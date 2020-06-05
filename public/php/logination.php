@@ -7,10 +7,10 @@ $email = "";
 //$errors = array();
 
 // connect to the database
-$connessione = new mysqli('localhost', 'root', 'root', 'mio');
+$connessione = new mysqli('localhost', 'root', 'root', 'tecweb');
 
 // REGISTER USER
-if (isset($_POST['reg_user'])) {
+if (isset($_POST['log_user'])) {
     // receive all input values from the form
     $email = mysqli_real_escape_string($connessione, $_POST['email']);
     $password = mysqli_real_escape_string($connessione, $_POST['password']);

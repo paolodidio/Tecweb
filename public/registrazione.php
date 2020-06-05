@@ -13,7 +13,7 @@
     <meta http-equiv="Cache-control" content="no-cache">
 
 
-    <title>Login utenti</title>
+    <title>Registrazione utenti</title>
 
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -30,7 +30,7 @@
 
 <div class="header">
     <div class="header-title">
-        <h1>Pagina login</h1>
+        <h1>Pagina registrazione</h1>
         <h2><?php display_message(); ?></h2>
     </div>
 </div>
@@ -38,9 +38,10 @@
 <div>
     <form method="post" action="">
 
-      <?php login_user(); ?>
+        <?php reg_user(); ?>
+
         <div class="input-group">
-            <label for="">Email</label>
+            <label for="email">Email</label>
             <input type="email" name="email" value="">
         </div>
         <div class="input-group">
@@ -48,13 +49,16 @@
             <input type="password" name="password">
         </div>
         <div class="input-group">
-            <button type="submit" class="btn" name="log_user">Login</button>
+            <label for="password">Password</label>
+            <input type="password" name="password2">
         </div>
+        <div class="input-group">
+            <button type="submit" class="btn" name="reg_user">Registrati</button>
+        </div>
+        <?php var_dump($_SESSION);?>
 
     </form>
 </div>
-
-
 
 <script src="js/hamburger.js"></script>
 

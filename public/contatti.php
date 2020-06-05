@@ -14,7 +14,7 @@
     <meta http-equiv="Cache-control" content="no-cache">
 
 
-    <title>Su di noi</title>
+    <title>Contatti</title>
 
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -31,7 +31,12 @@
 
 <div class="header">
     <div class="header-title">
-        <h1>Pagina contatti</h1>
-        <p>Scrivi  meglio i contatti</p>
+        <h1>Contatti</h1>
+        <ul>
+            <li>Paolo Di Dio: <a href="mailto:paolo.didio@studenti.unipd.it">paolo.didio@studenti.unipd.it</a></li>
+            <li>Anna Cisotto: <a href="mailto:nonricordo@la.mail">nonricordo@la.mail</a></li>
+            <li>Lucrezia: <a href="mailto:nonricordo@la.mail">nonricordo@la.mail</a></li>
+            <li>Ismaele Gobbo: <a href="mailto:nonricordo@la.mail">nonricordo@la.mail</a></li>
+        </ul>
     </div>
 </div>

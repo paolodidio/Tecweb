@@ -1,7 +1,8 @@
 <?php require_once("../resources/config.php"); ?>
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
-
 <head>
     <!-- meta tag -->
     <meta http-equiv="content-type" content="text/html" charset="utf-8">
@@ -13,7 +14,7 @@
     <meta http-equiv="Cache-control" content="no-cache">
 
 
-    <title>Login utenti</title>
+    <title>Su di noi</title>
 
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -30,33 +31,7 @@
 
 <div class="header">
     <div class="header-title">
-        <h1>Pagina login</h1>
-        <h2><?php display_message(); ?></h2>
+        <h1>Su di noi</h1>
+        <p>Scrivi un storiella moderatamente a caso</p>
     </div>
 </div>
-
-<div>
-    <form method="post" action="">
-
-      <?php login_user(); ?>
-        <div class="input-group">
-            <label for="">Email</label>
-            <input type="email" name="email" value="">
-        </div>
-        <div class="input-group">
-            <label for="password">Password</label>
-            <input type="password" name="password">
-        </div>
-        <div class="input-group">
-            <button type="submit" class="btn" name="log_user">Login</button>
-        </div>
-
-    </form>
-</div>
-
-
-
-<script src="js/hamburger.js"></script>
-
-</body>
-</html>

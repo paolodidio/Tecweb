@@ -117,7 +117,7 @@ echo $categories_links;
 
 function login_user(){
 
-    if(isset($_POST['reg_user'])){
+    if(isset($_POST['log_user'])){
 
         $email = escape_string($_POST['email']);
         $password = escape_string($_POST['password']);
@@ -137,6 +137,64 @@ function login_user(){
 
 }
 
+function reg_user(){
+
+
+    $errors = array();
+
+// connect to the database
+    $connessione = new mysqli('localhost', 'root', 'root', 'tecweb');
+
+// REGISTER USER
+    if (isset($_POST['reg_user'])) {
+        // receive all input values from the form
+        $error=false;
+        $email = mysqli_real_escape_string($connessione, $_POST['email']);
+        $password_1 = mysqli_real_escape_string($connessione, $_POST['password']);
+        $password_2 = mysqli_real_escape_string($connessione, $_POST['password2']);
+
+        // form validation: ensure that the form is correctly filled ...
+        // by adding (array_push()) corresponding error unto $errors array
+        if (empty($email)) {
+            $error=true;
+            set_message("Email is required");
+        }
+        if (empty($password_1)) {
+            $error=true;
+            set_message("Password is required");
+        }
+        if ($password_1 != $password_2) {
+            $error=true;
+            set_message("The two passwords do not match");
+        }
+
+
+
+        // first check the database to make sure
+        // a user does not already exist with the same username and/or email
+        $user_check_query = "SELECT * FROM utenti WHERE email='$email'  LIMIT 1";
+        $result = mysqli_query($connessione, $user_check_query);
+        $user = mysqli_fetch_assoc($result);
+
+        if ($user) { // if user exists
+            $error=true;
+           set_message("Email already exist");
+        }
+
+        // Finally, register user if there are no errors in the form
+        if ($error == false) {
+            $password = md5($password_1);//encrypt the password before saving in the database
+
+            $query = "INSERT INTO utenti (email, password) 
+  			  VALUES('$email', '$password')";
+            mysqli_query($connessione, $query);
+            $_SESSION['email'] = $email;
+            redirect("index.php");
+        } else redirect("registrazione.php");
+    }
+    $connessione->close();
+
+}
 
 
 
