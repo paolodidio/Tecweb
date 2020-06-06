@@ -17,9 +17,6 @@ function set_message($msg){
     if(!empty($msg)){
         $_SESSION['message'] = $msg;
     }
-    else {
-        $msg = "";
-    }
 
 }
 
@@ -177,7 +174,7 @@ echo $cat_products;
 }
 
 }
-    
+
 
 
 // permette il login dell'utente
@@ -195,7 +192,8 @@ function login_user(){
             set_message("Inserisci la password");
         }
 
-        $query = query("SELECT * FROM utenti WHERE email = '{$email}' AND password = '{$password}' ");
+
+        $query = query("SELECT * FROM utenti WHERE email = '$email' AND password = '$password' ");
         confirm($query);
 
         if(mysqli_num_rows($query) == 0){
@@ -214,8 +212,6 @@ function login_user(){
 // permette la registrazione di un nuovo utente
 function reg_user(){
 
-
-    $errors = array();
 
 // connect to the database
     $connessione = new mysqli('localhost', 'root', 'root', 'tecweb');
@@ -254,6 +250,7 @@ function reg_user(){
         if ($user) { // if user exists
             $error=true;
            set_message("Email already exist");
+           redirect("registrazione.php");
         }
 
         // Finally, register user if there are no errors in the form
@@ -301,7 +298,7 @@ echo $orders;
 }
 
 }
-    
+
 // ritorna la lista di prodotti presenti nel database
 function admin_products() {
 
@@ -330,7 +327,7 @@ echo $product;
 }
 
 }
-    
+
 // permette l'inserimento di una nuova pianta nel database
 function add_product() {
 
@@ -364,7 +361,7 @@ function add_product() {
     }
 
 }
-    
+
 // mostra i nomi delle categorie nel menu a tendina quando si aggiunge una nuova pianta
 function show_categories_admin(){
 
@@ -384,7 +381,7 @@ echo $categorie_options;
 }
 
 }
-    
+
 // ritorna il nome della categoria in corrispondenza dell'id inserito nel database
 function show_cat_name($cat_id) {
 
@@ -398,7 +395,7 @@ function show_cat_name($cat_id) {
     }
 
 }
-    
+
 // permette di modificare i dati di una pianta
 function edit_product() {
 
@@ -461,7 +458,7 @@ function edit_product() {
     }
 
 }
-    
+
 // mostra l'elenco delle categorie e dei loro id
 function get_cat_admin() {
 
@@ -485,7 +482,7 @@ echo $categoria;
 }
 
 }
-    
+
 // permette di aggiungere una nuova categoria
 function add_category() {
 
@@ -508,7 +505,7 @@ function add_category() {
     }
 
 }
-    
+
 // ritorna la lista degli utenti
 function get_users() {
 
@@ -533,7 +530,7 @@ echo $user;
 }
 
 }
-    
+
 // permette di aggiungere un nuovo utente
 function add_user() {
 
@@ -552,7 +549,7 @@ function add_user() {
     }
 
 }
-    
+
 // permette di modificare i dati di un utente
 function edit_user() {
 
@@ -571,7 +568,7 @@ function edit_user() {
     }
 
 }
-    
+
 // ritorna la lista dei report per l'admin
 function get_reports() {
 
@@ -597,7 +594,7 @@ echo $report;
 }
 
 }
-    
+
 // conta il numero totale di ordini ricevuti
 function tot_orders() {
 

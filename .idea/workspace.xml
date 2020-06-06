@@ -1,25 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0cb07149-e1ac-48fc-bc3e-05bd04df4a59" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/tecweb.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/registrazione.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/sudinoi.php" afterDir="false" />
+    <list default="true" id="0cb07149-e1ac-48fc-bc3e-05bd04df4a59" name="Default Changelist" comment="Messaggi controllo input registrazione">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/contatti.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/contatti.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/php/logination.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/php/logination.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/php/registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/php/registration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/registrazione.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/registrazione.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/templates/front/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/templates/front/navbar.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +59,7 @@
     <option name="generatedRoots">
       <set>
         <option value="C:\xampp\htdocs\progetto-tecweb\.idea" />
+        <option value="C:\xampp\htdocs\tecweb\.idea" />
       </set>
     </option>
   </component>
@@ -154,6 +141,8 @@
       <workItem from="1591271401646" duration="1655000" />
       <workItem from="1591283039781" duration="3775000" />
       <workItem from="1591294423835" duration="9613000" />
+      <workItem from="1591342553029" duration="326000" />
+      <workItem from="1591450239055" duration="2330000" />
     </task>
     <task id="LOCAL-00001" summary="Indirizzamenti e query in parte sistemati">
       <created>1591291965339</created>
@@ -162,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591291965339</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="aggiunto &quot;sudinoi&quot;, contatti, sistemati login etc">
+      <created>1591342690817</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1591342690817</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,7 +179,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Indirizzamenti e query in parte sistemati" />
-    <option name="LAST_COMMIT_MESSAGE" value="Indirizzamenti e query in parte sistemati" />
+    <MESSAGE value="aggiunto &quot;sudinoi&quot;, contatti, sistemati login etc" />
+    <MESSAGE value="Messaggi controllo input registrazione" />
+    <option name="LAST_COMMIT_MESSAGE" value="Messaggi controllo input registrazione" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="71" key="#SQL_Dialects" timestamp="1591291703721">
@@ -208,11 +206,15 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1588167526944" />
-    <state x="393" y="7" key="CommitChangelistDialog2" timestamp="1591342690081">
+    <state x="393" y="7" key="CommitChangelistDialog2" timestamp="1591473770082">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="393" y="7" key="CommitChangelistDialog2/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1591291964603" />
-    <state x="393" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1591342690081" />
+    <state x="393" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1591473770082" />
+    <state x="147" y="65" key="DiffContextDialog" timestamp="1591473757725">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="147" y="65" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1591473757725" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1591295681636">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -267,17 +269,17 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="538" y="49" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1591215553885" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1591342553190">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1591450314845">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1591283053436" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1591342553190" />
-    <state x="462" y="10" width="611" height="804" key="find.popup" timestamp="1591307263420">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1591450314845" />
+    <state x="462" y="10" width="611" height="804" key="find.popup" timestamp="1591473420309">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="519" y="-5" width="683" height="808" key="find.popup/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1591284580944" />
     <state x="2382" y="-4" width="607" height="713" key="find.popup/0.0.1536.824/1920.0.1366.728@1920.0.1366.728" timestamp="1591272784695" />
-    <state x="462" y="10" width="611" height="804" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1591307263420" />
+    <state x="462" y="10" width="611" height="804" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1591473420309" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1588609751417">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
