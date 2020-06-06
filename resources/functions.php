@@ -5,9 +5,6 @@ function set_message($msg){
     if(!empty($msg)){
         $_SESSION['message'] = $msg;
     }
-    else {
-        $msg = "";
-    }
 
 }
 
@@ -139,8 +136,6 @@ function login_user(){
 
 function reg_user(){
 
-
-    $errors = array();
 
 // connect to the database
     $connessione = new mysqli('localhost', 'root', 'root', 'tecweb');
