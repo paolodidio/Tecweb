@@ -55,7 +55,7 @@
         <div class="input-group">
             <button type="submit" class="btn" name="reg_user">Registrati</button>
         </div>
-        <?php var_dump($_SESSION);?>
+
 
     </form>
 </div>

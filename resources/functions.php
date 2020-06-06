@@ -122,7 +122,7 @@ function login_user(){
         $email = escape_string($_POST['email']);
         $password = escape_string($_POST['password']);
 
-        $query = query("SELECT * FROM utenti WHERE email = '{$email}' AND password = '{$password}' ");
+        $query = query("SELECT * FROM utenti WHERE email = '$email' AND password = '$password' ");
         confirm($query);
 
         if(mysqli_num_rows($query) == 0){
@@ -179,6 +179,7 @@ function reg_user(){
         if ($user) { // if user exists
             $error=true;
            set_message("Email already exist");
+           redirect("registrazione.php");
         }
 
         // Finally, register user if there are no errors in the form
