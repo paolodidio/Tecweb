@@ -103,7 +103,7 @@ a {
 .how-it-works {
   background-color: #6C9070;
   padding: 2em;
-  margin-top: 5em;
+  margin-top: 5%;
 }
 
 .how-it-works h2 {
@@ -368,7 +368,7 @@ p.price {
       grid-template-columns: 100% auto;
     }
 
-    .header h1 {
+    .header-title h1 {
       font-size: 4.5em;
     }
 
@@ -390,6 +390,7 @@ p.price {
         display: block;
         text-align: left;
     }
+
 
 
 }
