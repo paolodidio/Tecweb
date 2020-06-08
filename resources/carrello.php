@@ -85,10 +85,10 @@ $product = <<<DELIMETER
 
 <tr>
     <td>{$row['nome']}</td>
-    <td>{$row['prezzo']}</td>
+    <td>{$row['prezzo']} €</td>
     <td>{$value}</td>
-    <td>{$sub}</td>
-    <td><a href="../resources/carrello.php?remove={$row['pianta_id']}">Remove</a><a href="../resources/carrello.php?add={$row['pianta_id']}">Add</a><a href="../resources/carrello.php?delete={$row['pianta_id']}">Delete</a></td>
+    <td>{$sub} €</td>
+    <td><a href="../resources/carrello.php?remove={$row['pianta_id']}"><img src="../public/images/remove.png" alt="Rimuovi pianta"></a><a href="../resources/carrello.php?add={$row['pianta_id']}"><img src="../public/images/add.png" alt="Aggiungi pianta"></a><a href="../resources/carrello.php?delete={$row['pianta_id']}"><img src="../public/images/delete.png" alt="Cancella pianta"></a></td>
 </tr>
 
 DELIMETER;
@@ -120,7 +120,7 @@ if(isset($_SESSION['item_quantity']) && $_SESSION['item_quantity'] >= 1) {
 
 $payment_button = <<<DELIMETER
 
-<a class="btn btn-primary" href="conferma.php?amount={$_SESSION['item_total']}">Conferma pagamento</a>
+<a id="pay-button" href="conferma.php?amount={$_SESSION['item_total']}">Conferma pagamento</a>
 
 DELIMETER;
 

@@ -1,21 +1,20 @@
 <?php require_once("../resources/config.php"); ?>
 <?php include(TEMPLATE_FRONT . DS . "intro.php"); ?>
 
-  <div class="container">
+  <div class="checkout">
 
-    <div class="row">
+    <h1 class="page-title">Checkout</h1>
 
-      <h1>Checkout</h1>
-
-      <form action="" method="post">
-
-        <table class="table table-striped">
+    <div class="checkout-content">
+      <div class="checkout-summit">
+        <table>
           <thead>
             <tr>
               <th>Pianta</th>
               <th>Prezzo</th>
               <th>Quantità</th>
               <th>Sub totale</th>
+              <th>Azioni</th>
             </tr>
           </thead>
           <tbody>
@@ -24,46 +23,33 @@
         </table>
 
         <?php pay(); ?>
+      </div>
 
-      </form>
+      <div class="checkout-total">
 
-    </div>
+        <p>Totale carrello</p>
 
-    <!--  ***********CART TOTALS*************-->
+        <table>
+          <thead>
+            <tr>
+              <th>Numero piante</th>
+              <th>Spedizione</th>
+              <th>Totale</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><?php echo isset($_SESSION['item_quantity']) ? $_SESSION['item_quantity'] : $_SESSION['item_quantity'] = "0"; ?></td>
+              <td>Gratis</td>
+              <td><?php echo isset($_SESSION['item_total']) ? $_SESSION['item_total'] : $_SESSION['item_total'] = "0"; ?> €</td>
+            </tr>
+          </tbody>
+        </table>
 
-    <div class="col-xs-4 pull-right ">
-
-      <h2>Totale carrello</h2>
-
-      <table class="table table-bordered" cellspacing="0">
-
-        <tr class="cart-subtotal">
-          <th>Prodotti:</th>
-          <td>
-            <span class="amount">
-              <?php echo isset($_SESSION['item_quantity']) ? $_SESSION['item_quantity'] : $_SESSION['item_quantity'] = "0"; ?>
-            </span>
-          </td>
-        </tr>
-
-        <tr class="shipping">
-          <th>Spezione</th>
-          <td>Gratis</td>
-        </tr>
-
-        <tr class="order-total">
-          <th>Totale ordine</th>
-          <td>
-            <span class="amount">
-              <?php echo isset($_SESSION['item_total']) ? $_SESSION['item_total'] : $_SESSION['item_total'] = "0"; ?>
-            </span>
-          </td>
-        </tr>
-
-      </table>
+      </div>
 
     </div>
-
+    
   </div>
 
 <?php include(TEMPLATE_FRONT . DS . "footer.php"); ?>
