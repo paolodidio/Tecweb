@@ -443,6 +443,40 @@ legend {
   padding-top: 2em;
 }
 
+/* pagina di registrazione */
+
+.register-page {
+  padding: 3%;
+}
+
+.reg-input-group {
+  padding-bottom: 1.5em;
+}
+
+.reg-input-group label {
+  font-size: 1.5em;
+  color: #4D5E52;
+}
+
+.reg-input-group input {
+  padding: 0.5em;
+}
+
+.register-page form button {
+  background-color: #F90;
+  color: #FFF;
+  border-radius: 1.5em;
+  padding: 1em 3em;
+  font-weight: bold;
+  font-size: 1em;
+  border: none;
+}
+
+.register-page form button:hover {
+  background-color: #7c3c21;
+  color: #EDEBE9;
+}
+
 /* media query */
 
 

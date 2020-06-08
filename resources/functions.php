@@ -202,59 +202,46 @@ function login_user(){
 // permette la registrazione di un nuovo utente
 function reg_user(){
 
-
-// connect to the database
-    $connessione = new mysqli('localhost', 'root', 'root', 'tecweb');
-
-// REGISTER USER
     if (isset($_POST['reg_user'])) {
-        // receive all input values from the form
-        $error=false;
-        $email = mysqli_real_escape_string($connessione, $_POST['email']);
-        $password_1 = mysqli_real_escape_string($connessione, $_POST['password']);
-        $password_2 = mysqli_real_escape_string($connessione, $_POST['password2']);
 
-        // form validation: ensure that the form is correctly filled ...
-        // by adding (array_push()) corresponding error unto $errors array
+        $error=false;
+        $email = escape_string($_POST['email']);
+        $password_1 = escape_string($_POST['password']);
+        $password_2 = escape_string($_POST['password2']);
+
         if (empty($email)) {
             $error=true;
-            set_message("Email is required");
+            set_message("Inserisci un'email valida");
         }
         if (empty($password_1)) {
             $error=true;
-            set_message("Password is required");
+            set_message("Inserisci una password");
         }
         if ($password_1 != $password_2) {
             $error=true;
-            set_message("The two passwords do not match");
+            set_message("La password non corrisponde");
         }
 
+        $user_check_query = query("SELECT * FROM utenti WHERE email='$email'  LIMIT 1");
+        confirm($user_check_query);
+        $user = fetch_array($user_check_query);
 
-
-        // first check the database to make sure
-        // a user does not already exist with the same username and/or email
-        $user_check_query = "SELECT * FROM utenti WHERE email='$email'  LIMIT 1";
-        $result = mysqli_query($connessione, $user_check_query);
-        $user = mysqli_fetch_assoc($result);
-
-        if ($user) { // if user exists
+        if ($user) { 
             $error=true;
-           set_message("Email already exist");
+           set_message("Esiste già un utente con questa email");
            redirect("registrazione.php");
         }
 
-        // Finally, register user if there are no errors in the form
         if ($error == false) {
-            $password = md5($password_1);//encrypt the password before saving in the database
-
-            $query = "INSERT INTO utenti (email, password) 
-  			  VALUES('$email', '$password')";
-            mysqli_query($connessione, $query);
+            $query = query("INSERT INTO utenti (email, password) VALUES('$email', '$password')");
+            confirm($query);
             $_SESSION['email'] = $email;
             redirect("index.php");
-        } else redirect("registrazione.php");
+        } 
+        else {
+            redirect("registrazione.php");
+        }
     }
-    $connessione->close();
 
 }
 
