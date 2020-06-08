@@ -4,13 +4,20 @@ html {
 }
 
 body {
-  padding: 3% 5%;
+  margin: 3% 5%;
   font-family: sans-serif;
 }
 
 a {
   text-decoration: none;
 }
+
+/* devo capire come cambiare colore ai link già visitati 
+/* REGOLE GENERALI: 
+/* padding in em
+/* margini in percentuale
+/* altezza e larghezza in percentuale
+/* border radius in em
 
 /* navbar */
 
@@ -23,7 +30,7 @@ a {
     color: #708A64;
     text-align: center;
     padding: 1.5em;
-    margin: 1.5em;
+    margin: 2%;
     font-weight: bold;
     text-transform: uppercase;
 }

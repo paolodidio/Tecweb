@@ -1,4 +1,4 @@
-<div class="navigation-bar" id="Navbar">
+<div class="admin-navbar" id="Navbar">
   <a href="../index.php">Home</a>
   <a href="logout.php" id="Logout">Logout</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
