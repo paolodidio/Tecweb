@@ -1,22 +1,19 @@
-<div class="content">
+<div class="orders">
 
-  <h1>Tutti gli ordini</h1>
-  <h2><?php display_message(); ?></h2>
+  <h1 class="admin-title">Ordini</h1>
+  <p><?php display_message(); ?></p>
 
-  <div class="row">
-    <table class="table table-hover">
-      <thead>
-        <tr>
-          <th>Id</th>
-          <th>Totale</th>
-          <th>Transazione</th>
-          <th>Stato</th>
-        </tr>
-      </thead>
-      <tbody>
-        <?php display_orders(); ?>
-      </tbody>
-    </table>
-  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Totale</th>
+        <th>Azioni</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php display_orders(); ?>
+    </tbody>
+  </table>
 
 </div>

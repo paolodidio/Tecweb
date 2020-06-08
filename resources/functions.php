@@ -263,8 +263,6 @@ $orders = <<<DELIMITER
 <tr>
     <td>{$row['ordine_id']}</td>
     <td>{$row['ordine_tot']}</td>
-    <td>{$row['transazione']}</td>
-    <td>{$row['stato']}</td>
     <td><a href="../../resources/templates/back/delete_order.php?id={$row['ordine_id']}">Elimina</a></td>
 </tr>
 
