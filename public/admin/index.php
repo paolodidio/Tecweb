@@ -26,12 +26,12 @@
   <?php include(TEMPLATE_BACK . "/navbar.php"); ?>
 
   <!-- central body -->
-  <div class="content">
+  <div class="admin-content">
 
 
     <?php
 
-    if($_SERVER['REQUEST_URI'] == "/tecweb/public/admin/" || $_SERVER['REQUEST_URI'] == "/tecweb/public/admin/index.php" ) {
+    if($_SERVER['REQUEST_URI'] == "/Tecweb/public/admin/" || $_SERVER['REQUEST_URI'] == "/Tecweb/public/admin/index.php" ) {
         include(TEMPLATE_BACK . "/content.php");
     }
 

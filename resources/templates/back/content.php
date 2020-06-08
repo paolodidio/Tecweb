@@ -1,31 +1,21 @@
-<div class="row">
-    <h1 class="page-header">Dashboard</h1>
+<div class="dashboard">
+  <h1 class="admin-title">Dashboard</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Ordini</th>
+        <th>Piante</th>
+        <th>Categorie</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><?php tot_orders(); ?><a href="index.php?orders">Vedi dettagli</a></td>
+        <td><?php tot_piante(); ?><a href="index.php?prodotti">Vedi dettagli</a></td>
+        <td><?php tot_cat(); ?><a href="index.php?add-categoria">Vedi dettagli</a></td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
-<div class="row">
-
-  <div class="card">
-    <div class="container">
-      <h4><?php tot_orders(); ?></h4>
-      <p>ordini</p>
-      <a href="index.php?orders">Vedi dettagli</a>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="container">
-      <h4><?php tot_piante(); ?></h4>
-      <p>piante</p>
-      <a href="index.php?prodotti">Vedi dettagli</a>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="container">
-      <h4><?php tot_cat(); ?></h4>
-      <p>categorie</p>
-      <a href="index.php?add-categoria">Vedi dettagli</a>
-    </div>
-  </div>
-
-</div>

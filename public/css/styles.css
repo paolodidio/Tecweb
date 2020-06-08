@@ -519,6 +519,7 @@ legend {
   top: 0; 
   left: 0;
   overflow-x: hidden; 
+  margin: 0;
 }
 
 .sidenav a {
@@ -532,6 +533,43 @@ legend {
 .sidenav a:hover {
   color: #000;
 }
+
+/* admin content */
+
+.admin-content {
+  left: 25%;
+  position: relative;
+  top: -25em;
+}
+
+.admin-title {
+  font-weight: bold;
+  font-size: 3em;
+  color: #3C2B26;
+}
+
+/* dashboard */
+
+.dashboard table thead tr th {
+  background-color: #4D5E52;
+  height: 2em;
+  margin: 0;
+  padding: 0.5em 1.5em;
+  color: #EDEBE9;
+  text-align: justify;
+  border: #4D5E52 solid 1px;
+}
+
+.dashboard table tbody tr td {
+  text-align: justify;
+  padding: 0.5em 1.5em;
+  border: #4D5E52 solid 1px;
+}
+
+.dashboard table tbody tr td a {
+  display: block;
+}
+
 
 /* media query */
 
