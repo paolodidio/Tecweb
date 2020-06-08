@@ -189,66 +189,33 @@ a {
 
 /* pagina piante */
 
-.plant-category {
-    color: #708A64;
-    margin-bottom:0.5em;
-    text-decoration: underline;
+#plant-shop {
+  margin: 3%;
 }
 
-.plant-category:hover {
-    color: #242424;
+#plant-shop h1 {
+  font-weight: bold;
+  font-size: 4em;
+  color: #3C2B26;
 }
 
-#filter-list fieldset {
-  margin-top:0.8em;
-  margin-bottom:0.8em;
-}
-
-#filter-list legend {
-  padding-bottom:0.3em;
-}
-
-/* plant list */
-
-
-#plant-page {
-  display: table;
-  width:100%;
-  height:100%;
-}
-
-
-#filters {
-  display: table-cell;
-  width: 200px;
-  min-width: 200px;
-  min-height: 100%;
-}
-
-#plants {
-  display:table-cell;
-  padding-left: 1em;
-}
-
-#plant-flex-wrapper {}
-
-.plant-flex {
-  margin:0 -0.5em;
+#plant-shop ul {
+  margin: 0;
   padding: 0;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
 }
 
-.plant-flex li {
+#plant-shop ul li {
   background-color: #FFF;
-  margin: 0.2em ;
+  margin: 0.5%;
   flex: 1 1 22em;
   transition: 0.3s;
   box-shadow: 0 1px 1px rgba(0,0,0,0.2);
 }
 
-.plant-flex li:hover {
+#plant-shop ul li:hover {
     box-shadow:0 6px 40px rgba(0,0,0,0.15);
 }
 
@@ -256,32 +223,36 @@ a {
   display: flex;
 }
 
-.plant-preview-description {
+.plant-preview-desc {
   display: flex;
-  flex-direction:column;
-  justify-content:space-between;
+  flex-direction: column;
+  justify-content: space-between;
   order: 2;
-  margin: 1em;
+  margin: 2%;
   padding: 0;
   border: 0;
 }
 
-p.price {
+.plant-name {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.plant-price {
   color: #F90 ;
   font-size: 1.5em;
 }
 
 .plant-preview-image {
   order: 1;
-  margin: 1em;
+  margin: 5%;
   border: 0;
   padding: 0;
 }
 
-
 .plant-preview-image img {
   display: block;
-  max-height: 150px;
+  max-height: 10em;
 }
 
 /* plant detail page */

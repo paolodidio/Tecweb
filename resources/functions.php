@@ -95,19 +95,14 @@ $pianta_img = display_image($row['pianta_img']);
 $product = <<<DELIMETER
 <li>
     <div class="plant-preview">
-    <div class="plant-preview-description">
-        <div class="plant-preview-description-name">
-        <p class="bold">{$row['nome']}</p>
-        <p>{$row['genere']}</p>
+        <div class="plant-preview-desc">
+            <p class="plant-name">{$row['nome']}</p>
+            <p class="plant-price">{$row['prezzo']} €</p>
+            <a href="plantDetail.php?id={$row['pianta_id']}">Maggiori informazioni</a>
         </div>
-        <div class="plant-preview-description-price">
-        <p class="price bold">{$row['prezzo']} €</p>
+        <div class="plant-preview-image">
+            <a href="plantDetail.php?id={$row['pianta_id']}"><img src="../resources/{$pianta_img}" alt="Immagine della pianta {$row['nome']}"></a>
         </div>
-    </div>
-    <div class="plant-preview-image">
-        <a href="plantDetail.php?id={$row['pianta_id']}"><img src="../resources/{$pianta_img}" alt="Maggiori informazioni"></a>
-    </div>
-    <a class="btn btn-primary" target="_blank" href="../resources/carrello.php?add={$row['pianta_id']}">Aggiungi al carrello</a>
     </div>
 </li>
 DELIMETER;

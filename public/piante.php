@@ -1,22 +1,14 @@
 <?php require_once("../resources/config.php"); ?>
 <?php include(TEMPLATE_FRONT . DS . "intro.php"); ?>
 
-<div id="plant-page">
+<div id="plant-shop">
 
-    <div id="plants">
+  <h1>Catalogo piante</h1>
+  <ul>
 
-      <div id="plant-flex-wrapper">
+    <?php get_products(); ?>
 
-        <h3>Lista delle nostre piante</h3>
-        <ul class="plant-flex">
-
-          <?php get_products(); ?>
-
-        </ul>
-
-      </div>
-
-    </div>
+  </ul>
 
 </div>
 
