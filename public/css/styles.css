@@ -12,6 +12,12 @@ a {
   text-decoration: none;
 }
 
+.page-title {
+  font-weight: bold;
+  font-size: 4em;
+  color: #3C2B26;
+}
+
 /* devo capire come cambiare colore ai link già visitati 
 /* REGOLE GENERALI: 
 /* padding in em
@@ -193,12 +199,6 @@ a {
   margin: 3%;
 }
 
-.plant-shop h1 {
-  font-weight: bold;
-  font-size: 4em;
-  color: #3C2B26;
-}
-
 .plant-shop ul {
   margin: 0;
   padding: 0;
@@ -329,6 +329,11 @@ a {
    padding: 2em 0;
 }
 
+/* pagina contatti */
+
+.contacts {
+  padding: 3%;
+}
 
 /* media query */
 

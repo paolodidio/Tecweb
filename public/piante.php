@@ -3,7 +3,7 @@
 
 <div class="plant-shop">
 
-  <h1>Catalogo piante</h1>
+  <h1 class="page-title">Catalogo piante</h1>
   <ul>
 
     <?php get_products(); ?>

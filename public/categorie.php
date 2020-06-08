@@ -3,7 +3,7 @@
 
 <div class="plant-shop">
 
-  <h1><?php echo show_cat_name($_GET['id']); ?></h1>
+  <h1 class="page-title"><?php echo show_cat_name($_GET['id']); ?></h1>
   <ul>
 
     <?php get_cat_products(); ?>
