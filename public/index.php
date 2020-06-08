@@ -6,7 +6,7 @@
     <div class="header-title">
       <h1>Succulente</h1>
       <p>Scopri e acquista piante dalla migliore selezione di succulente sul mercato.</p>
-      <a href="piante.php">Scopri</a>
+      <a href="piante.php">Acquista</a>
     </div>
     <div class="header-image"></div>
   </div>

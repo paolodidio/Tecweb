@@ -18,6 +18,7 @@ a {
 /* margini in percentuale
 /* altezza e larghezza in percentuale
 /* border radius in em
+/* font size in em
 
 /* navbar */
 
@@ -59,7 +60,6 @@ a {
 }
 
 
-
 /* header homepage */
 
 .header {
@@ -68,19 +68,19 @@ a {
   grid-template-columns: 50% 50%;
 }
 
-.header h1 {
+.header-title h1 {
   font-weight: bold;
   font-size: 6em;
   color: #3C2B26;
 }
 
-.header p {
+.header-title p {
   text-transform: uppercase;
   line-height: 2em;
   padding-bottom: 3em;
 }
 
-.header a {
+.header-title a {
   background-color: #708A64;
   color: #EDEBE9;
   border-radius: 2.5em;
@@ -88,12 +88,12 @@ a {
   font-weight: bold;
 }
 
-.header a:hover {
+.header-title a:hover {
   background-color: #242424;
   color: #EDEBE9;
 }
 
-.header .header-image {
+.header-image {
   background-image: url("../images/header.png");
   background-repeat: no-repeat;
 }
