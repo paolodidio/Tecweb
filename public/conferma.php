@@ -35,6 +35,6 @@
 
   ?>
 
-  <h1>Grazie per l'acquisto!</h1>
+  <h1 class="page-title">Grazie per l'acquisto!</h1>
 
 <?php include(TEMPLATE_FRONT . DS . "footer.php"); ?>
