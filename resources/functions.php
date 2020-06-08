@@ -219,7 +219,7 @@ function reg_user(){
         }
         if ($password_1 != $password_2) {
             $error=true;
-            set_message("La password non corrisponde");
+            set_message("Le due password non coincidono");
         }
 
         $user_check_query = query("SELECT * FROM utenti WHERE email='$email'  LIMIT 1");
@@ -233,7 +233,7 @@ function reg_user(){
         }
 
         if ($error == false) {
-            $query = query("INSERT INTO utenti (email, password) VALUES('$email', '$password')");
+            $query = query("INSERT INTO utenti (email, password) VALUES('$email', '$password_1')");
             confirm($query);
             $_SESSION['email'] = $email;
             redirect("index.php");
