@@ -172,38 +172,20 @@ a {
 .categories ul a li {
   display: inline-block;
   padding-right: 2em;
+  margin: 1% 0 1% 1%;
   color: #242424;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.5em;
   padding: 2em;
+  border: #6C9070 solid 0.5em;
+  border-radius: 2.5em;
 }
 
-.interno, .tappezzanti, .roccioso, .cactus, .fiore {
-  height: 10em;
-  background-repeat: no-repeat;
-  background-position: center;
+.categories ul a li:hover {
+  color: #708A64;
 }
 
-.interno {
-  background-image: url("images/interno.png");
-}
-
-.tappezzanti {
-  background-image: url("images/tappezzanti.png");
-}
-
-.roccioso {
-  background-image: url("../images/roccioso.png");
-}
-
-.cactus {
-  background-image: url("../images/cactus.png");
-}
-
-.fiore {
-  background-image: url("../images/fiore.png");
-}
 
 /* pagina piante */
 
