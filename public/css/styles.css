@@ -271,21 +271,44 @@ a {
   padding: 0 5em;
 }
 
-.plant-desc-panel h1 {
+.plant-detail-name {
   color: #6C9070;
   font-size: 3em;
   margin: 0;
+  font-weight: bold;
+  padding-bottom: 0.5em;
 }
 
-.family {
+.plant-detail-spec {
   font-weight: bold;
   text-transform: uppercase;
+  color: #4D5E52;
+  padding-bottom: 2em;
 }
 
-.plant-desc-panel p {
+.plant-detail-spec span {
+  color: #242424;
+  font-weight: normal;
+  text-transform: none;
+}
+
+.plant-detail-desc {
   color: #4D5E52;
   line-height: 1.5em;
   text-align: justify;
+}
+
+.plant-desc-panel a {
+  background-color: #F90;
+  color: #EDEBE9;
+  border-radius: 2.5em;
+  padding: 1.5em;
+  font-weight: bold;
+}
+
+.plant-desc-panel a:hover {
+  background-color: #7c3c21;
+  color: #EDEBE9;
 }
 
 .plant-info-panel {

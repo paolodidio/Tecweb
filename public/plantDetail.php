@@ -13,24 +13,28 @@
 
     <div class="plant-container">
 
-      <img src="../resources/<?php echo $pianta_img ?>" alt="">
+      <img src="../resources/<?php echo $pianta_img ?>" alt="immagine pianta <?php echo $row['nome'] ?>">
 
       <div class="plant-desc-panel">
-        <h1><?php echo $row['nome']; ?></h1>
-        <p class="family"><?php echo $row['famiglia']; ?></p>
-        <p><?php echo $row['descrizione']; ?></p>
+        <p class="plant-detail-name"><?php echo $row['nome']; ?></p>
+        <p class="plant-detail-spec">Famiglia: <span><?php echo $row['famiglia']; ?></span></p>
+        <p class="plant-detail-spec">Genere: <span><?php echo $row['genere']; ?></span></p>
+        <p class="plant-detail-spec">Specie: <span><?php echo $row['specie']; ?></span></p>
+        <p class="plant-detail-desc"><?php echo $row['descrizione']; ?></p>
+        <p class="plant-detail-spec">Prezzo: <span><?php echo $row['prezzo']; ?> €</span></p>
+        <a href="../resources/carrello.php?add=<?php echo $row['pianta_id']; ?>">Aggiungi al carrello</a>
       </div>
 
       <div class="plant-info-panel">
         <dl>
-          <dt>Periodo fioritura</dt>
+          <dt>Periodo di fioritura</dt>
           <dd><?php echo $row['fioritura']; ?></dd>
+          <dt>Colore fiori</dt>
+          <dd><?php echo $row['colore']; ?></dd>
           <dt>Illuminazione</dt>
           <dd><?php echo $row['illuminazione']; ?></dd>
           <dt>Hardiness</dt>
           <dd><?php echo $row['hardiness']; ?></dd>
-          <dt>Colore fiori</dt>
-          <dd><?php echo $row['colore']; ?></dd>
           <dt>Da interno</dt>
           <dd><?php echo $row['interno']; ?></dd>
         </dl>
