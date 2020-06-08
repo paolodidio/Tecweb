@@ -18,6 +18,10 @@ a {
   color: #3C2B26;
 }
 
+legend {
+  display: none;
+}
+
 /* devo capire come cambiare colore ai link già visitati 
 /* REGOLE GENERALI: 
 /* padding in em
@@ -398,6 +402,45 @@ a {
   text-align: justify;
   padding: 0.5em 1.5em;
   border: #4D5E52 solid 1px;
+}
+
+/* pagina login */
+
+.login-page {
+  padding: 3%;
+}
+
+.login-input-group {
+  padding-bottom: 1.5em;
+}
+
+.login-input-group label {
+  font-size: 1.5em;
+  color: #4D5E52;
+}
+
+.login-input-group input {
+  padding: 0.5em;
+}
+
+.login-page form button {
+  background-color: #F90;
+  color: #FFF;
+  border-radius: 1.5em;
+  padding: 1em 3em;
+  font-weight: bold;
+  font-size: 1em;
+  border: none;
+}
+
+.login-page form button:hover {
+  background-color: #7c3c21;
+  color: #EDEBE9;
+}
+
+.login-page a {
+  display: block;
+  padding-top: 2em;
 }
 
 /* media query */

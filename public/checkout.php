@@ -4,6 +4,7 @@
   <div class="checkout">
 
     <h1 class="page-title">Checkout</h1>
+    <p><?php display_message(); ?></p>
 
     <div class="checkout-content">
       <div class="checkout-summit">

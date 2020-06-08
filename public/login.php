@@ -1,32 +1,23 @@
 <?php require_once("../resources/config.php"); ?>
 <?php include(TEMPLATE_FRONT . DS . "intro.php"); ?>
 
+<div class="login-page">
+    <h1 class="page-title">Accedi</h1>
+    <p><?php display_message(); ?></p>
 
-<div class="header">
-    <div class="header-title">
-        <h1>Pagina login</h1>
-        <h2><?php display_message(); ?></h2>
-    </div>
-</div>
-
-<div>
     <form method="post" action="">
-      <legend><h3>Accedi</h3></legend>
-      <?php login_user(); ?>
-        <div class="input-group">
+        <legend>Accedi</legend>
+        <?php login_user(); ?>
+        <div class="login-input-group">
             <label for="email">Email: </label>
             <input type="email" name="email" value="">
         </div>
-        <div class="input-group">
+        <div class="login-input-group">
             <label for="password">Password: </label>
             <input type="password" name="password">
         </div>
-        <div class="input-group">
-            <button type="submit" class="btn" name="log_user">Login</button>
-        </div>
-        <div>
-            <a href="#" > Non hai un account?</a>
-        </div>
+        <button class="" type="submit" class="btn" name="log_user">Accedi</button>
+        <a href="registrazione.php"> Non hai un account? Registrati</a>
 
     </form>
 </div>
