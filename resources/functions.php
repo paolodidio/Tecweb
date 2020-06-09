@@ -175,6 +175,7 @@ function login_user(){
         $email = escape_string($_POST['email']);
         $password = escape_string($_POST['password']);
 
+
         if (empty($email)) {
             set_message("Inserisci un'email valida");
         }
@@ -191,8 +192,10 @@ function login_user(){
             redirect("login.php");
         }
         else{
+            $row = fetch_array($query);
           $_SESSION['user'] = $email;
-          redirect("admin");
+          if ($row['admin'] == true) {redirect("admin");}
+          else {redirect("index.php");}
         }
 
     }
