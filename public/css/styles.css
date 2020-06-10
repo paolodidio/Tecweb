@@ -706,6 +706,49 @@ legend {
   grid-template-columns: auto auto;
 }
 
+/* categorie */
+
+.add-cat {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.add-cat-form {
+  padding-bottom: 2em;
+}
+
+.edit-cat-input label {
+  font-weight: bold;
+  display: block;
+  padding-bottom: 0.5em;
+}
+
+.edit-cat-input input {
+  height: 2em;
+  width: 40%;
+}
+
+.add-cat-table  table thead tr th {
+  background-color: #4D5E52;
+  height: 2em;
+  margin: 0;
+  padding: 0.5em 1.5em;
+  color: #EDEBE9;
+  text-align: justify;
+  border: #4D5E52 solid 1px;
+}
+
+.add-cat-table  table tbody tr td {
+  text-align: justify;
+  padding: 0.5em 1.5em;
+  border: #4D5E52 solid 1px;
+}
+
+.add-cat-table  table tbody tr td a {
+  display: block;
+}
+
+
 /* media query */
 
 
