@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Creato il: Giu 04, 2020 alle 19:07
+-- Creato il: Giu 10, 2020 alle 11:21
 -- Versione del server: 10.4.8-MariaDB
 -- Versione PHP: 7.1.32
 
@@ -60,7 +60,9 @@ CREATE TABLE `ordini` (
 --
 
 INSERT INTO `ordini` (`ordine_id`, `ordine_tot`) VALUES
-(3, 8);
+(25, 6),
+(26, 2),
+(27, 4);
 
 -- --------------------------------------------------------
 
@@ -91,7 +93,7 @@ CREATE TABLE `piante` (
 --
 
 INSERT INTO `piante` (`pianta_id`, `nome`, `genere`, `specie`, `famiglia`, `fioritura`, `colore`, `hardiness`, `illuminazione`, `cat_id`, `prezzo`, `descrizione`, `pianta_img`, `pianta_qt`, `interno`) VALUES
-(14, 'Flying Saucer', 'Echinopsis', '', 'Cactaceae', 'Primavera', 'Rosa', 10, 'Pieno sole', 1, 4, 'Echinopsis \\\\\\\'Flying Saucer\\\\\\\' è uno degli ibridi più belli del genere Echinopsis. È un cactus che forma gambi chari, verdi a forma di colonna fino a 75 cm di altezza e 12,5 cm di diametro. Di aspetto attraente tutto l\\\\\\\'anno, ne si apprezza particolarmente la fioritura primaverile. I fiori arrivano fino a 25cm di diametro, rossi all\\\\\\\'esterno con un tocco di arancio, diventando di un rosa sempre più tenue verso l\\\\\\\'interno; i singoli fiori appassiscono nel giro di un paio di giorni, ma la fioritura continua anche per settimane.', 'echinopsis.jpg', 2, 0),
+(14, 'Flying Saucer', 'Echinopsis', '', 'Cactaceae', 'Primavera', 'Rosa', 1, '', 1, 4, 'Echinopsis \\\\\\\\\\\\\\\'Flying Saucer\\\\\\\\\\\\\\\' è uno degli ibridi più belli del genere Echinopsis. È un cactus che forma gambi chari, verdi a forma di colonna fino a 75 cm di altezza e 12,5 cm di diametro. Di aspetto attraente tutto l\\\\\\\\\\\\\\\'anno, ne si apprezza particolarmente la fioritura primaverile. I fiori arrivano fino a 25cm di diametro, rossi all\\\\\\\\\\\\\\\'esterno con un tocco di arancio, diventando di un rosa sempre più tenue verso l\\\\\\\\\\\\\\\'interno; i singoli fiori appassiscono nel giro di un paio di giorni, ma la fioritura continua anche per settimane.', 'echinopsis.jpg', 2, 0),
 (15, 'Rubromarginata', 'Sedum', 'Palmeri', 'Crassulacee', 'Primavera', 'Giallo', 1, '', 2, 2, 'Sedum palmeri ha una portamento arbustivo, rampicante o strisciante a seconda della coltivazione e dell\\\'esposizione. Può raggiungere fino a 20 cm di altezza. La pianta forma piccole rosette di foglie blu-verde, che si arrossano in caso di calore o congelamento, di 5-8 cm di diametro, portate da fusti ramificati di circa venti centimetri. Fiorisce a inizio primavera, con fiori numerosi e gialli molto amati da api e altri insetti impollinatori.', '2383330382.jpg', 8, 0),
 (16, 'Rebutia fiebrigii', 'Rebutia', 'Fiebrigii', 'Cactaceae', 'Primavera', 'Arancio', 9, 'Pieno sole', 4, 4, 'Rebutia fiebrigii è una specie di cactus originaria degli altopiani delle Ande Boliviani, ad altitudini di 2,100-4000 metri. Questo cactus ha una forma \"a palla\" di circa 15 cm in diametro, coperta da spine e peli setosi. Con il tempo il cactus si moltiplica e forma agglomerati. I fiori, di un intenso color arancio, appaiono in tarda primavera e possono continuare per tutta l\'estate.', 'rebutia_fiebrigii.jpg', 12, 0),
 (17, 'Saguaro', 'Carnegiea', 'Gigantea', 'Cactaceae', 'Primavera', 'Bianco', 12, 'Pieno sole', 4, 5, 'Il saguaro (Carnegiea gigantea) è un cactus di grandi dimensioni che cresce nel deserto di Sonora, nel sud dell\'Arizona, e nell\'area adiacente del Messico. I saguari hanno tronco verde carnoso e colonnare, con alcune ramificazioni e con l\'aspetto tipico dei cactus.', 'saguaro.jpg', 13, 1),
@@ -127,6 +129,16 @@ CREATE TABLE `report` (
   `nome` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dump dei dati per la tabella `report`
+--
+
+INSERT INTO `report` (`report_id`, `pianta_id`, `prezzo`, `pianta_qt`, `ordine_id`, `nome`) VALUES
+(16, 14, 4, 1, 24, 'Flying Saucer'),
+(17, 15, 2, 1, 25, 'Rubromarginata'),
+(18, 15, 2, 1, 26, 'Rubromarginata'),
+(19, 14, 4, 1, 27, 'Flying Saucer');
+
 -- --------------------------------------------------------
 
 --
@@ -136,16 +148,18 @@ CREATE TABLE `report` (
 CREATE TABLE `utenti` (
   `utente_id` int(11) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `password` varchar(50) NOT NULL
+  `password` varchar(50) NOT NULL,
+  `admin` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dump dei dati per la tabella `utenti`
 --
 
-INSERT INTO `utenti` (`utente_id`, `email`, `password`) VALUES
-(1, 'anna@gmail.com', 'anna'),
-(3, 'nicola@gmail.com', 'nicola1');
+INSERT INTO `utenti` (`utente_id`, `email`, `password`, `admin`) VALUES
+(5, 'anna@gmail.com', 'anna', 1),
+(6, 'emma@gmail.com', 'emma', 1),
+(7, 'admin@gmail.com', 'admin', 0);
 
 --
 -- Indici per le tabelle scaricate
@@ -195,7 +209,7 @@ ALTER TABLE `categorie`
 -- AUTO_INCREMENT per la tabella `ordini`
 --
 ALTER TABLE `ordini`
-  MODIFY `ordine_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ordine_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT per la tabella `piante`
@@ -207,13 +221,13 @@ ALTER TABLE `piante`
 -- AUTO_INCREMENT per la tabella `report`
 --
 ALTER TABLE `report`
-  MODIFY `report_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `report_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT per la tabella `utenti`
 --
 ALTER TABLE `utenti`
-  MODIFY `utente_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `utente_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
