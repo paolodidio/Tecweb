@@ -748,6 +748,50 @@ legend {
   display: block;
 }
 
+/* utenti */
+
+#add-user {
+  background-color: #F90;
+  color: #FFF;
+  border-radius: 1.5em;
+  padding: 1em 3em;
+  font-weight: bold;
+  font-size: 1em;
+  border: none;
+  margin-top: 2em;
+}
+
+#add-user:hover {
+  background-color: #7c3c21;
+  color: #EDEBE9;
+}
+
+.users table {
+  margin-top: 2em;
+}
+
+.users table thead tr th {
+  background-color: #4D5E52;
+  height: 2em;
+  margin: 0;
+  padding: 0.5em 1.5em;
+  color: #EDEBE9;
+  text-align: justify;
+  border: #4D5E52 solid 1px;
+}
+
+.users table tbody tr td {
+  text-align: justify;
+  padding: 0.5em 1.5em;
+  border: #4D5E52 solid 1px;
+}
+
+.users table tbody tr td a {
+  display: block;
+}
+
+
+
 
 /* media query */
 

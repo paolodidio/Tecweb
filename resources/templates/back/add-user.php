@@ -1,24 +1,25 @@
 <?php add_user(); ?>
-<h1 class="page-header">Aggiungi utente</h1>
 
-<form action="" method="post" enctype="multipart/form-data">
+<div class="add-user">
 
-  <div class="col-md-6">
+  <h1 class="admin-title">Aggiungi utente</h1>
 
-    <div class="form-group">
+  <form action="" method="post" enctype="multipart/form-data">
+
+    <div class="edit-input">
       <label for="email">Email</label>
       <input type="text" name="email" class="form-control"   >
     </div>
 
-    <div class="form-group">
+    <div class="edit-input">
       <label for="password">Password</label>
       <input type="password" name="password" class="form-control"  >
     </div>
 
-    <div class="form-group">
-      <input type="submit" name="add_user" class="btn btn-primary pull-right" value="Aggiungi utente" >
+    <div class="update-button">
+      <input type="submit" name="add_user" value="Aggiungi utente" >
     </div>
 
-  </div>
+  </form>
 
-</form>
+</div>

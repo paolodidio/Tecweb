@@ -493,8 +493,7 @@ $user = <<<DELIMITER
 <tr>
     <td>{$row['utente_id']}</td>
     <td>{$row['email']}</td>
-    <td><a href="index.php?edit-user&id={$row['utente_id']}">Modifica</a></td>
-    <td><a href="../../resources/templates/back/delete_user.php?id={$row['utente_id']}">Elimina</a></td>
+    <td><a href="index.php?edit-user&id={$row['utente_id']}">Modifica</a><a href="../../resources/templates/back/delete_user.php?id={$row['utente_id']}">Elimina</a></td>
 </tr>
 
 DELIMITER;
