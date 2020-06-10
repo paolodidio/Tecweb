@@ -339,6 +339,13 @@ legend {
   padding: 3%;
 }
 
+/* pagina su di noi */
+
+.sudinoi p {
+  text-align: justify;
+  width: 50%;
+}
+
 /* pagina di checkout */
 
 .checkout {
@@ -476,6 +483,8 @@ legend {
   background-color: #7c3c21;
   color: #EDEBE9;
 }
+
+
 
 /* ADMIN */
 
