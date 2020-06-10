@@ -290,10 +290,9 @@ $product = <<<DELIMETER
     <td>{$row['pianta_id']}</td>
     <td>{$row['nome']}</td>
     <td>{$cat_title}</td>
-    <td>{$row['prezzo']}</td>
+    <td>{$row['prezzo']} €</td>
     <td>{$row['pianta_qt']}</td>
-    <td><a href="index.php?edit-product&id={$row['pianta_id']}">Modifica</a></td>
-    <td><a href="../../resources/templates/back/delete_product.php?id={$row['pianta_id']}">Elimina</a></td>
+    <td><a href="index.php?edit-product&id={$row['pianta_id']}">Modifica</a><a href="../../resources/templates/back/delete_product.php?id={$row['pianta_id']}">Elimina</a></td>
 </tr>
 DELIMETER;
 

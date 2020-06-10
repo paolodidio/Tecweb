@@ -1,18 +1,21 @@
-<h1 class="page-header">Prodotti</h1>
+<div class="admin-products">
+  <h1 class="admin-title">Prodotti</h1>
 
-<h2><?php display_message(); ?></h2>
+  <p><?php display_message(); ?></p>
 
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th>Id</th>
-      <th>Nome</th>
-      <th>Categoria</th>
-      <th>Prezzo</th>
-      <th>Quantità</th>
-    </tr>
-  </thead>
-  <tbody>
-    <?php admin_products(); ?>
-  </tbody>
-</table>
+  <table>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Categoria</th>
+        <th>Prezzo</th>
+        <th>Quantità</th>
+        <th>Azioni</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php admin_products(); ?>
+    </tbody>
+  </table>
+</div>
