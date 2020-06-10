@@ -592,6 +592,28 @@ legend {
   display: block;
 }
 
+/* reports */
+
+.reports table thead tr th {
+  background-color: #4D5E52;
+  height: 2em;
+  margin: 0;
+  padding: 0.5em 1.5em;
+  color: #EDEBE9;
+  text-align: justify;
+  border: #4D5E52 solid 1px;
+}
+
+.reports table tbody tr td {
+  text-align: justify;
+  padding: 0.5em 1.5em;
+  border: #4D5E52 solid 1px;
+}
+
+.reports table tbody tr td a {
+  display: block;
+}
+
 
 /* media query */
 

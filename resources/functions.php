@@ -262,7 +262,7 @@ $orders = <<<DELIMITER
 
 <tr>
     <td>{$row['ordine_id']}</td>
-    <td>{$row['ordine_tot']}</td>
+    <td>{$row['ordine_tot']} €</td>
     <td><a href="../../resources/templates/back/delete_order.php?id={$row['ordine_id']}">Elimina</a></td>
 </tr>
 
@@ -557,7 +557,7 @@ $report = <<<DELIMETER
     <td>{$row['report_id']}</td>
     <td>{$row['pianta_id']}</td>
     <td>{$row['nome']}</td>
-    <td>{$row['prezzo']}</td>
+    <td>{$row['prezzo']} €</td>
     <td>{$row['pianta_qt']}</td>
     <td>{$row['ordine_id']}</td>
     <td><a href="../../resources/templates/back/delete_report.php?id={$row['report_id']}">Elimina</a></td>
