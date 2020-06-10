@@ -699,6 +699,12 @@ legend {
   color: #EDEBE9;
 }
 
+/* add product */
+
+.add-product form {
+  display: grid;
+  grid-template-columns: auto auto;
+}
 
 /* media query */
 

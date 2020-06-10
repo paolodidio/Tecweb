@@ -39,6 +39,7 @@
     <form action="" method="post" enctype="multipart/form-data">
 
       <div class=first-col>
+
         <div class="edit-input">
           <label for="nome">Nome pianta</label>
           <input type="text" name="nome" class="form-control" value="<?php echo $nome; ?>">
@@ -63,6 +64,7 @@
           <label for="colore">Colore fiori</label>
           <input type="text" name="colore" class="form-control" value="<?php echo $colore; ?>">
         </div>
+
       </div>
 
       <div class="second-col">
@@ -150,7 +152,7 @@
 
 
         <div class="update-button">
-          <input type="submit" name="update" class="btn btn-primary btn-lg" value="Modifica">
+          <input type="submit" name="update" value="Modifica">
         </div>
       </div>
 
