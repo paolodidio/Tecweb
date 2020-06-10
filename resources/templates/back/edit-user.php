@@ -11,6 +11,7 @@ if(isset($_GET['id'])) {
 
     $email = escape_string($row['email']);
     $password = escape_string($row['password']);
+    $admin = escape_string($row['admin']);
 
   }
 
@@ -18,26 +19,30 @@ if(isset($_GET['id'])) {
 
 ?>
 
-<h1 class="page-header">Modifica utente</h1>
+<h1 class="admin-title">Modifica utente</h1>
 
 <form action="" method="post" enctype="multipart/form-data">
 
-  <div class="col-md-6">
+  <div class="edit-input">
+    <label for="email">Email</label>
+    <input type="text" name="email" class="form-control" value="<?php echo $email; ?>">
+  </div>
 
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input type="text" name="email" class="form-control" value="<?php echo $email; ?>">
-    </div>
+  <div class="edit-input">
+    <label for="password">Password</label>
+    <input type="password" name="password" class="form-control" value="<?php echo $password; ?>">
+  </div>
 
-    <div class="form-group">
-      <label for="password">Password</label>
-      <input type="password" name="password" class="form-control" value="<?php echo $password; ?>">
-    </div>
+  <div class="select-input">
+    <label for="admin">Admin</label>
+    <select name="admin" id="" class="form-control">
+      <option value="0">Si</option>
+      <option value="1">No</option>
+    </select>
+  </div>
 
-    <div class="form-group">
-      <input type="submit" name="update_user" class="btn btn-primary pull-right" value="Modifica" >
-    </div>
-
+  <div class="update-button">
+    <input type="submit" name="update_user" value="Modifica" >
   </div>
 
 </form>

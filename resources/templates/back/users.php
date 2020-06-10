@@ -11,6 +11,7 @@
         <tr>
           <th>Id</th>
           <th>Email</th>
+          <th>Admin</th>
           <th>Azioni</th>
         </tr>
       </thead>

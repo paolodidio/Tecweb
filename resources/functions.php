@@ -191,8 +191,15 @@ function login_user(){
             redirect("login.php");
         }
         else{
-          $_SESSION['user'] = $email;
-          redirect("admin");
+            $row = fetch_array($query);
+            $_SESSION['user'] = $email;
+
+            if ($row['admin'] == 0) {
+                redirect("admin");
+            }
+            else {
+                redirect("index.php");
+            }
         }
 
     }
@@ -208,6 +215,7 @@ function reg_user(){
         $email = escape_string($_POST['email']);
         $password_1 = escape_string($_POST['password']);
         $password_2 = escape_string($_POST['password2']);
+        $admin = 1;
 
         if (empty($email)) {
             $error=true;
@@ -228,14 +236,14 @@ function reg_user(){
 
         if ($user) { 
             $error=true;
-           set_message("Esiste già un utente con questa email");
-           redirect("registrazione.php");
+            set_message("Esiste già un utente con questa email");
+            redirect("registrazione.php");
         }
 
         if ($error == false) {
-            $query = query("INSERT INTO utenti (email, password) VALUES('$email', '$password')");
+            $query = query("INSERT INTO utenti(email, password, admin) VALUES('$email', '$password_1', '$admin')");
             confirm($query);
-            $_SESSION['email'] = $email;
+            $_SESSION['user'] = $email;
             redirect("index.php");
         } 
         else {
@@ -493,6 +501,7 @@ $user = <<<DELIMITER
 <tr>
     <td>{$row['utente_id']}</td>
     <td>{$row['email']}</td>
+    <td>{$row['admin']}</td>
     <td><a href="index.php?edit-user&id={$row['utente_id']}">Modifica</a><a href="../../resources/templates/back/delete_user.php?id={$row['utente_id']}">Elimina</a></td>
 </tr>
 
@@ -511,8 +520,9 @@ function add_user() {
 
     $email = escape_string($_POST['email']);
     $password = escape_string($_POST['password']);
+    $admin = escape_string($_POST['admin']);
 
-    $query = query("INSERT INTO utenti(email, password) VALUES('{$email}', '{$password}')");
+    $query = query("INSERT INTO utenti(email, password, admin) VALUES('{$email}', '{$password}', '{$admin}')");
     confirm($query);
 
     set_message("Utente aggiunto");
@@ -530,8 +540,9 @@ function edit_user() {
 
     $email = escape_string($_POST['email']);
     $password = escape_string($_POST['password']);
+    $admin = escape_string($_POST['admin']);
 
-    $query = query("UPDATE utenti SET email = '{$email}', password = '{$password}' WHERE utente_id=" . escape_string($_GET['id']) . " ");
+    $query = query("UPDATE utenti SET email = '{$email}', password = '{$password}', admin = '{$admin}' WHERE utente_id=" . escape_string($_GET['id']) . " ");
     confirm($query);
 
     set_message("Utente modificato");
