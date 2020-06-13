@@ -2,11 +2,12 @@
 <?php include(TEMPLATE_FRONT . DS . "intro.php"); ?>
 
 <div class="register-page">
+
     <h1 class="page-title">Registrati</h1>
     <p><?php display_message(); ?></p>
 
     <form method="post" action="">
-        <legend>Accedi</legend>
+        <legend>Registrati</legend>
         <?php reg_user(); ?>
         <div class="reg-input-group">
             <label for="email">Email: </label>
@@ -14,7 +15,7 @@
         </div>
         <div class="reg-input-group">
             <label for="password">Password: </label>
-            <input type="password" name="password"  id="password" onkeyup="check();">
+            <input type="password" name="password" id="password" onkeyup="check();">
         </div>
         <div class="reg-input-group">
             <label for="password">Ripeti password: </label>
@@ -31,16 +32,17 @@
                     document.getElementById('password2').value) {
 
                     document.getElementById('message').style.color = 'green';
-                    document.getElementById('message').innerHTML = 'The two passwords match';
+                    document.getElementById('message').innerHTML = 'Le password corrispondono';
                 } else {
                     document.getElementById('message').style.color = 'red';
-                    document.getElementById('message').innerHTML = 'The two password are not matching';
+                    document.getElementById('message').innerHTML = 'Le password non corrispondono';
                 }
             }
 
         </script>
 
     </form>
+
 </div>
 
 

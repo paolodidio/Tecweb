@@ -1,16 +1,18 @@
 
-  <h1 class="page-header">Utenti</h1>
-  <h2><?php display_message(); ?></h2>
+  <div class="users">
 
-  <a href="index.php?add-user" class="btn btn-primary">Aggiungi utente</a>
+    <h1 class="admin-title">Utenti</h1>
+    <p><?php display_message(); ?></p>
 
-  <div class="col-md-12">
+    <a id="add-user" href="index.php?add-user">Aggiungi utente</a>
 
-    <table class="table table-hover">
+    <table>
       <thead>
         <tr>
           <th>Id</th>
           <th>Email</th>
+          <th>Admin</th>
+          <th>Azioni</th>
         </tr>
       </thead>
       <tbody>

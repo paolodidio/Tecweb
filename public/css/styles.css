@@ -339,6 +339,13 @@ legend {
   padding: 3%;
 }
 
+/* pagina su di noi */
+
+.sudinoi p {
+  text-align: justify;
+  width: 50%;
+}
+
 /* pagina di checkout */
 
 .checkout {
@@ -477,6 +484,8 @@ legend {
   color: #EDEBE9;
 }
 
+
+
 /* ADMIN */
 
 /* navbar admin */
@@ -591,6 +600,206 @@ legend {
 .orders table tbody tr td a {
   display: block;
 }
+
+/* reports */
+
+.reports table thead tr th {
+  background-color: #4D5E52;
+  height: 2em;
+  margin: 0;
+  padding: 0.5em 1.5em;
+  color: #EDEBE9;
+  text-align: justify;
+  border: #4D5E52 solid 1px;
+}
+
+.reports table tbody tr td {
+  text-align: justify;
+  padding: 0.5em 1.5em;
+  border: #4D5E52 solid 1px;
+}
+
+.reports table tbody tr td a {
+  display: block;
+}
+
+/* prodotti */
+
+.admin-products table thead tr th {
+  background-color: #4D5E52;
+  height: 2em;
+  margin: 0;
+  padding: 0.5em 1.5em;
+  color: #EDEBE9;
+  text-align: justify;
+  border: #4D5E52 solid 1px;
+}
+
+.admin-products table tbody tr td {
+  text-align: justify;
+  padding: 0.5em 1.5em;
+  border: #4D5E52 solid 1px;
+}
+
+.admin-products table tbody tr td a {
+  display: block;
+}
+
+/* edit product page */
+
+.edit-product form {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.edit-input label {
+  display: block;
+  font-weight: bold;
+  padding-bottom: 0.5em;
+}
+
+.edit-input input {
+  margin-bottom: 1.5%;
+  height: 2em;
+  width: 60%;
+}
+
+.edit-input textarea {
+  padding: 1em;
+  width: 50%;
+  overflow: auto;
+}
+
+.select-input {
+  padding-bottom: 0.5em;
+}
+
+.select-input label {
+  font-weight: bold;
+}
+
+.check-input {
+  padding-bottom: 1em;
+}
+
+#check-title {
+  font-weight: bold;
+  display: block;
+}
+
+.edit-input2 label {
+  font-weight: bold;
+  padding-right: 2em;
+}
+
+.update-button input {
+  background-color: #F90;
+  color: #FFF;
+  border-radius: 1.5em;
+  padding: 1em 3em;
+  font-weight: bold;
+  font-size: 1em;
+  border: none;
+  margin-top: 2em;
+}
+
+.update-button input:hover {
+  background-color: #7c3c21;
+  color: #EDEBE9;
+}
+
+/* add product */
+
+.add-product form {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+/* categorie */
+
+.add-cat {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.add-cat-form {
+  padding-bottom: 2em;
+}
+
+.edit-cat-input label {
+  font-weight: bold;
+  display: block;
+  padding-bottom: 0.5em;
+}
+
+.edit-cat-input input {
+  height: 2em;
+  width: 40%;
+}
+
+.add-cat-table  table thead tr th {
+  background-color: #4D5E52;
+  height: 2em;
+  margin: 0;
+  padding: 0.5em 1.5em;
+  color: #EDEBE9;
+  text-align: justify;
+  border: #4D5E52 solid 1px;
+}
+
+.add-cat-table  table tbody tr td {
+  text-align: justify;
+  padding: 0.5em 1.5em;
+  border: #4D5E52 solid 1px;
+}
+
+.add-cat-table  table tbody tr td a {
+  display: block;
+}
+
+/* utenti */
+
+#add-user {
+  background-color: #F90;
+  color: #FFF;
+  border-radius: 1.5em;
+  padding: 1em 3em;
+  font-weight: bold;
+  font-size: 1em;
+  border: none;
+  margin-top: 2em;
+}
+
+#add-user:hover {
+  background-color: #7c3c21;
+  color: #EDEBE9;
+}
+
+.users table {
+  margin-top: 2em;
+}
+
+.users table thead tr th {
+  background-color: #4D5E52;
+  height: 2em;
+  margin: 0;
+  padding: 0.5em 1.5em;
+  color: #EDEBE9;
+  text-align: justify;
+  border: #4D5E52 solid 1px;
+}
+
+.users table tbody tr td {
+  text-align: justify;
+  padding: 0.5em 1.5em;
+  border: #4D5E52 solid 1px;
+}
+
+.users table tbody tr td a {
+  display: block;
+}
+
+
 
 
 /* media query */

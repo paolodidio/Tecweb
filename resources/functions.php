@@ -175,7 +175,6 @@ function login_user(){
         $email = escape_string($_POST['email']);
         $password = escape_string($_POST['password']);
 
-
         if (empty($email)) {
             set_message("Inserisci un'email valida");
         }
@@ -193,9 +192,14 @@ function login_user(){
         }
         else{
             $row = fetch_array($query);
-          $_SESSION['user'] = $email;
-          if ($row['admin'] == true) {redirect("admin");}
-          else {redirect("index.php");}
+            $_SESSION['user'] = $email;
+
+            if ($row['admin'] == 0) {
+                redirect("admin");
+            }
+            else {
+                redirect("index.php");
+            }
         }
 
     }
@@ -211,6 +215,7 @@ function reg_user(){
         $email = escape_string($_POST['email']);
         $password_1 = escape_string($_POST['password']);
         $password_2 = escape_string($_POST['password2']);
+        $admin = 1;
 
         if (empty($email)) {
             $error=true;
@@ -231,14 +236,14 @@ function reg_user(){
 
         if ($user) { 
             $error=true;
-           set_message("Esiste già un utente con questa email");
-           redirect("registrazione.php");
+            set_message("Esiste già un utente con questa email");
+            redirect("registrazione.php");
         }
 
         if ($error == false) {
             $query = query("INSERT INTO utenti (email, password) VALUES('$email', '$password_1')");
             confirm($query);
-            $_SESSION['email'] = $email;
+            $_SESSION['user'] = $email;
             redirect("index.php");
         } 
         else {
@@ -265,7 +270,7 @@ $orders = <<<DELIMITER
 
 <tr>
     <td>{$row['ordine_id']}</td>
-    <td>{$row['ordine_tot']}</td>
+    <td>{$row['ordine_tot']} €</td>
     <td><a href="../../resources/templates/back/delete_order.php?id={$row['ordine_id']}">Elimina</a></td>
 </tr>
 
@@ -293,10 +298,9 @@ $product = <<<DELIMETER
     <td>{$row['pianta_id']}</td>
     <td>{$row['nome']}</td>
     <td>{$cat_title}</td>
-    <td>{$row['prezzo']}</td>
+    <td>{$row['prezzo']} €</td>
     <td>{$row['pianta_qt']}</td>
-    <td><a href="index.php?edit-product&id={$row['pianta_id']}">Modifica</a></td>
-    <td><a href="../../resources/templates/back/delete_product.php?id={$row['pianta_id']}">Elimina</a></td>
+    <td><a href="index.php?edit-product&id={$row['pianta_id']}">Modifica</a><a href="../../resources/templates/back/delete_product.php?id={$row['pianta_id']}">Elimina</a></td>
 </tr>
 DELIMETER;
 
@@ -497,8 +501,8 @@ $user = <<<DELIMITER
 <tr>
     <td>{$row['utente_id']}</td>
     <td>{$row['email']}</td>
-    <td><a href="index.php?edit-user&id={$row['utente_id']}">Modifica</a></td>
-    <td><a href="../../resources/templates/back/delete_user.php?id={$row['utente_id']}">Elimina</a></td>
+    <td>{$row['admin']}</td>
+    <td><a href="index.php?edit-user&id={$row['utente_id']}">Modifica</a><a href="../../resources/templates/back/delete_user.php?id={$row['utente_id']}">Elimina</a></td>
 </tr>
 
 DELIMITER;
@@ -516,8 +520,9 @@ function add_user() {
 
     $email = escape_string($_POST['email']);
     $password = escape_string($_POST['password']);
+    $admin = escape_string($_POST['admin']);
 
-    $query = query("INSERT INTO utenti(email, password) VALUES('{$email}', '{$password}')");
+    $query = query("INSERT INTO utenti(email, password, admin) VALUES('{$email}', '{$password}', '{$admin}')");
     confirm($query);
 
     set_message("Utente aggiunto");
@@ -535,8 +540,9 @@ function edit_user() {
 
     $email = escape_string($_POST['email']);
     $password = escape_string($_POST['password']);
+    $admin = escape_string($_POST['admin']);
 
-    $query = query("UPDATE utenti SET email = '{$email}', password = '{$password}' WHERE utente_id=" . escape_string($_GET['id']) . " ");
+    $query = query("UPDATE utenti SET email = '{$email}', password = '{$password}', admin = '{$admin}' WHERE utente_id=" . escape_string($_GET['id']) . " ");
     confirm($query);
 
     set_message("Utente modificato");
@@ -560,7 +566,7 @@ $report = <<<DELIMETER
     <td>{$row['report_id']}</td>
     <td>{$row['pianta_id']}</td>
     <td>{$row['nome']}</td>
-    <td>{$row['prezzo']}</td>
+    <td>{$row['prezzo']} €</td>
     <td>{$row['pianta_qt']}</td>
     <td>{$row['ordine_id']}</td>
     <td><a href="../../resources/templates/back/delete_report.php?id={$row['report_id']}">Elimina</a></td>
