@@ -72,6 +72,63 @@ function fetch_array($result){
 
 }
 
+/* modifica dinamicamente il tag title delle varie pagine */
+
+function show_title($page) {
+
+    $title = " ";
+
+    switch ($page){
+    case '/Tecweb/public/index.php':
+        $title= 'Succulente';
+        break;
+    
+    case '/Tecweb/public/categorie.php':
+        $title= 'Succulente | categorie';
+        break;
+
+    case '/Tecweb/public/checkout.php':
+        $title= 'Succulente | checkout';
+        break;
+
+    case '/Tecweb/public/conferma.php':
+        $title= 'Succulente | grazie';
+        break;
+
+    case '/Tecweb/public/contatti.php':
+        $title= 'Succulente | contatti';
+        break;
+
+    case '/Tecweb/public/login.php':
+        $title= 'Succulente | login';
+        break;
+
+    case '/Tecweb/public/piante.php':
+        $title= 'Succulente | piante';
+        break;
+
+    case '/Tecweb/public/plantDetail.php':
+        $title= 'Succulente | pianta';
+        break;
+
+    case '/Tecweb/public/profile.php':
+        $title= 'Succulente | profilo';
+        break;
+
+    case '/Tecweb/public/registrazione.php':
+        $title= 'Succulente | registrazione';
+        break;
+
+    case '/Tecweb/public/sudinoi.php':
+        $title= 'Succulente | su di noi';
+        break;
+
+    }  
+
+    return $title;
+
+}
+
 // ************************** FRONT END **********************************
 
 // ritorna il path per le immagini delle piante

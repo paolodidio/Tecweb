@@ -5,7 +5,7 @@
 <head>
 
   <!-- meta tag -->
-  <meta http-equiv="content-type" content="text/html" charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
   <meta name="description" content="Bisogna inserire la descrizione breve del contenuto della pagina">
   <meta name="keywords" content="succulente, piante">
   <meta name="author" content="Anna Cisotto Bertocco, Ismaele Gobbo, Paolo di Dio, Lucrezia Gradi">
@@ -14,7 +14,7 @@
   <!-- tag di Paolo per non avere la pagina in cache -->
   <meta http-equiv="Cache-control" content="no-cache">
 
-  <title>Succulente</title>
+  <title><?php echo show_title($_SERVER['PHP_SELF']); ?> </title>
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
