@@ -7,11 +7,12 @@
   <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
   <meta http-equiv="Cache-control" content="no-cache">
   <meta name="description" content="<?php echo show_desc($_SERVER['PHP_SELF']); ?>">
-  <meta name="keywords" content="succulente, piante">
+  <meta name="keywords" content="succulente, piante, e-commerce, cactus">
   <meta name="author" content="Anna Cisotto Bertocco, Ismaele Gobbo, Paolo di Dio, Lucrezia Gradi">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title><?php echo show_title($_SERVER['PHP_SELF']); ?> </title>
+  
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
