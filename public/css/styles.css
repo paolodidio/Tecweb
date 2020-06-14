@@ -12,12 +12,6 @@ a {
   text-decoration: none;
 }
 
-.page-title {
-  font-weight: bold;
-  font-size: 4em;
-  color: #3C2B26;
-}
-
 legend {
   display: none;
 }
@@ -28,7 +22,36 @@ legend {
 /* margini in percentuale
 /* altezza e larghezza in percentuale
 /* border radius in em
-/* font size in em
+/* font size in em */
+
+.page-title {
+  font-weight: bold;
+  font-size: 4em;
+  color: #3C2B26;
+}
+
+.warning-msg {
+  color: #7c3c21;
+}
+
+.colored-button {
+  background-color: #708A64;
+  color: #EDEBE9;
+  border-radius: 2.5em;
+  padding: 1.5em;
+  font-weight: bold;
+}
+
+.colored-button:hover {
+  background-color: #242424;
+  color: #EDEBE9;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  line-height: 2em;
+  padding-bottom: 3em;
+}
 
 /* navbar */
 
@@ -58,72 +81,41 @@ legend {
   float: right;
 }
 
-#Registrati {
-  background-color: #708A64;
-  color: #EDEBE9;
-  border-radius: 2.5em;
-}
-
-#Registrati:hover {
-  background-color: #242424;
-  color: #EDEBE9;
-}
-
-
 /* header homepage */
 
-.header {
+#header {
   padding: 3em;
   display: grid;
   grid-template-columns: 50% 50%;
 }
 
-.header-title h1 {
+#header-title h1 {
   font-weight: bold;
   font-size: 6em;
   color: #3C2B26;
 }
 
-.header-title p {
-  text-transform: uppercase;
-  line-height: 2em;
-  padding-bottom: 3em;
-}
-
-.header-title a {
-  background-color: #708A64;
-  color: #EDEBE9;
-  border-radius: 2.5em;
-  padding: 1.5em;
-  font-weight: bold;
-}
-
-.header-title a:hover {
-  background-color: #242424;
-  color: #EDEBE9;
-}
-
-.header-image {
+#header-image {
   background-image: url("../images/header.png");
   background-repeat: no-repeat;
 }
 
 /* how it works homepage*/
 
-.how-it-works {
+#how-it-works {
   background-color: #6C9070;
   padding: 2em;
   margin-top: 5%;
 }
 
-.how-it-works h2 {
+#how-it-works h2 {
   font-weight: bold;
   font-size: 3em;
   color: #F3D6A9;
   text-align: center;
 }
 
-.how-it-works ul {
+#how-it-works ul {
   list-style-type: none;
   color: #EDEBE9;
   margin: 0;
@@ -131,7 +123,7 @@ legend {
   text-align: center;
 }
 
-.how-it-works ul li {
+#how-it-works ul li {
   display: inline-block;
   color: #EDEBE9;
   text-transform: uppercase;
@@ -142,44 +134,33 @@ legend {
   padding-right: 2.5em;
 }
 
-.order {
+#order {
   background-image: url("../images/order.png");
 }
 
-.refill {
+#refill {
   background-image: url("../images/refill.png");
 }
 
-.delivery {
+#delivery {
   background-image: url("../images/delivery.png");
 }
 
 /* categorie homepage */
 
-.categories {
+#categories {
   padding-top: 3em;
   text-align: center;
 }
 
-.categories h2 {
-  font-weight: bold;
-  font-size: 4em;
-  color: #3C2B26;
-}
-
-.categories p {
-  text-transform: uppercase;
-  padding-bottom: 3em;
-}
-
-.categories ul {
+#categories ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   text-align: center;
 }
 
-.categories ul a li {
+#categories ul a li {
   display: inline-block;
   padding-right: 2em;
   margin: 1% 0 1% 1%;
@@ -192,7 +173,7 @@ legend {
   border-radius: 2.5em;
 }
 
-.categories ul a li:hover {
+#categories ul a li:hover {
   color: #708A64;
 }
 
@@ -335,7 +316,7 @@ legend {
 
 /* pagina contatti */
 
-.contacts {
+#contacts {
   padding: 3%;
 }
 
@@ -348,20 +329,18 @@ legend {
 
 /* pagina di checkout */
 
-.checkout {
-  padding: 3%;
-}
 
-.checkout-content {
+
+#checkout-content {
   display: grid;
   grid-template-columns: 70% 40%;
 }
 
-.checkout-summit table {
+#checkout-summit table {
   padding-bottom: 3em;
 }
 
-.checkout-summit table thead tr th{
+#checkout-summit table thead tr th{
   background-color: #4D5E52;
   height: 2em;
   margin: 0;
@@ -371,7 +350,7 @@ legend {
   border: #4D5E52 solid 1px;
 }
 
-.checkout-summit table tbody tr td {
+#checkout-summit table tbody tr td {
   text-align: justify;
   padding: 0.5em 1.5em;
   border: #4D5E52 solid 1px;
@@ -390,12 +369,12 @@ legend {
   color: #EDEBE9;
 }
 
-.checkout-total p {
+#checkout-total p {
   font-size: 2em;
   font-weight: bold;
 }
 
-.checkout-total table thead tr th {
+#checkout-total table thead tr th {
   background-color: #4D5E52;
   height: 2em;
   margin: 0;
@@ -405,7 +384,7 @@ legend {
   border: #4D5E52 solid 1px;
 }
 
-.checkout-total table tbody tr td {
+#checkout-total table tbody tr td {
   text-align: justify;
   padding: 0.5em 1.5em;
   border: #4D5E52 solid 1px;

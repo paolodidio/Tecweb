@@ -1,13 +1,13 @@
 <?php require_once("../resources/config.php"); ?>
 <?php include(TEMPLATE_FRONT . DS . "intro.php"); ?>
 
-  <div class="checkout">
+  <div id="checkout">
 
     <h1 class="page-title" xml:lang="en">Checkout</h1>
-    <p><?php display_message(); ?></p>
+    <p class="warning-msg"><?php display_message(); ?></p>
 
-    <div class="checkout-content">
-      <div class="checkout-summit">
+    <div id="checkout-content">
+      <div id="checkout-summit">
         <table>
           <thead>
             <tr>
@@ -26,7 +26,7 @@
         <?php pay(); ?>
       </div>
 
-      <div class="checkout-total">
+      <div id="checkout-total">
 
         <p>Totale carrello</p>
 
