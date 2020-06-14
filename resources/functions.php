@@ -262,7 +262,7 @@ $cat_products = <<<DELIMETER
     <div class="plant-preview">
         <div class="plant-preview-desc">
             <p class="plant-name">{$row['nome']}</p>
-            <p class="plant-price">{$row['prezzo']} €</p>
+            <p class="plant-price">{$row['prezzo']} &euro;</p>
             <a href="plantDetail.php?id={$row['pianta_id']}">Maggiori informazioni</a>
         </div>
         <div class="plant-preview-image">

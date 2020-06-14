@@ -13,7 +13,7 @@
             <tr>
               <th>Pianta</th>
               <th>Prezzo</th>
-              <th>Quantità</th>
+              <th>Quantit&agrave;</th>
               <th>Sub totale</th>
               <th>Azioni</th>
             </tr>
@@ -42,7 +42,7 @@
             <tr>
               <td><?php echo isset($_SESSION['item_quantity']) ? $_SESSION['item_quantity'] : $_SESSION['item_quantity'] = "0"; ?></td>
               <td>Gratis</td>
-              <td><?php echo isset($_SESSION['item_total']) ? $_SESSION['item_total'] : $_SESSION['item_total'] = "0"; ?> €</td>
+              <td><?php echo isset($_SESSION['item_total']) ? $_SESSION['item_total'] : $_SESSION['item_total'] = "0"; ?> &euro;</td>
             </tr>
           </tbody>
         </table>

@@ -15,7 +15,7 @@ if(isset($_GET['add'])) {
             redirect("../public/checkout.php");
         }
         else {
-            set_message("Sono rimaste solo " . $row['pianta_qt' . " piante"]);
+            set_message("Sono rimaste solo " . $row['pianta_qt'] . " piante");
             redirect("../public/checkout.php");
         }
 
@@ -85,9 +85,9 @@ $product = <<<DELIMETER
 
 <tr>
     <td>{$row['nome']}</td>
-    <td>{$row['prezzo']} €</td>
+    <td>{$row['prezzo']} &euro;</td>
     <td>{$value}</td>
-    <td>{$sub} €</td>
+    <td>{$sub} &euro;</td>
     <td><a href="../resources/carrello.php?remove={$row['pianta_id']}"><img src="../public/images/remove.png" alt="Rimuovi pianta"></a><a href="../resources/carrello.php?add={$row['pianta_id']}"><img src="../public/images/add.png" alt="Aggiungi pianta"></a><a href="../resources/carrello.php?delete={$row['pianta_id']}"><img src="../public/images/delete.png" alt="Cancella pianta"></a></td>
 </tr>
 
