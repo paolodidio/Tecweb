@@ -59,7 +59,13 @@ legend {
     overflow: hidden;
 }
 
-.navigation-bar a {
+.navigation-bar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-bar ul li a {
     float: left;
     color: #708A64;
     text-align: center;
@@ -69,7 +75,7 @@ legend {
     text-transform: uppercase;
 }
 
-.navigation-bar a:hover{
+.navigation-bar ul li a:hover{
     color: #242424;
 }
 
