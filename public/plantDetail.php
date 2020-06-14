@@ -33,7 +33,7 @@
           <dd><?php echo $row['colore']; ?></dd>
           <dt>Illuminazione</dt>
           <dd><?php echo $row['illuminazione']; ?></dd>
-          <dt>Hardiness</dt>
+          <dt xml:lang="en">Hardiness</dt>
           <dd><?php echo $row['hardiness']; ?></dd>
           <dt>Da interno</dt>
           <dd><?php echo $row['interno']; ?></dd>

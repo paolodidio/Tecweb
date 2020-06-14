@@ -9,15 +9,15 @@
         <legend>Accedi</legend>
         <?php login_user(); ?>
         <div class="login-input-group">
-            <label for="email">Email: </label>
+            <label for="email" xml:lang="en">Email: </label>
             <input type="email" name="email" value="">
         </div>
         <div class="login-input-group">
-            <label for="password">Password: </label>
+            <label for="password" xml:lang="en">Password: </label>
             <input type="password" name="password">
         </div>
         <button type="submit" name="log_user">Accedi</button>
-        <a href="registrazione.php"> Non hai un account? Registrati</a>
+        <a href="registrazione.php"> Non hai un <span xml:lang="en">account</span>? Registrati</a>
 
     </form>
 </div>
