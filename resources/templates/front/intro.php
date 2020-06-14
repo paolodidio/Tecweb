@@ -4,15 +4,12 @@
 
 <head>
 
-  <!-- meta tag -->
   <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
-  <meta name="description" content="Bisogna inserire la descrizione breve del contenuto della pagina">
+  <meta http-equiv="Cache-control" content="no-cache">
+  <meta name="description" content="<?php echo show_desc($_SERVER['PHP_SELF']); ?>">
   <meta name="keywords" content="succulente, piante">
   <meta name="author" content="Anna Cisotto Bertocco, Ismaele Gobbo, Paolo di Dio, Lucrezia Gradi">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- tag di Paolo per non avere la pagina in cache -->
-  <meta http-equiv="Cache-control" content="no-cache">
 
   <title><?php echo show_title($_SERVER['PHP_SELF']); ?> </title>
   <link rel="stylesheet" type="text/css" href="css/styles.css">

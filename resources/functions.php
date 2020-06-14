@@ -129,6 +129,63 @@ function show_title($page) {
 
 }
 
+/* modifica dinamicamente le descrizioni delle varie pagine */
+
+function show_desc($page) {
+
+    $desc = " ";
+
+    switch ($page){
+    case '/Tecweb/public/index.php':
+        $desc= 'E-commerce di piante succulente';
+        break;
+    
+    case '/Tecweb/public/categorie.php':
+        $desc= 'Pagina con il catalogo delle piante divise per categorie';
+        break;
+
+    case '/Tecweb/public/checkout.php':
+        $desc= 'Pagina con il sommario del carrello';
+        break;
+
+    case '/Tecweb/public/conferma.php':
+        $desc= 'Pagina di conferma acquisto';
+        break;
+
+    case '/Tecweb/public/contatti.php':
+        $desc= 'Pagina con i contatti degli amministratori del sito';
+        break;
+
+    case '/Tecweb/public/login.php':
+        $desc= 'Pagina di login al sito';
+        break;
+
+    case '/Tecweb/public/piante.php':
+        $desc= 'Pagina con il catalogo delle piante disponibili';
+        break;
+
+    case '/Tecweb/public/plantDetail.php':
+        $desc= 'Pagina con i dettagli della pianta';
+        break;
+
+    case '/Tecweb/public/profile.php':
+        $desc= 'Pagina con il profilo utente';
+        break;
+
+    case '/Tecweb/public/registrazione.php':
+        $desc= 'Pagina di registrazione di un utente';
+        break;
+
+    case '/Tecweb/public/sudinoi.php':
+        $desc= 'Pagina con breve descrizione del sito';
+        break;
+
+    }  
+
+    return $desc;
+
+}
+
 // ************************** FRONT END **********************************
 
 // ritorna il path per le immagini delle piante
