@@ -1,7 +1,7 @@
 <?php require_once("../resources/config.php"); ?>
 <?php include(TEMPLATE_FRONT . DS . "intro.php"); ?>
 
-<div class="plant-shop">
+<div class="plant-shop" id="PlantShop">
 
   <h1 class="page-title">Catalogo piante</h1>
   <ul>
