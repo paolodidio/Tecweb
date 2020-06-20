@@ -1,4 +1,13 @@
-/* general css */
+
+/* REGOLE GENERALI: 
+/* padding in em
+/* margini in percentuale
+/* altezza e larghezza in percentuale
+/* border radius in em
+/* font size in em */
+
+/************************ GENERAL CSS ********************/
+
 html {
   background-color: #EDEBE9;
 }
@@ -15,14 +24,6 @@ a {
 legend {
   display: none;
 }
-
-/* devo capire come cambiare colore ai link già visitati 
-/* REGOLE GENERALI: 
-/* padding in em
-/* margini in percentuale
-/* altezza e larghezza in percentuale
-/* border radius in em
-/* font size in em */
 
 .page-title {
   font-weight: bold;
@@ -53,10 +54,19 @@ legend {
   padding-bottom: 3em;
 }
 
-/* navbar */
+/* navbar homepage */
 
-.navigation-bar{
-    overflow: hidden;
+#SkipNav {
+  display: none;
+}
+
+#SkipNav:focus, #SkipNav:active {
+  color: #242424;
+  display: block;
+}
+
+.navigation-bar {
+  overflow: hidden;
 }
 
 .navigation-bar ul {
@@ -65,25 +75,29 @@ legend {
   padding: 0;
 }
 
-.navigation-bar ul li a {
-    float: left;
-    color: #708A64;
-    text-align: center;
-    padding: 1.5em;
-    margin: 2%;
-    font-weight: bold;
-    text-transform: uppercase;
+.navigation-bar ul li a:link {
+  float: left;
+  color: #708A64;
+  text-align: center;
+  padding: 1.5em;
+  margin: 2%;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .navigation-bar ul li a:hover{
-    color: #242424;
+  color: #242424;
+}
+
+.navigation-bar ul li a:visited{
+  color: #F90;
 }
 
 .navigation-bar .icon {
-    display: none;
+  display: none;
 }
 
-#Accedi, #Registrati {
+#Accedi, #Registrati, #Logout {
   float: right;
 }
 
@@ -182,7 +196,6 @@ legend {
 #categories ul a li:hover {
   color: #708A64;
 }
-
 
 /* pagina negozio piante */
 
