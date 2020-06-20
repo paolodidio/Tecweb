@@ -1,25 +1,25 @@
 <?php require_once("../resources/config.php"); ?>
 <?php include(TEMPLATE_FRONT . DS . "intro.php"); ?>
 
-  <div id="header">
-    <div id="header-title">
+  <div id="Header">
+    <div id="HeaderTitle">
       <h1>Succulente</h1>
       <p class="subtitle">Scopri e acquista piante dalla migliore selezione di succulente sul mercato.</p>
-      <a href="piante.php" class="colored-button">Acquista</a>
+      <a href="../public/piante.php" class="colored-button">Acquista</a>
     </div>
-    <div id="header-image"></div>
+    <div id="HeaderImg"></div>
   </div>
 
-  <div id="how-it-works">
+  <div id="HowItWorks">
     <h2>Come funziona</h2>
     <ul>
-      <li id="order">Scegli le tue piante e aggiungile al carrello.</li>
-      <li id="refill">Riforniamo ogni settimana il nostro magazzino con piante nuove.</li>
-      <li id="delivery">Portiamo la pianta direttamente a casa tua.</li>
+      <li id="Order">Scegli le tue piante e aggiungile al carrello.</li>
+      <li id="Refill">Riforniamo ogni settimana il nostro magazzino con piante nuove.</li>
+      <li id="Delivery">Portiamo la pianta direttamente a casa tua.</li>
     </ul>
   </div>
 
-  <div id="categories">
+  <div id="Categorie">
     <h2 class="page-title">Categorie</h2>
     <p class="subtitle">Esplora le piante per categoria</p>
     <ul>

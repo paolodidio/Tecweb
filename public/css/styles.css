@@ -43,6 +43,11 @@ legend {
   font-weight: bold;
 }
 
+.colored-button:visited {
+  background-color: #F90;
+  color: #EDEBE9;
+}
+
 .colored-button:hover {
   background-color: #242424;
   color: #EDEBE9;
@@ -75,7 +80,7 @@ legend {
   padding: 0;
 }
 
-.navigation-bar ul li a:link {
+.navigation-bar ul li a {
   float: left;
   color: #708A64;
   text-align: center;
@@ -85,7 +90,7 @@ legend {
   text-transform: uppercase;
 }
 
-.navigation-bar ul li a:hover{
+.navigation-bar ul li a:hover, .navigation-bar ul li a:visited:hover{
   color: #242424;
 }
 
@@ -103,39 +108,39 @@ legend {
 
 /* header homepage */
 
-#header {
+#Header {
   padding: 3em;
   display: grid;
   grid-template-columns: 50% 50%;
 }
 
-#header-title h1 {
+#HeaderTitle h1 {
   font-weight: bold;
   font-size: 6em;
   color: #3C2B26;
 }
 
-#header-image {
+#HeaderImg {
   background-image: url("../images/header.png");
   background-repeat: no-repeat;
 }
 
 /* how it works homepage*/
 
-#how-it-works {
+#HowItWorks {
   background-color: #6C9070;
   padding: 2em;
   margin-top: 5%;
 }
 
-#how-it-works h2 {
+#HowItWorks h2 {
   font-weight: bold;
   font-size: 3em;
   color: #F3D6A9;
   text-align: center;
 }
 
-#how-it-works ul {
+#HowItWorks ul {
   list-style-type: none;
   color: #EDEBE9;
   margin: 0;
@@ -143,7 +148,7 @@ legend {
   text-align: center;
 }
 
-#how-it-works ul li {
+#HowItWorks ul li {
   display: inline-block;
   color: #EDEBE9;
   text-transform: uppercase;
@@ -154,33 +159,38 @@ legend {
   padding-right: 2.5em;
 }
 
-#order {
+#Order {
   background-image: url("../images/order.png");
 }
 
-#refill {
+#Refill {
   background-image: url("../images/refill.png");
 }
 
-#delivery {
+#Delivery {
   background-image: url("../images/delivery.png");
 }
 
 /* categorie homepage */
 
-#categories {
+#Categorie {
   padding-top: 3em;
   text-align: center;
 }
 
-#categories ul {
+#Categorie ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   text-align: center;
 }
 
-#categories ul a li {
+#Categorie a:visited li{
+  border: #F90 solid 0.2em;
+  color: #F90;
+}
+
+#Categorie ul a li {
   display: inline-block;
   padding-right: 2em;
   margin: 1% 0 1% 1%;
@@ -189,11 +199,11 @@ legend {
   font-weight: bold;
   font-size: 1.5em;
   padding: 2em;
-  border: #6C9070 solid 0.5em;
+  border: #6C9070 solid 0.2em;
   border-radius: 2.5em;
 }
 
-#categories ul a li:hover {
+#Categorie ul a li:hover {
   color: #708A64;
 }
 

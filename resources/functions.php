@@ -195,7 +195,7 @@ function skip_to($page) {
 
     switch ($page){
     case '/Tecweb/public/index.php':
-        $main= '#header';
+        $main= '#Header';
         break;
     
     case '/Tecweb/public/categorie.php':
@@ -293,7 +293,7 @@ while($row = fetch_array($query)) {
 
 $categories_links = <<<DELIMETER
 
-<a href='categorie.php?id={$row['cat_id']}'><li>{$row['cat_title']}</li></a>
+<a href='../public/categorie.php?id={$row['cat_id']}'><li>{$row['cat_title']}</li></a>
 
 DELIMETER;
 
