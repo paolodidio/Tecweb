@@ -72,6 +72,8 @@ function fetch_array($result){
 
 }
 
+// ************************** FRONT END **********************************
+
 /* modifica dinamicamente il tag title delle varie pagine */
 
 function show_title($page) {
@@ -84,43 +86,43 @@ function show_title($page) {
         break;
     
     case '/Tecweb/public/categorie.php':
-        $title= 'Succulente | categorie';
+        $title= 'Categorie | Succulente';
         break;
 
     case '/Tecweb/public/checkout.php':
-        $title= 'Succulente | checkout';
+        $title= 'Checkout | Succulente';
         break;
 
     case '/Tecweb/public/conferma.php':
-        $title= 'Succulente | grazie';
+        $title= 'Conferma acquisto | Succulente';
         break;
 
     case '/Tecweb/public/contatti.php':
-        $title= 'Succulente | contatti';
+        $title= 'Contatti | Succulente';
         break;
 
     case '/Tecweb/public/login.php':
-        $title= 'Succulente | login';
+        $title= 'Accedi | Succulente';
         break;
 
     case '/Tecweb/public/piante.php':
-        $title= 'Succulente | piante';
+        $title= 'Piante | Succulente';
         break;
 
     case '/Tecweb/public/plantDetail.php':
-        $title= 'Succulente | pianta';
+        $title= 'Dettaglio pianta | Succulente';
         break;
 
     case '/Tecweb/public/profile.php':
-        $title= 'Succulente | profilo';
+        $title= 'Profilo | Succulente';
         break;
 
     case '/Tecweb/public/registrazione.php':
-        $title= 'Succulente | registrazione';
+        $title= 'Registrati | Succulente';
         break;
 
     case '/Tecweb/public/sudinoi.php':
-        $title= 'Succulente | su di noi';
+        $title= 'Su di noi | Succulente';
         break;
 
     }  
@@ -186,7 +188,61 @@ function show_desc($page) {
 
 }
 
-// ************************** FRONT END **********************************
+/* ritorna l'id usato come ancora per saltare il menu per l'accessibilità */
+function skip_to($page) {
+
+    $main = " ";
+
+    switch ($page){
+    case '/Tecweb/public/index.php':
+        $main= '#header';
+        break;
+    
+    case '/Tecweb/public/categorie.php':
+        $main= '#PlantCat';
+        break;
+
+    case '/Tecweb/public/checkout.php':
+        $main= '#checkout';
+        break;
+
+    case '/Tecweb/public/conferma.php':
+        $main= '#main';
+        break;
+
+    case '/Tecweb/public/contatti.php':
+        $main= '#contacts';
+        break;
+
+    case '/Tecweb/public/login.php':
+        $main= '#LoginPage';
+        break;
+
+    case '/Tecweb/public/piante.php':
+        $main= '#PlantShop';
+        break;
+
+    case '/Tecweb/public/plantDetail.php':
+        $main= '#PlantDetail';
+        break;
+
+    case '/Tecweb/public/profile.php':
+        $main= '#Profile';
+        break;
+
+    case '/Tecweb/public/registrazione.php':
+        $main= '#Register';
+        break;
+
+    case '/Tecweb/public/sudinoi.php':
+        $main= '#sudinoi';
+        break;
+
+    }  
+
+    return $main;
+
+}
 
 // ritorna il path per le immagini delle piante
 function display_image($image) {
