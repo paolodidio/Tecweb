@@ -445,6 +445,51 @@ function reg_user(){
 
 // ******************************** BACK END ******************************
 
+// ritorna il body della pagina di admin
+function show_content() {
+
+    if($_SERVER['REQUEST_URI'] == "/Tecweb/public/admin/" || $_SERVER['REQUEST_URI'] == "/Tecweb/public/admin/index.php" ) {
+        include(TEMPLATE_BACK . "/content.php");
+    }
+
+    if(isset($_GET['orders'])) {
+        include(TEMPLATE_BACK . "/orders.php");
+    }
+
+    if(isset($_GET['prodotti'])) {
+        include(TEMPLATE_BACK . "/prodotti.php");
+    }
+
+    if(isset($_GET['add-product'])) {
+        include(TEMPLATE_BACK . "/add-product.php");
+    }
+
+    if(isset($_GET['edit-product'])) {
+        include(TEMPLATE_BACK . "/edit-product.php");
+    }
+
+    if(isset($_GET['add-categoria'])) {
+        include(TEMPLATE_BACK . "/add-categoria.php");
+    }
+
+    if(isset($_GET['users'])) {
+        include(TEMPLATE_BACK . "/users.php");
+    }
+
+    if(isset($_GET['add-user'])) {
+        include(TEMPLATE_BACK . "/add-user.php");
+    }
+
+    if(isset($_GET['edit-user'])) {
+        include(TEMPLATE_BACK . "/edit-user.php");
+    }
+
+    if(isset($_GET['reports'])) {
+        include(TEMPLATE_BACK . "/reports.php");
+    }
+
+}
+
 
 // ritorna la lista degli ordini effettuati dagli utenti
 function display_orders() {
