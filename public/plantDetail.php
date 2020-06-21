@@ -11,7 +11,7 @@
 
    <?php $pianta_img = display_image($row['pianta_img']); ?>
 
-    <div id="PlantDetail">
+    <div class="plant-detail-container">
 
       <img src="../resources/<?php echo $pianta_img ?>" alt="immagine pianta <?php echo $row['nome'] ?>">
 

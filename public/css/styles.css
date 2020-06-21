@@ -287,13 +287,13 @@ legend {
 
 /* plant detail page */
 
-.plant-container {
+.plant-detail-container {
   display: grid;
   grid-template-columns: 30% 50% 20%;
   padding: 3em;
 }
 
-.plant-container img {
+.plant-detail-container img {
   border: 1em solid #fff;
 }
 
