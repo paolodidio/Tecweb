@@ -254,7 +254,7 @@ function display_image($image) {
 // fa visualizzare la lista delle piante presenti nel database
 function get_products(){
 
-$query = query("SELECT * FROM piante");
+$query = query("SELECT * FROM piante WHERE pianta_qt >= 1");
 confirm($query);
 
 $rows = mysqli_num_rows($query);
@@ -324,7 +324,7 @@ echo $categories_links;
 // ritorna la lista di piante per una determinata categoria
 function get_cat_products(){
 
-$query = query("SELECT * FROM piante WHERE cat_id = " . escape_string($_GET['id']) . " ");
+$query = query("SELECT * FROM piante WHERE cat_id = " . escape_string($_GET['id']) . " AND pianta_qt >= 1");
 confirm($query);
 
 while($row = fetch_array($query)) {

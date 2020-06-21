@@ -24,6 +24,7 @@
           $insert_report = query("INSERT INTO report (pianta_id, prezzo, pianta_qt, ordine_id, nome) VALUES('{$id}', '{$row['prezzo']}', '{$value}', '{$last_id}', '{$row['nome']}')");
           confirm($insert_report);
 
+
         }
 
       }
