@@ -441,8 +441,6 @@ function reg_user(){
 
 }
 
-
-
 // ******************************** BACK END ******************************
 
 // ritorna il body della pagina di admin
@@ -489,7 +487,6 @@ function show_content() {
     }
 
 }
-
 
 // ritorna la lista degli ordini effettuati dagli utenti
 function display_orders() {
