@@ -353,7 +353,56 @@ echo $cat_products;
 
 }
 
+// mostra la pianta nel dettaglio
+function show_plant() {
 
+$query = query("SELECT * FROM piante WHERE pianta_id =" . escape_string($_GET['id']) . " ");
+confirm($query);
+
+while($row = fetch_array($query)) {
+
+$pianta_img = display_image($row['pianta_img']); 
+
+$plant = <<<DELIMITER
+
+<div class="plant-detail-container">
+
+    <img src="../resources/{$pianta_img}" alt="immagine pianta {$row['nome']}">
+
+    <div class="plant-desc-panel">
+        <p class="plant-detail-name">{$row['nome']}</p>
+        <p class="plant-detail-spec">Famiglia: {$row['famiglia']}</p>
+        <p class="plant-detail-spec">Genere: {$row['genere']}</p>
+        <p class="plant-detail-spec">Specie: {$row['specie']}</p>
+        <p class="plant-detail-desc">{$row['descrizione']}</p>
+        <p class="plant-detail-spec">Prezzo: {$row['prezzo']} €</p>
+        <a href="../resources/carrello.php?add={$row['pianta_id']}">Aggiungi al carrello</a>
+    </div>
+
+    <div class="plant-info-panel">
+        <dl>
+        <dt>Periodo di fioritura</dt>
+        <dd>{$row['fioritura']}</dd>
+        <dt>Colore fiori</dt>
+        <dd>{$row['colore']}</dd>
+        <dt>Illuminazione</dt>
+        <dd>{$row['illuminazione']}</dd>
+        <dt xml:lang="en">Hardiness</dt>
+        <dd>{$row['hardiness']}</dd>
+        <dt>Da interno</dt>
+        <dd>{$row['interno']}</dd>
+        </dl>
+    </div>
+
+</div>
+
+DELIMITER;
+
+echo $plant;
+
+}
+
+}
 
 // permette il login dell'utente
 function login_user(){
