@@ -4,7 +4,7 @@
     <h1 class="admin-title">Utenti</h1>
     <p><?php display_message(); ?></p>
 
-    <a id="add-user" href="index.php?add-user">Aggiungi utente</a>
+    <a id="add-user" href="../public/admin/index.php?add-user">Aggiungi utente</a>
 
     <table>
       <thead>

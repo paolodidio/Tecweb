@@ -1,7 +1,7 @@
 <?php require_once("../resources/config.php"); ?>
 <?php include(TEMPLATE_FRONT . DS . "intro.php"); ?>
 
-<div class="login-page">
+<div id="LoginPage">
     <h1 class="page-title">Accedi</h1>
     <p><?php display_message(); ?></p>
 
@@ -17,7 +17,7 @@
             <input type="password" name="password">
         </div>
         <button type="submit" name="log_user">Accedi</button>
-        <a href="registrazione.php"> Non hai un <span xml:lang="en">account</span>? Registrati</a>
+        <a href="../public/registrazione.php"> Non hai un <span xml:lang="en">account</span>? Registrati</a>
 
     </form>
 </div>

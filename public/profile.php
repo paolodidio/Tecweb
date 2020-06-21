@@ -2,7 +2,7 @@
 <?php include(TEMPLATE_FRONT . DS . "intro.php"); ?>
 
 
-<div class="header">
+<div class="header" id="Profile">
     <div class="header-title">
         <h1>Pagina profilo</h1>
     </div>
