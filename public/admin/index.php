@@ -14,7 +14,11 @@
 
   <title>Admin | Succulente</title>
 
+<<<<<<< HEAD
   <link rel="stylesheet" type="text/css" href="../../public/css/styles.css">
+=======
+  <link rel="stylesheet" type="text/css" href="../public/css/styles.css">
+>>>>>>> 163410eb96814a262395bb2c3b870ea7a787bef0
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
