@@ -1,7 +1,7 @@
 <?php require_once("../resources/config.php"); ?>
 <?php include(TEMPLATE_FRONT . DS . "intro.php"); ?>
 
-<div class="sudinoi">
+<div id="sudinoi">
     <h1 class="page-title">Su di noi</h1>
 
     <p>  Quando c'è stato l'incontro del gruppo per fare brainstorming

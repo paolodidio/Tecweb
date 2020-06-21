@@ -1,7 +1,7 @@
 <?php require_once("../resources/config.php"); ?>
 <?php include(TEMPLATE_FRONT . DS . "intro.php"); ?>
 
-<div class="register-page">
+<div id="Register">
 
     <h1 class="page-title">Registrati</h1>
     <p><?php display_message(); ?></p>

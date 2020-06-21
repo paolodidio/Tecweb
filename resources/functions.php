@@ -255,8 +255,26 @@ function display_image($image) {
 function get_products(){
 
 $query = query("SELECT * FROM piante");
-
 confirm($query);
+
+$rows = mysqli_num_rows($query);
+
+if(isset($_GET['page'])) {
+$page = preg_replace('#[^0-9]#', '', $_GET['page']);
+}
+else {
+$page = 1;
+}
+
+$perPage = 6;
+$lastPage = ceil($rows / $perPage);
+
+if($page < 1) {
+$page = 1;
+}
+elseif($page > $lastPage) {
+$page = $lastPage;
+}
 
 while($row = fetch_array($query)){
 
@@ -319,10 +337,10 @@ $cat_products = <<<DELIMETER
         <div class="plant-preview-desc">
             <p class="plant-name">{$row['nome']}</p>
             <p class="plant-price">{$row['prezzo']} &euro;</p>
-            <a href="plantDetail.php?id={$row['pianta_id']}">Maggiori informazioni</a>
+            <a href="../public/plantDetail.php?id={$row['pianta_id']}">Maggiori informazioni</a>
         </div>
         <div class="plant-preview-image">
-            <a href="plantDetail.php?id={$row['pianta_id']}"><img src="../resources/{$pianta_img}" alt="Immagine della pianta {$row['nome']}"></a>
+            <a href="../public/plantDetail.php?id={$row['pianta_id']}"><img src="../resources/{$pianta_img}" alt="Immagine della pianta {$row['nome']}"></a>
         </div>
     </div>
 </li>
@@ -470,7 +488,7 @@ $product = <<<DELIMETER
     <td>{$cat_title}</td>
     <td>{$row['prezzo']} €</td>
     <td>{$row['pianta_qt']}</td>
-    <td><a href="index.php?edit-product&id={$row['pianta_id']}">Modifica</a><a href="../../resources/templates/back/delete_product.php?id={$row['pianta_id']}">Elimina</a></td>
+    <td><a href="../public/admin/index.php?edit-product&id={$row['pianta_id']}">Modifica</a><a href="../../resources/templates/back/delete_product.php?id={$row['pianta_id']}">Elimina</a></td>
 </tr>
 DELIMETER;
 
@@ -672,7 +690,7 @@ $user = <<<DELIMITER
     <td>{$row['utente_id']}</td>
     <td>{$row['email']}</td>
     <td>{$row['admin']}</td>
-    <td><a href="index.php?edit-user&id={$row['utente_id']}">Modifica</a><a href="../../resources/templates/back/delete_user.php?id={$row['utente_id']}">Elimina</a></td>
+    <td><a href="../public/admin/index.php?edit-user&id={$row['utente_id']}">Modifica</a><a href="../../resources/templates/back/delete_user.php?id={$row['utente_id']}">Elimina</a></td>
 </tr>
 
 DELIMITER;

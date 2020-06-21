@@ -1,4 +1,4 @@
-<script src="js/hamburger.js"></script>
+<script src="../public/js/hamburger.js"></script>
 
 </body>
 
