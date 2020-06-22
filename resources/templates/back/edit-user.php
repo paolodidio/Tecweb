@@ -24,17 +24,17 @@ if(isset($_GET['id'])) {
 <form action="" method="post" enctype="multipart/form-data">
 
   <div class="edit-input">
-    <label for="email">Email</label>
+    <label for="email" xml:lang="en">Email</label>
     <input type="text" name="email" class="form-control" value="<?php echo $email; ?>">
   </div>
 
   <div class="edit-input">
-    <label for="password">Password</label>
+    <label for="password" xml:lang="en">Password</label>
     <input type="password" name="password" class="form-control" value="<?php echo $password; ?>">
   </div>
 
   <div class="select-input">
-    <label for="admin">Admin</label>
+    <label for="admin" xml:lang="en">Admin</label>
     <select name="admin" id="" class="form-control">
       <option value="0">Si</option>
       <option value="1">No</option>

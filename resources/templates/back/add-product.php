@@ -52,7 +52,7 @@
         </div>
 
         <div class="select-input">
-          <label for="hardiness">Hardiness</label>
+          <label for="hardiness" xml:lang="en">Hardiness</label>
           <select name="hardiness" id="" class="form-control">
             <option value="1">1</option>
             <option value="2">2</option>

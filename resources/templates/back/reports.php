@@ -1,5 +1,5 @@
 <div class="reports">
-  <h1 class="admin-title">Reports</h1>
+  <h1 class="admin-title" xml:lang="en">Reports</h1>
   <p><?php display_message(); ?></p>
 
   <table>
