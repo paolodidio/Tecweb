@@ -22,20 +22,21 @@ if(isset($_GET['id'])) {
 <h1 class="admin-title">Modifica utente</h1>
 
 <form action="" method="post" enctype="multipart/form-data">
+<legend>Modifica utente</legend>
 
   <div class="edit-input">
     <label for="email" xml:lang="en">Email</label>
-    <input type="text" name="email" class="form-control" value="<?php echo $email; ?>">
+    <input type="text" name="email" class="form-control" value="<?php echo $email; ?>" required>
   </div>
 
   <div class="edit-input">
     <label for="password" xml:lang="en">Password</label>
-    <input type="password" name="password" class="form-control" value="<?php echo $password; ?>">
+    <input type="password" name="password" class="form-control" value="<?php echo $password; ?>" required>
   </div>
 
   <div class="select-input">
     <label for="admin" xml:lang="en">Admin</label>
-    <select name="admin" id="" class="form-control">
+    <select name="admin" id="" class="form-control" required>
       <option value="0">Si</option>
       <option value="1">No</option>
     </select>
@@ -44,5 +45,6 @@ if(isset($_GET['id'])) {
   <div class="update-button">
     <input type="submit" name="update_user" value="Modifica" >
   </div>
+    <input type="button" value="Reset" onClick="this.form.reset()" />
 
 </form>

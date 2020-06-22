@@ -3,7 +3,7 @@
   <h1 class="admin-title">Ordini</h1>
   <p><?php display_message(); ?></p>
 
-  <table>
+  <table summary="Ordini">
     <thead>
       <tr>
         <th>Id</th>

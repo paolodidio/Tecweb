@@ -2,7 +2,7 @@
   <h1 class="admin-title" xml:lang="en">Reports</h1>
   <p><?php display_message(); ?></p>
 
-  <table>
+  <table summary="Reports">
     <thead>
       <tr>
         <th>Id</th>

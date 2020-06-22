@@ -3,7 +3,7 @@
 
   <p><?php display_message(); ?></p>
 
-  <table>
+  <table summary="Prodotti">
     <thead>
       <tr>
         <th>Id</th>

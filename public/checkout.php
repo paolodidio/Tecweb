@@ -8,7 +8,7 @@
 
     <div id="checkout-content">
       <div id="checkout-summit">
-        <table>
+        <table summary="Piante acquistate">
           <thead>
             <tr>
               <th>Pianta</th>
@@ -30,7 +30,7 @@
 
         <p>Totale carrello</p>
 
-        <table>
+        <table summary="Totale">
           <thead>
             <tr>
               <th>Numero piante</th>

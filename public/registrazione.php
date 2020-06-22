@@ -22,6 +22,7 @@
             <input type="password" name="password2" id="password2" onkeyup="check();" required>
             <span id='message'></span>
         </div>
+        <input type="button" value="Reset" onClick="this.form.reset()" />
         <button type="submit" name="reg_user">Registrati</button>
 
         <!-- controllo input lato client -->
