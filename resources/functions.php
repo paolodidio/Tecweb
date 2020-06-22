@@ -375,7 +375,7 @@ $plant = <<<DELIMITER
         <p class="plant-detail-spec">Genere: {$row['genere']}</p>
         <p class="plant-detail-spec">Specie: {$row['specie']}</p>
         <p class="plant-detail-desc">{$row['descrizione']}</p>
-        <p class="plant-detail-spec">Prezzo: {$row['prezzo']} €</p>
+        <p class="plant-detail-spec">Prezzo: {$row['prezzo']} &euro;</p>
         <a href="../resources/carrello.php?add={$row['pianta_id']}">Aggiungi al carrello</a>
     </div>
 
