@@ -20,7 +20,7 @@
   </div>
 
   <div id="Categorie">
-    <h2 class="page-title">Categorie</h2>
+    <h3 class="page-title">Categorie</h3>
     <p class="subtitle">Esplora le piante per categoria</p>
     <ul>
 
