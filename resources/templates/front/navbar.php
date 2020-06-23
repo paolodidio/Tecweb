@@ -14,7 +14,7 @@
           echo "<li><a href='../public/login.php' id='Accedi' tabindex='6'>Accedi</a></li>";
         }
       ?>
-    <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <li class="icon"><a href="javascript:void(0);" onclick="myFunction()">
       <i class="fa fa-bars"></i>
     </a></li>
   </ul>

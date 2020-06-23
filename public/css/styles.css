@@ -830,8 +830,8 @@ legend {
 
 
 @media screen and (max-width: 1200px) {
-    .navigation-bar a:not(:first-child) {display: none;}
-    .navigation-bar a.icon {
+    .navigation-bar ul > :not(:first-child) {display: none;}
+    .navigation-bar li.icon {
         float: right;
         display: block;
     }
@@ -858,15 +858,20 @@ legend {
 
 @media screen and (max-width: 1200px) {
     .navigation-bar.responsive {position: relative;}
-    .navigation-bar.responsive .icon {
+    .navigation-bar.responsive li.icon {
         position: absolute;
         right: 0;
         top: 0;
     }
-    .navigation-bar.responsive a {
+    .navigation-bar.responsive ul li {
         float: none;
         display: block;
         text-align: left;
+        padding-bottom: 1.5em;
+    }
+
+    .navigation-bar.responsive ul li a {
+      float: none;
     }
 
     .admin-navbar.responsive {position: relative;}
