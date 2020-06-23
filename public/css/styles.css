@@ -250,9 +250,6 @@ legend {
 .plant-shop .pagination li.active {
   background-color: #bac964;
   border-radius: 1em;
-}
-
-.plant-shop .pagination li.active a{
   color: #FFF;
 }
 
