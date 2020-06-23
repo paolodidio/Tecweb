@@ -144,7 +144,7 @@ legend {
   opacity: 0.8;
 }
 
-/* navbar homepage */
+/* navbar*/
 
 #SkipNav {
   display: none;
@@ -187,7 +187,7 @@ legend {
   display: none;
 }
 
-#Accedi, #Registrati, #Logout {
+#Accedi, #Registrati, #Logout, #AdminLogout {
   float: right;
 }
 
@@ -508,7 +508,7 @@ legend {
   text-align: center;
 }
 
-/* ADMIN */
+/******************** ADMIN ************************/
 
 /* navbar admin */
 
@@ -834,12 +834,6 @@ legend {
         display: block;
     }
 
-    .admin-navbar a:not(:first-child) {display: none;}
-    .admin-navbar a.icon {
-        float: right;
-        display: block;
-    }
-
     .header{
       grid-template-columns: 100% auto;
     }
@@ -871,19 +865,5 @@ legend {
     .navigation-bar.responsive ul li a {
       float: none;
     }
-
-    .admin-navbar.responsive {position: relative;}
-    .admin-navbar.responsive .icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-    .admin-navbar.responsive a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-
-
 
 }
