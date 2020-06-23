@@ -257,6 +257,7 @@ function get_products(){
 $query = query("SELECT * FROM piante WHERE pianta_qt >= 1");
 confirm($query);
 
+// per la paginazione 
 $rows = mysqli_num_rows($query);
 
 if(isset($_GET['page'])) {
@@ -266,7 +267,7 @@ else {
 $page = 1;
 }
 
-$perPage = 6;
+$perPage = 9;
 $lastPage = ceil($rows / $perPage);
 
 if($page < 1) {
@@ -276,7 +277,57 @@ elseif($page > $lastPage) {
 $page = $lastPage;
 }
 
-while($row = fetch_array($query)){
+$middleNumbers = '';
+$sub1 = $page - 1;
+$sub2 = $page - 2;
+$add1 = $page + 1;
+$add2 = $page + 2;
+
+if($page == 1) {
+$middleNumbers .= '<li class="active"><a>' .$page. '</a></li>';
+$middleNumbers .= '<li><a href="' .$_SERVER['PHP_SELF'].'?page='.$add1.'">' .$add1. '</a></li>';
+}
+elseif($page == $lastPage) {
+$middleNumbers .= '<li><a href="' .$_SERVER['PHP_SELF'].'?page='.$sub1.'">' .$sub1. '</a></li>';
+$middleNumbers .= '<li class="active"><a>' .$page. '</a></li>';
+}
+elseif($page > 2 && $page < ($lastPage - 1)) {
+$middleNumbers .= '<li><a href="' .$_SERVER['PHP_SELF'].'?page='.$sub2.'">' .$sub2. '</a></li>';
+$middleNumbers .= '<li><a href="' .$_SERVER['PHP_SELF'].'?page='.$sub1.'">' .$sub1. '</a></li>';
+$middleNumbers .= '<li class="active"><a>' .$page. '</a></li>';
+$middleNumbers .= '<li><a href="' .$_SERVER['PHP_SELF'].'?page='.$add1.'">' .$add1. '</a></li>';
+$middleNumbers .= '<li><a href="' .$_SERVER['PHP_SELF'].'?page='.$add2.'">' .$add2. '</a></li>';
+}
+elseif($page > 1 && $page < $lastPage) {
+$middleNumbers .= '<li><a href="' .$_SERVER['PHP_SELF'].'?page='.$sub1.'">' .$sub1. '</a></li>';
+$middleNumbers .= '<li class="active"><a>' .$page. '</a></li>';
+$middleNumbers .= '<li><a href="' .$_SERVER['PHP_SELF'].'?page='.$add1.'">' .$add1. '</a></li>';
+}
+
+$output = '';
+
+if($page != 1) {
+$prev = $page - 1;
+$output .= '<li class="back"><a href="' .$_SERVER['PHP_SELF'].'?page='.$prev.'">Indietro</a></li>';
+}
+
+$output .= $middleNumbers;
+
+if($page != $lastPage) {
+$next = $page + 1;
+$output .= '<li class="next"><a href="' .$_SERVER['PHP_SELF'].'?page='.$next.'">Avanti</a></li>';
+}
+
+// mostro i prodotti
+
+$limit = 'LIMIT ' . ($page - 1) * $perPage . ',' . $perPage; 
+
+$query2 = query("SELECT * FROM piante WHERE pianta_qt >= 1 $limit");
+confirm($query2);
+
+echo "<ul class='plants'>";
+
+while($row = fetch_array($query2)){
 
 $pianta_img = display_image($row['pianta_img']);
 
@@ -297,6 +348,11 @@ DELIMETER;
 
 echo $product;
 
+}
+echo "</ul>";
+echo "<div class='pagination-wrap'><ul class='pagination'>$output</ul>";
+if($lastPage != 1) {
+echo "<p>Pagina $page di $lastPage</p></div>";
 }
 
 }

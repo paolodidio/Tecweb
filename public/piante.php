@@ -4,11 +4,8 @@
 <div class="plant-shop" id="PlantShop">
 
   <h1 class="page-title">Catalogo piante</h1>
-  <ul>
 
-    <?php get_products(); ?>
-
-  </ul>
+  <?php get_products(); ?>
 
 </div>
 

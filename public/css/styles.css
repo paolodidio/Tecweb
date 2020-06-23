@@ -44,7 +44,7 @@ legend {
 }
 
 .colored-button:visited {
-  background-color: #F90;
+  background-color: #bac964;
   color: #EDEBE9;
 }
 
@@ -72,7 +72,7 @@ legend {
 }
 
 .info-button:visited {
-  background-color: #F90;
+  background-color: #bac964;
 }
 
 /* navbar homepage */
@@ -111,7 +111,7 @@ legend {
 }
 
 .navigation-bar ul li a:visited{
-  color: #F90;
+  color: #bac964;
 }
 
 .navigation-bar .icon {
@@ -202,8 +202,8 @@ legend {
 }
 
 #Categorie a:visited li{
-  border: #F90 solid 0.2em;
-  color: #F90;
+  border: #bac964 solid 0.2em;
+  color: #bac964;
 }
 
 #Categorie ul a li {
@@ -225,11 +225,46 @@ legend {
 
 /* pagina negozio piante e filtri per categoria */
 
+.plant-shop .pagination {
+  display: inline-block;
+  list-style-type: none;
+}
+
+.plant-shop .pagination-wrap {
+  text-align: center;
+}
+
+.plant-shop .pagination li {
+  float: left;
+  padding: 1em;
+}
+
+.plant-shop .pagination li a {
+  color: #000;
+}
+
+.plant-shop .pagination li a:visited {
+  color: #6C9070;
+}
+
+.plant-shop .pagination li.active {
+  background-color: #bac964;
+  border-radius: 1em;
+}
+
+.plant-shop .pagination li.active a{
+  color: #FFF;
+}
+
+.plant-shop .pagination li:hover:not(.active) {
+  background-color: #ddd;
+}
+
 .plant-shop {
   margin: 3%;
 }
 
-.plant-shop ul {
+.plant-shop .plants {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -237,7 +272,7 @@ legend {
   flex-wrap: wrap;
 }
 
-.plant-shop ul li {
+.plant-shop .plants li {
   background-color: #FFF;
   margin: 0.5%;
   flex: 1 1 22em;
@@ -245,7 +280,7 @@ legend {
   box-shadow: 0 0.1em 0.1em rgba(0,0,0,0.2);
 }
 
-.plant-shop ul li:hover {
+.plant-shop .plants li:hover {
     box-shadow:0 1.5em 1em rgba(0,0,0,0.15);
 }
 
