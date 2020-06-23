@@ -4,7 +4,7 @@
 <div id="Register">
 
     <h1 class="page-title">Registrati</h1>
-    <p><?php display_message(); ?></p>
+    <p class="warning-msg"><?php display_message(); ?></p>
 
     <form method="post" action="">
         <legend>Registrati</legend>

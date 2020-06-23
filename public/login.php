@@ -3,7 +3,7 @@
 
 <div id="LoginPage">
     <h1 class="page-title">Accedi</h1>
-    <p><?php display_message(); ?></p>
+    <p class="warning-msg"><?php display_message(); ?></p>
 
     <form method="post" action="">
         <legend>Accedi</legend>
