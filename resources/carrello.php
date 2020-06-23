@@ -15,7 +15,7 @@ if(isset($_GET['add'])) {
             redirect("../public/checkout.php");
         }
         else {
-            set_message("Sono rimaste solo " . $row['pianta_qt'] . " piante");
+            set_message("Sono rimaste solo " . $row['pianta_qt'] . " piante del tipo " . $row['nome'] . "!");
             redirect("../public/checkout.php");
         }
 
