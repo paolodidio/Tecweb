@@ -505,6 +505,13 @@ confirm($query);
 while($row = fetch_array($query)) {
 
 $pianta_img = display_image($row['pianta_img']); 
+$interno = '';
+if($row['interno'] == '0') {
+$interno = 'Si';
+}
+else{
+$interno = 'No';    
+}
 
 $plant = <<<DELIMITER
 
@@ -533,7 +540,7 @@ $plant = <<<DELIMITER
         <dt xml:lang="en">Hardiness</dt>
         <dd>{$row['hardiness']}</dd>
         <dt>Da interno</dt>
-        <dd>{$row['interno']}</dd>
+        <dd>{$interno}</dd>
         </dl>
     </div>
 
