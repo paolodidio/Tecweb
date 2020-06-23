@@ -37,10 +37,11 @@ legend {
 
 .colored-button {
   background-color: #708A64;
-  color: #EDEBE9;
-  border-radius: 2.5em;
-  padding: 1.5em;
-  font-weight: bold;
+  color: #FFF;
+  border-radius: 2em;
+  padding: 1em;
+  margin-bottom: 2em;
+  max-width: 160px;
 }
 
 .colored-button:visited {
@@ -57,22 +58,6 @@ legend {
   text-transform: uppercase;
   line-height: 2em;
   padding-bottom: 3em;
-}
-
-.info-button {
-  background-color: #708A64;
-  color: #FFF;
-  border-radius: 2em;
-  padding: 1em;
-  margin-bottom: 2em;
-}
-
-.info-button:hover, .info-button:visited:hover {
-  background-color: #7c3c21;
-}
-
-.info-button:visited {
-  background-color: #bac964;
 }
 
 /* navbar homepage */
@@ -275,6 +260,7 @@ legend {
   flex: 1 1 22em;
   transition: 0.3s;
   box-shadow: 0 0.1em 0.1em rgba(0,0,0,0.2);
+  max-width: 460px;
 }
 
 .plant-shop .plants li:hover {
