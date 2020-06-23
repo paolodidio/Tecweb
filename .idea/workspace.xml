@@ -3,7 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="0cb07149-e1ac-48fc-bc3e-05bd04df4a59" name="Default Changelist" comment="Redirect dopo login se sei admin o meno">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/checkout.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/checkout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/registrazione.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/registrazione.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/templates/back/add-categoria.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/templates/back/add-categoria.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/templates/back/add-product.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/templates/back/add-product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/templates/back/add-user.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/templates/back/add-user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/templates/back/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/templates/back/content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/templates/back/edit-product.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/templates/back/edit-product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/templates/back/orders.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/templates/back/orders.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/templates/back/prodotti.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/templates/back/prodotti.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/templates/back/reports.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/templates/back/reports.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/templates/back/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/templates/back/users.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +52,13 @@
         <item name="tecweb@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="tecweb: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="tecweb@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="tecweb: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="piante: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -142,6 +160,10 @@
       <workItem from="1591342553029" duration="326000" />
       <workItem from="1591450239055" duration="2330000" />
       <workItem from="1591739456658" duration="1300000" />
+      <workItem from="1592064944215" duration="2059000" />
+      <workItem from="1592730021874" duration="3467000" />
+      <workItem from="1592813475866" duration="455000" />
+      <workItem from="1592853174981" duration="9703000" />
     </task>
     <task id="LOCAL-00001" summary="Indirizzamenti e query in parte sistemati">
       <created>1591291965339</created>
@@ -201,11 +223,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="71" key="#SQL_Resolution_Scopes/0.0.1536.824@0.0.1536.824" timestamp="1587923616710" />
-    <state x="448" y="118" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591298327252">
+    <state x="482" y="106" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592730840004">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="448" y="118" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1591298327252" />
-    <state x="482" y="106" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1591129655255" />
+    <state x="482" y="106" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1592730840004" />
     <state x="535" y="215" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1590949628244">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -252,6 +274,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="189" height="457" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1590942408787" />
+    <state x="68" y="65" width="1321" height="694" key="MergeDialog" timestamp="1592066403414">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="68" y="65" width="1321" height="694" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1592066403414" />
+    <state x="481" y="128" key="MultipleFileMergeDialog" timestamp="1592066403419">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="481" y="128" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1592066403419" />
     <state x="555" y="227" key="NewPhpClassDialog" timestamp="1591301852702">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -277,11 +307,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="538" y="49" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1591215553885" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1591739467657">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1592853174564">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1591283053436" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1591739467657" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1592853174564" />
     <state x="462" y="10" width="611" height="804" key="find.popup" timestamp="1591473420309">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

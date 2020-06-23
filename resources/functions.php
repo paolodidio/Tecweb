@@ -285,7 +285,7 @@ $product = <<<DELIMETER
     <div class="plant-preview">
         <div class="plant-preview-desc">
             <p class="plant-name">{$row['nome']}</p>
-            <p class="plant-price">{$row['prezzo']} €</p>
+            <p class="plant-price">{$row['prezzo']} &euro;</p>
             <a class="info-button" href="../public/plantDetail.php?id={$row['pianta_id']}">Maggiori informazioni</a>
         </div>
         <div class="plant-preview-image">
@@ -375,7 +375,7 @@ $plant = <<<DELIMITER
         <p class="plant-detail-spec">Genere: {$row['genere']}</p>
         <p class="plant-detail-spec">Specie: {$row['specie']}</p>
         <p class="plant-detail-desc">{$row['descrizione']}</p>
-        <p class="plant-detail-spec">Prezzo: {$row['prezzo']} €</p>
+        <p class="plant-detail-spec">Prezzo: {$row['prezzo']} &euro;</p>
         <a href="../resources/carrello.php?add={$row['pianta_id']}">Aggiungi al carrello</a>
     </div>
 
@@ -549,7 +549,7 @@ $orders = <<<DELIMITER
 
 <tr>
     <td>{$row['ordine_id']}</td>
-    <td>{$row['ordine_tot']} €</td>
+    <td>{$row['ordine_tot']} &euro;</td>
     <td><a href="../../resources/templates/back/delete_order.php?id={$row['ordine_id']}">Elimina</a></td>
 </tr>
 
@@ -577,7 +577,7 @@ $product = <<<DELIMETER
     <td>{$row['pianta_id']}</td>
     <td>{$row['nome']}</td>
     <td>{$cat_title}</td>
-    <td>{$row['prezzo']} €</td>
+    <td>{$row['prezzo']} &euro;</td>
     <td>{$row['pianta_qt']}</td>
     <td><a href="../public/admin/index.php?edit-product&id={$row['pianta_id']}">Modifica</a><a href="../../resources/templates/back/delete_product.php?id={$row['pianta_id']}">Elimina</a></td>
 </tr>
@@ -845,7 +845,7 @@ $report = <<<DELIMETER
     <td>{$row['report_id']}</td>
     <td>{$row['pianta_id']}</td>
     <td>{$row['nome']}</td>
-    <td>{$row['prezzo']} €</td>
+    <td>{$row['prezzo']} &euro;</td>
     <td>{$row['pianta_qt']}</td>
     <td>{$row['ordine_id']}</td>
     <td><a href="../../resources/templates/back/delete_report.php?id={$row['report_id']}">Elimina</a></td>
@@ -890,35 +890,5 @@ function tot_cat() {
     echo $result['tot_cat'];
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ?>

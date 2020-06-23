@@ -6,7 +6,7 @@
 
     <a id="add-user" href="../public/admin/index.php?add-user">Aggiungi utente</a>
 
-    <table>
+    <table summary="Users">
       <thead>
         <tr>
           <th>Id</th>

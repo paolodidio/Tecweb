@@ -13,7 +13,7 @@
         <div class="col-md-4 offset-md-4 home-wrapper">
 
             <!-- Display messages -->
-            <h4>Welcome, <?php echo $_SESSION['user']; ?></h4>
+            <h2>Benvenuto, <?php echo $_SESSION['user']; ?></h2>
 
         </div>
     </div>

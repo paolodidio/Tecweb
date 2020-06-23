@@ -1,7 +1,7 @@
 <div class="dashboard">
-  <h1 class="admin-title">Dashboard</h1>
+  <h1 class="admin-title" xml:lang="en">Dashboard</h1>
 
-  <table>
+  <table summary="Dashboard">
     <thead>
       <tr>
         <th>Ordini</th>
