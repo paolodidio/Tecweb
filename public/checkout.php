@@ -1,14 +1,14 @@
 <?php require_once("../resources/config.php"); ?>
 <?php include(TEMPLATE_FRONT . DS . "intro.php"); ?>
 
-  <div id="checkout">
+  <div id="Checkout">
 
     <h1 class="page-title" xml:lang="en">Checkout</h1>
     <p class="warning-msg"><?php display_message(); ?></p>
 
-    <div id="checkout-content">
-      <div id="checkout-summit">
-        <table summary="Piante acquistate">
+    <div id="CheckoutContent">
+      <div>
+        <table class="table" summary="Piante acquistate">
           <thead>
             <tr>
               <th>Pianta</th>
@@ -26,11 +26,11 @@
         <?php pay(); ?>
       </div>
 
-      <div id="checkout-total">
+      <div id="CheckoutTotal">
 
         <p>Totale carrello</p>
 
-        <table summary="Totale">
+        <table class="table" summary="Totale">
           <thead>
             <tr>
               <th>Numero piante</th>

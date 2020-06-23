@@ -10,14 +10,12 @@
         <?php login_user(); ?>
         <div class="login-input-group">
             <label for="email" xml:lang="en">Email: </label>
-            <input type="email" name="email" value="" required>
-        </div>
-        <div class="login-input-group">
+            <input type="email" placeholder="Inserisci email" name="email" required>
             <label for="password" xml:lang="en">Password: </label>
-            <input type="password" name="password" required>
+            <input type="password" placeholder="Inserisci password" name="password" required>
         </div>
-        <button type="submit" name="log_user">Accedi</button>
-        <input type="button" value="Reset" onClick="this.form.reset()" />
+        <button class="submit-button" type="submit" name="log_user">Accedi</button>
+        <input class="reset-button" type="button" value="Reset" onClick="this.form.reset()" />
         <a href="../public/registrazione.php"> Non hai un <span xml:lang="en">account</span>? Registrati</a>
 
     </form>
