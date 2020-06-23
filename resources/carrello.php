@@ -120,7 +120,7 @@ if(isset($_SESSION['item_quantity']) && $_SESSION['item_quantity'] >= 1) {
 
 $payment_button = <<<DELIMETER
 
-<a id="pay-button" href="../public/conferma.php?amount={$_SESSION['item_total']}">Conferma pagamento</a>
+<a class="confirm-button" href="../public/conferma.php?amount={$_SESSION['item_total']}">Conferma pagamento</a>
 
 DELIMETER;
 

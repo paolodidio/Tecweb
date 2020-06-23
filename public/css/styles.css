@@ -54,6 +54,19 @@ legend {
   color: #EDEBE9;
 }
 
+.confirm-button {
+  background-color: #F90;
+  color: #EDEBE9;
+  border-radius: 2.5em;
+  padding: 1.5em;
+  font-weight: bold;
+}
+
+.confirm-button:hover {
+  background-color: #7c3c21;
+  color: #EDEBE9;
+}
+
 .subtitle {
   text-transform: uppercase;
   line-height: 2em;
@@ -346,19 +359,6 @@ legend {
   text-align: justify;
 }
 
-.plant-desc-panel a {
-  background-color: #F90;
-  color: #EDEBE9;
-  border-radius: 2.5em;
-  padding: 1.5em;
-  font-weight: bold;
-}
-
-.plant-desc-panel a:hover {
-  background-color: #7c3c21;
-  color: #EDEBE9;
-}
-
 .plant-info-panel {
   background-color: #6C9070;
   border-radius: 2em;
@@ -417,19 +417,6 @@ legend {
   text-align: justify;
   padding: 0.5em 1.5em;
   border: #4D5E52 solid 1px;
-}
-
-#pay-button {
-  background-color: #F90;
-  color: #EDEBE9;
-  border-radius: 2.5em;
-  padding: 1.5em;
-  font-weight: bold;
-}
-
-#pay-button:hover {
-  background-color: #7c3c21;
-  color: #EDEBE9;
 }
 
 #checkout-total p {
