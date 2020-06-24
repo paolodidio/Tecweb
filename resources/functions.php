@@ -622,6 +622,7 @@ function login_user(){
             $_SESSION['user'] = $email;
 
             if ($row['admin'] == 0) {
+                $_SESSION['admin'] = true;
                 redirect("admin");
             }
             else {
