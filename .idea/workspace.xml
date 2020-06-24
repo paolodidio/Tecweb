@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0cb07149-e1ac-48fc-bc3e-05bd04df4a59" name="Default Changelist" comment="Redirect dopo login se sei admin o meno">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/checkout.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/checkout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/registrazione.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/registrazione.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/templates/back/add-categoria.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/templates/back/add-categoria.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/templates/back/add-product.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/templates/back/add-product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/templates/back/add-user.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/templates/back/add-user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/templates/back/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/templates/back/content.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/templates/back/edit-product.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/templates/back/edit-product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/templates/back/orders.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/templates/back/orders.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/templates/back/prodotti.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/templates/back/prodotti.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/templates/back/reports.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/templates/back/reports.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/templates/back/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/templates/back/users.php" afterDir="false" />
-    </list>
+    <list default="true" id="0cb07149-e1ac-48fc-bc3e-05bd04df4a59" name="Default Changelist" comment="Redirect dopo login se sei admin o meno" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -164,6 +150,8 @@
       <workItem from="1592730021874" duration="3467000" />
       <workItem from="1592813475866" duration="455000" />
       <workItem from="1592853174981" duration="9703000" />
+      <workItem from="1593004980425" duration="2370000" />
+      <workItem from="1593012771350" duration="2330000" />
     </task>
     <task id="LOCAL-00001" summary="Indirizzamenti e query in parte sistemati">
       <created>1591291965339</created>
@@ -307,11 +295,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="538" y="49" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1591215553885" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1592853174564">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1593027854223">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1591283053436" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1592853174564" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1593012777676" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1593027854223" />
     <state x="462" y="10" width="611" height="804" key="find.popup" timestamp="1591473420309">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
