@@ -26,7 +26,7 @@
   <!-- breadcrumb -->
   <div>
       <ul>
-          <li>Home</li>
+          <li>Dashboard</li>
       </ul>
   </div>
 
