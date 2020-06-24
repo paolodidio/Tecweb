@@ -1,6 +1,14 @@
 <?php require_once("../resources/config.php"); ?>
 <?php include(TEMPLATE_FRONT . DS . "intro.php"); ?>
 
+    <!-- breadcrumb -->
+    <div class="breadcrumb">
+        <ul>
+            <li><a href="index.php">Home</a></li>
+            <li>Login</li>
+        </ul>
+    </div>
+
 <div id="LoginPage">
     <h1 class="page-title">Accedi</h1>
     <p class="warning-msg"><?php display_message(); ?></p>

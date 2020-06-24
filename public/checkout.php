@@ -1,6 +1,14 @@
 <?php require_once("../resources/config.php"); ?>
 <?php include(TEMPLATE_FRONT . DS . "intro.php"); ?>
 
+<!-- breadcrumb -->
+<div class="breadcrumb">
+    <ul>
+        <li><a href="index.php">Home</a></li>
+        <li>Carrello</li>
+    </ul>
+</div>
+
   <div id="Checkout">
 
     <h1 class="page-title" xml:lang="en">Checkout</h1>

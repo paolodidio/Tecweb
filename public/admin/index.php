@@ -23,6 +23,14 @@
 
   <?php include(TEMPLATE_BACK . "/navbar.php"); ?>
 
+  <!-- breadcrumb -->
+  <div>
+      <ul>
+          <li>Home</li>
+      </ul>
+  </div>
+
+
   <div class="admin-content">
 
     <?php show_content(); ?>
