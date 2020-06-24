@@ -713,3 +713,31 @@ div.breadcrumb li a:hover {
     }
 
 }
+
+@media screen and (max-width: 1200px) {
+  #HeaderImg {
+    display: none;
+  }
+}
+
+/* plant detail page */
+@media screen and (max-width: 1200px) {
+
+  .plant-detail-container {
+    display: grid;
+    grid-template-columns: 100%;
+    padding: 3em;
+  }
+
+}
+
+/* pagina di checkout */
+@media screen and (max-width: 1200px) {
+
+  #CheckoutContent{
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+}
+
