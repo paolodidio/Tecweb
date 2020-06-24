@@ -146,11 +146,11 @@ legend {
 
 /* navbar*/
 
-#SkipNav {
+.skip-nav {
   display: none;
 }
 
-#SkipNav:focus, #SkipNav:active {
+.skip-nav:focus, .skip-nav:active {
   color: #242424;
   display: block;
 }
@@ -512,32 +512,9 @@ legend {
 
 /* navbar admin */
 
-.admin-navbar {
-  overflow: hidden;
+#AdminNavbar {
   background-color: #4D5E52;
-  margin: 0;
-}
-
-.admin-navbar a {
-  float: left;
   color: #FFF;
-  text-align: center;
-  padding: 1.5em;
-  margin: 2%;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.admin-navbar a:hover{
-  color: #242424;
-}
-
-.admin-navbar .icon {
-  display: none;
-}
-
-#Logout {
-  float: right;
 }
 
 /* sidebar admin */
@@ -545,32 +522,39 @@ legend {
 .sidenav {
   background-color: #4D5E52;
   height: 100%; 
-  width: 20%;
-  z-index: 1; 
-  top: 0; 
-  left: 0;
-  overflow-x: hidden; 
+  width: 25%;
+  position: fixed;
   margin: 0;
+  padding: 0;
+  overflow: auto;
 }
 
-.sidenav a {
-  padding: 1.5em 3em;
+.sidenav ul {
+  list-style-type: none;
+}
+
+.sidenav ul li a {
+  padding: 1.5em 1em;
   display: block;
   color: #FFF;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-.sidenav a:hover {
+.sidenav ul li a:visited {
+  color: #bac964;
+}
+
+.sidenav a:hover, .sidenav ul li a:visited:hover {
   color: #000;
 }
 
 /* admin content */
 
 .admin-content {
-  left: 25%;
-  position: relative;
-  top: -25em;
+  margin-left: 30em;
+  padding-top: 2em;
+  height: 100%;
 }
 
 .admin-title {
@@ -579,249 +563,74 @@ legend {
   color: #3C2B26;
 }
 
-/* dashboard */
-
-.dashboard table thead tr th {
-  background-color: #4D5E52;
-  height: 2em;
-  margin: 0;
-  padding: 0.5em 1.5em;
-  color: #EDEBE9;
-  text-align: justify;
-  border: #4D5E52 solid 1px;
-}
-
-.dashboard table tbody tr td {
-  text-align: justify;
-  padding: 0.5em 1.5em;
-  border: #4D5E52 solid 1px;
-}
-
-.dashboard table tbody tr td a {
+.admin-button {
   display: block;
+  margin-top: 1.5em;
+  background-color: #FFF;
+  color: #4D5E52;
+  border-radius: 1.5em;
+  padding: 1em 2em;
+  cursor: pointer;
 }
 
-/* ordini */
-
-.orders table thead tr th {
-  background-color: #4D5E52;
-  height: 2em;
-  margin: 0;
-  padding: 0.5em 1.5em;
-  color: #EDEBE9;
-  text-align: justify;
-  border: #4D5E52 solid 1px;
+.admin-button:hover {
+  background-color: #6C9070;
+  color: #FFF;
 }
 
-.orders table tbody tr td {
-  text-align: justify;
-  padding: 0.5em 1.5em;
-  border: #4D5E52 solid 1px;
-}
-
-.orders table tbody tr td a {
-  display: block;
-}
-
-/* reports */
-
-.reports table thead tr th {
-  background-color: #4D5E52;
-  height: 2em;
-  margin: 0;
-  padding: 0.5em 1.5em;
-  color: #EDEBE9;
-  text-align: justify;
-  border: #4D5E52 solid 1px;
-}
-
-.reports table tbody tr td {
-  text-align: justify;
-  padding: 0.5em 1.5em;
-  border: #4D5E52 solid 1px;
-}
-
-.reports table tbody tr td a {
-  display: block;
+.admin-button:visited {
+  background-color: #bac964;
 }
 
 /* prodotti */
 
-.admin-products table thead tr th {
-  background-color: #4D5E52;
-  height: 2em;
-  margin: 0;
-  padding: 0.5em 1.5em;
-  color: #EDEBE9;
-  text-align: justify;
-  border: #4D5E52 solid 1px;
-}
-
-.admin-products table tbody tr td {
-  text-align: justify;
-  padding: 0.5em 1.5em;
-  border: #4D5E52 solid 1px;
-}
-
-.admin-products table tbody tr td a {
+#Products a {
   display: block;
 }
 
-/* edit product page */
+/* modifica prodotto */
 
-.edit-product form {
+.edit-form {
   display: grid;
   grid-template-columns: auto auto;
+  grid-column-gap: 3em;
 }
 
-.edit-input label {
+.edit-input-group label, .select-input-group label {
   display: block;
   font-weight: bold;
   padding-bottom: 0.5em;
 }
 
-.edit-input input {
+.edit-input-group input {
   margin-bottom: 1.5%;
   height: 2em;
-  width: 60%;
+  width: 100%;
 }
 
-.edit-input textarea {
+.edit-input-group textarea {
   padding: 1em;
-  width: 50%;
   overflow: auto;
 }
 
-.select-input {
+.select-input-group select option{
   padding-bottom: 0.5em;
-}
-
-.select-input label {
-  font-weight: bold;
-}
-
-.check-input {
-  padding-bottom: 1em;
-}
-
-#check-title {
-  font-weight: bold;
-  display: block;
-}
-
-.edit-input2 label {
-  font-weight: bold;
-  padding-right: 2em;
-}
-
-.update-button input {
-  background-color: #F90;
-  color: #FFF;
-  border-radius: 1.5em;
-  padding: 1em 3em;
-  font-weight: bold;
-  font-size: 1em;
-  border: none;
-  margin-top: 2em;
-}
-
-.update-button input:hover {
-  background-color: #7c3c21;
-  color: #EDEBE9;
-}
-
-/* add product */
-
-.add-product form {
-  display: grid;
-  grid-template-columns: auto auto;
 }
 
 /* categorie */
 
-.add-cat {
-  display: grid;
-  grid-template-columns: auto auto;
-}
-
-.add-cat-form {
+#AddCat form {
   padding-bottom: 2em;
 }
 
-.edit-cat-input label {
-  font-weight: bold;
-  display: block;
-  padding-bottom: 0.5em;
-}
-
-.edit-cat-input input {
-  height: 2em;
-  width: 40%;
-}
-
-.add-cat-table  table thead tr th {
-  background-color: #4D5E52;
-  height: 2em;
-  margin: 0;
-  padding: 0.5em 1.5em;
-  color: #EDEBE9;
-  text-align: justify;
-  border: #4D5E52 solid 1px;
-}
-
-.add-cat-table  table tbody tr td {
-  text-align: justify;
-  padding: 0.5em 1.5em;
-  border: #4D5E52 solid 1px;
-}
-
-.add-cat-table  table tbody tr td a {
-  display: block;
-}
-
 /* utenti */
-
-#add-user {
-  background-color: #F90;
-  color: #FFF;
-  border-radius: 1.5em;
-  padding: 1em 3em;
-  font-weight: bold;
-  font-size: 1em;
-  border: none;
-  margin-top: 2em;
-}
-
-#add-user:hover {
-  background-color: #7c3c21;
-  color: #EDEBE9;
-}
-
-.users table {
-  margin-top: 2em;
-}
-
-.users table thead tr th {
-  background-color: #4D5E52;
-  height: 2em;
-  margin: 0;
-  padding: 0.5em 1.5em;
-  color: #EDEBE9;
-  text-align: justify;
-  border: #4D5E52 solid 1px;
-}
-
-.users table tbody tr td {
-  text-align: justify;
-  padding: 0.5em 1.5em;
-  border: #4D5E52 solid 1px;
-}
-
-.users table tbody tr td a {
+#Users a {
   display: block;
 }
 
-
+#EditUser .select-input-group {
+  margin-bottom: 2em;
+}
 
 
 /* media query */

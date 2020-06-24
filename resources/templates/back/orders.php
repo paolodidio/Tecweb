@@ -1,9 +1,9 @@
-<div class="orders">
+<div id="Orders">
 
   <h1 class="admin-title">Ordini</h1>
-  <p><?php display_message(); ?></p>
+  <p class="warning-msg"><?php display_message(); ?></p>
 
-  <table summary="Ordini">
+  <table class="table" summary="Ordini">
     <thead>
       <tr>
         <th>Id</th>

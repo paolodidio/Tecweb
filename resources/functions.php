@@ -203,7 +203,7 @@ function skip_to($page) {
         break;
 
     case '/Tecweb/public/checkout.php':
-        $main= '#checkout';
+        $main= '#Checkout';
         break;
 
     case '/Tecweb/public/conferma.php':
@@ -211,7 +211,7 @@ function skip_to($page) {
         break;
 
     case '/Tecweb/public/contatti.php':
-        $main= '#contacts';
+        $main= '#Contacts';
         break;
 
     case '/Tecweb/public/login.php':
@@ -235,7 +235,47 @@ function skip_to($page) {
         break;
 
     case '/Tecweb/public/sudinoi.php':
-        $main= '#sudinoi';
+        $main= '#Sudinoi';
+        break;
+    
+    case '/Tecweb/public/admin/index.php':
+        $main= '#Dashboard';
+        break;
+
+    case '/Tecweb/public/admin/index.php?orders':
+        $main= '#Orders';
+        break;
+
+    case '/Tecweb/public/admin/index.php?reports':
+        $main= '#Reports';
+        break;
+
+    case '/Tecweb/public/admin/index.php?prodotti':
+        $main= '#Products';
+        break;
+
+    case '/Tecweb/public/admin/index.php?edit-product':
+        $main= '#EditProduct';
+        break;
+
+    case '/Tecweb/public/admin/index.php?add-product':
+        $main= '#AddProduct';
+        break;
+
+    case '/Tecweb/public/admin/index.php?add-categoria':
+        $main= '#AddCat';
+        break;
+
+    case '/Tecweb/public/admin/index.php?users':
+        $main= '#Users';
+        break;
+
+    case '/Tecweb/public/admin/index.php?edit-user':
+        $main= '#EditUser';
+        break;
+
+    case '/Tecweb/public/admin/index.php?add-user':
+        $main= '#AddUser';
         break;
 
     }  
@@ -700,7 +740,7 @@ $orders = <<<DELIMITER
 <tr>
     <td>{$row['ordine_id']}</td>
     <td>{$row['ordine_tot']} &euro;</td>
-    <td><a href="../../resources/templates/back/delete_order.php?id={$row['ordine_id']}">Elimina</a></td>
+    <td><a class="admin-button" href="../../resources/templates/back/delete_order.php?id={$row['ordine_id']}">Elimina</a></td>
 </tr>
 
 DELIMITER;
@@ -729,7 +769,7 @@ $product = <<<DELIMETER
     <td>{$cat_title}</td>
     <td>{$row['prezzo']} &euro;</td>
     <td>{$row['pianta_qt']}</td>
-    <td><a href="../public/admin/index.php?edit-product&id={$row['pianta_id']}">Modifica</a><a href="../../resources/templates/back/delete_product.php?id={$row['pianta_id']}">Elimina</a></td>
+    <td><a href="../../public/admin/index.php?edit-product&id={$row['pianta_id']}">Modifica</a><a href="../../resources/templates/back/delete_product.php?id={$row['pianta_id']}">Elimina</a></td>
 </tr>
 DELIMETER;
 
@@ -931,7 +971,7 @@ $user = <<<DELIMITER
     <td>{$row['utente_id']}</td>
     <td>{$row['email']}</td>
     <td>{$row['admin']}</td>
-    <td><a href="../public/admin/index.php?edit-user&id={$row['utente_id']}">Modifica</a><a href="../../resources/templates/back/delete_user.php?id={$row['utente_id']}">Elimina</a></td>
+    <td><a href="../../public/admin/index.php?edit-user&id={$row['utente_id']}">Modifica</a><a href="../../resources/templates/back/delete_user.php?id={$row['utente_id']}">Elimina</a></td>
 </tr>
 
 DELIMITER;

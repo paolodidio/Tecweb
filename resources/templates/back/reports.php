@@ -1,8 +1,8 @@
-<div class="reports">
+<div id="Reports">
   <h1 class="admin-title" xml:lang="en">Reports</h1>
-  <p><?php display_message(); ?></p>
+  <p class="warning-msg"><?php display_message(); ?></p>
 
-  <table summary="Reports">
+  <table class="table" summary="Reports">
     <thead>
       <tr>
         <th>Id</th>

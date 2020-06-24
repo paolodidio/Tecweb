@@ -1,9 +1,8 @@
-<div class="admin-products">
+<div id="Products">
   <h1 class="admin-title">Prodotti</h1>
+  <p class="warning-msg"><?php display_message(); ?></p>
 
-  <p><?php display_message(); ?></p>
-
-  <table summary="Prodotti">
+  <table class="table" summary="Prodotti">
     <thead>
       <tr>
         <th>Id</th>

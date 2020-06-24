@@ -1,12 +1,12 @@
 
-  <div class="users">
+  <div id="Users">
 
     <h1 class="admin-title">Utenti</h1>
-    <p><?php display_message(); ?></p>
+    <p class="warning-msg"><?php display_message(); ?></p>
 
-    <a id="add-user" href="../public/admin/index.php?add-user">Aggiungi utente</a>
+    <a class="colored-button" id="add-user" href="../../public/admin/index.php?add-user">Aggiungi utente</a>
 
-    <table summary="Users">
+    <table class="table" summary="Utenti">
       <thead>
         <tr>
           <th>Id</th>
