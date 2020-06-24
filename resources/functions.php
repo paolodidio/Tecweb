@@ -680,6 +680,35 @@ function reg_user(){
 
 }
 
+// mostra riepilogo ordine
+function show_orders() {
+
+$users = query("SELECT * FROM utenti WHERE `email`= '{$_SESSION['user']}' ");
+confirm($users);
+
+$result = fetch_array($users);
+$user_id = $result['utente_id'];
+
+$query = query("SELECT * FROM ordini WHERE utente_id={$user_id}");
+confirm($query);
+
+while($row = fetch_array($query)){
+
+$orders = <<<DELIMITER
+
+<tr>
+    <td>{$row['ordine_id']}</td>
+    <td>{$row['ordine_tot']} &euro;</td>
+</tr>
+
+DELIMITER;
+
+echo $orders;
+
+}
+
+}
+
 // ******************************** BACK END ******************************
 
 // ritorna il body della pagina di admin

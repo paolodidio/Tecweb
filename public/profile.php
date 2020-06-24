@@ -2,21 +2,23 @@
 <?php include(TEMPLATE_FRONT . DS . "intro.php"); ?>
 
 
-<div class="header" id="Profile">
-    <div class="header-title">
-        <h1>Pagina profilo</h1>
-    </div>
-</div>
+<div id="Profile">
+    <h1 class="page-title">Pagina profilo</h1>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-4 offset-md-4 home-wrapper">
+    <p>Benvenuto, <?php echo $_SESSION['user']; ?></p>
+    <p>Ecco il resoconto dei tuoi ultimi ordini</p>
+    <table class="table" summary="Ordini">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Totale</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php show_orders(); ?>
+        </tbody>
+    </table>
 
-            <!-- Display messages -->
-            <h2>Benvenuto, <?php echo $_SESSION['user']; ?></h2>
-
-        </div>
-    </div>
 </div>
 
 <?php include(TEMPLATE_FRONT . DS . "footer.php"); ?>

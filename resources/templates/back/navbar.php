@@ -1,4 +1,4 @@
-<a class="skip-nav" href="<?php echo skip_to($_SERVER['PHP_SELF']); ?>" tabindex="0">Vai al contenuto della pagina</a>
+<a class="skip-nav" href="<?php echo skip_to($_SERVER['PHP_SELF']); ?>" tabindex="-1">Vai al contenuto della pagina</a>
 <div class="navigation-bar" id="AdminNavbar">
   <ul>
     <li><a href="../index.php" xml:lang="en" tabindex="1">Home</a></li>

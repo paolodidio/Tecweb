@@ -51,6 +51,7 @@ if(isset($_GET['delete'])) {
 
 }
 
+
 // ritorna il riepilogo del carrello
 function cart() {
 
@@ -117,15 +118,20 @@ $_SESSION['item_quantity'] = $tot_quant;
 function pay() {
 
 if(isset($_SESSION['item_quantity']) && $_SESSION['item_quantity'] >= 1) {
+if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
 
 $payment_button = <<<DELIMETER
 
-<a class="confirm-button" href="../public/conferma.php?amount={$_SESSION['item_total']}">Conferma pagamento</a>
+<a class="confirm-button" href="../public/conferma.php?amount={$_SESSION['item_total']}&email={$_SESSION['user']}">Conferma pagamento</a>
 
 DELIMETER;
 
 echo $payment_button;
 
+}
+else {
+echo "<p class='warning-msg'>Per confermare l'acquisto devi prima accedere con il tuo account.</p>";
+}
 }
 
 }
@@ -133,7 +139,13 @@ echo $payment_button;
 // processa il pagamento 
 function process_pay() {
     
-    $send_order = query("INSERT INTO ordini (ordine_tot) VALUES('{$_GET['amount']}')");
+    $users = query("SELECT * FROM utenti WHERE `email`= '{$_GET['email']}' ");
+    confirm($users);
+
+    $result = fetch_array($users);
+    $user_id = $result['utente_id'];
+
+    $send_order = query("INSERT INTO ordini (ordine_tot, utente_id) VALUES('{$_GET['amount']}', '{$user_id}')");
     $last_id = last_id();
     confirm($send_order);
 
@@ -165,8 +177,8 @@ function process_pay() {
 
         }
 
-    }
-    session_destroy();
+    }        
+    
 }
 
 
