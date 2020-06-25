@@ -482,7 +482,7 @@ $cat_products = <<<DELIMETER
             <a class="colored-button" href="../public/plantDetail.php?id={$row['pianta_id']}">Maggiori informazioni</a>
         </div>
         <div class="plant-preview-image">
-            <a href="../public/plantDetail.php?id={$row['pianta_id']}"><img src="../resources/{$pianta_img}" alt="Immagine della pianta {$row['nome']}"></a>
+            <a href="../public/plantDetail.php?id={$row['pianta_id']}" tabindex="-1"><img src="../resources/{$pianta_img}" alt="Immagine della pianta {$row['nome']}"/></a>
         </div>
     </div>
 </li>
@@ -527,7 +527,7 @@ $plant = <<<DELIMITER
 
 <div class="plant-detail-container">
 
-    <img src="../resources/{$pianta_img}" alt="immagine pianta {$row['nome']}">
+    <img src="../resources/{$pianta_img}" alt="immagine pianta {$row['nome']}" />
 
     <div class="plant-desc-panel">
         <p class="plant-detail-name">{$row['nome']}</p>

@@ -89,7 +89,11 @@ $product = <<<DELIMETER
     <td>{$row['prezzo']} &euro;</td>
     <td>{$value}</td>
     <td>{$sub} &euro;</td>
-    <td><a href="../resources/carrello.php?remove={$row['pianta_id']}"><img src="../public/images/remove.png" alt="Rimuovi pianta"></a><a href="../resources/carrello.php?add={$row['pianta_id']}"><img src="../public/images/add.png" alt="Aggiungi pianta"></a><a href="../resources/carrello.php?delete={$row['pianta_id']}"><img src="../public/images/delete.png" alt="Cancella pianta"></a></td>
+    <td>
+        <a href="../resources/carrello.php?remove={$row['pianta_id']}"><img src="../public/images/remove.png" alt="Rimuovi pianta" /></a>
+        <a href="../resources/carrello.php?add={$row['pianta_id']}"><img src="../public/images/add.png" alt="Aggiungi pianta" /></a>
+        <a href="../resources/carrello.php?delete={$row['pianta_id']}"><img src="../public/images/delete.png" alt="Cancella pianta" /></a>
+    </td>
 </tr>
 
 DELIMETER;
