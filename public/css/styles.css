@@ -25,6 +25,10 @@ legend {
   display: none;
 }
 
+fieldset {
+  border: none;
+}
+
 /* classi usate in tutto il sito */
 
 /* titoli h1 nelle pagine */
