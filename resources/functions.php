@@ -350,7 +350,7 @@ $product = <<<DELIMETER
             <a class="colored-button" href="../public/plantDetail.php?id={$row['pianta_id']}">Maggiori informazioni</a>
         </div>
         <div class="plant-preview-image">
-            <a href="../public/plantDetail.php?id={$row['pianta_id']}"><img src="../resources/{$pianta_img}" alt="Immagine della pianta {$row['nome']}"></a>
+            <a href="../public/plantDetail.php?id={$row['pianta_id']}" tabindex="-1"><img src="../resources/{$pianta_img}" alt="Immagine della pianta {$row['nome']}"/></a>
         </div>
     </div>
 </li>
