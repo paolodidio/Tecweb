@@ -7,15 +7,16 @@
     <p class="warning-msg"><?php display_message(); ?></p>
 
     <form action="" method="post">
-      <legend>Aggiungi una categoria</legend>
-      <div class="edit-input-group">
-        <label for="cat_title">Nome categoria</label>
-        <input type="text" name="cat_title" class="form-control" required/>
-      </div>
+      <fieldset>
+        <legend>Aggiungi una categoria</legend>
+        <div class="edit-input-group">
+          <label for="cat_title">Nome categoria</label>
+          <input type="text" name="cat_title" class="form-control" required/>
+        </div>
 
-      <input class="submit-button" type="submit" name="add-categoria" value="Aggiungi categoria"/>
-      <input class="reset-button" type="button" value="Reset" onClick="this.form.reset()" />
-
+        <input class="submit-button" type="submit" name="add-categoria" value="Aggiungi categoria"/>
+        <input class="reset-button" type="button" value="Reset" onClick="this.form.reset()" />
+      </fieldset>
     </form>
 
     <table class="table" summary="Categorie di piante">
