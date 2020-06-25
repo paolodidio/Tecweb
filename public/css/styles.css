@@ -25,16 +25,23 @@ legend {
   display: none;
 }
 
+/* classi usate in tutto il sito */
+
+/* titoli h1 nelle pagine */
 .page-title {
   font-weight: bold;
   font-size: 4em;
   color: #3C2B26;
 }
 
+/* messaggi dal php */
 .warning-msg {
-  color: #7c3c21;
+  color: #ff4301;
+  font-weight: bold;
+  font-size: 1.3em;
 }
 
+/* bottone comune nel sito */
 .colored-button {
   background-color: #708A64;
   color: #FFF;
@@ -54,6 +61,7 @@ legend {
   color: #EDEBE9;
 }
 
+/* bottone per azioni che richiedono più attenzione */
 .confirm-button {
   background-color: #F90;
   color: #EDEBE9;
@@ -67,12 +75,14 @@ legend {
   color: #EDEBE9;
 }
 
+/* p nelle pagine */
 .subtitle {
   text-transform: uppercase;
   line-height: 2em;
   padding-bottom: 3em;
 }
 
+/* tabelle del sito */
 .table {
   padding-bottom: 3em;
 }
@@ -93,6 +103,7 @@ legend {
   border: #4D5E52 solid 1px;
 }
 
+/* bottone di conferma per i form */
 .submit-button {
   background-color: #6C9070;
   color: #FFF;
@@ -109,6 +120,7 @@ legend {
   background-color: #4D5E52;
 }
 
+/* input dei form di login e registrazione */
 .login-input-group {
   padding: 1em;
 }
@@ -128,6 +140,7 @@ legend {
   box-sizing: border-box;
 }
 
+/* bottone di reset per i form */
 .reset-button {
   margin-left: 2em;
   background-color: #FFF;
@@ -147,12 +160,12 @@ legend {
 /* navbar*/
 
 .skip-nav {
-  display: none;
-}
-
-.skip-nav:focus, .skip-nav:active {
-  color: #242424;
-  display: block;
+  position: absolute;
+  left: -100em;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 .navigation-bar {
@@ -189,6 +202,44 @@ legend {
 
 #Accedi, #Registrati, #Logout, #AdminLogout {
   float: right;
+}
+
+/* breadcrumb */
+
+/* Stile generale */
+div.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+}
+
+/* stile item list */
+div.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+
+/* Metti un > dopo ogni list item */
+div.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: ">\00a0";
+}
+
+/* colore dei link non visitati */
+div.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+/* colore link visitati*/
+div.breadcrumb li a:visited{
+  color: purple;
+}
+
+/* Colore quando metti il mouse sul link */
+div.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
 }
 
 /* header homepage */
@@ -632,43 +683,6 @@ legend {
   margin-bottom: 2em;
 }
 
-/* breadcrumb */
-
-/* Stile generale */
-div.breadcrumb {
-  padding: 10px 16px;
-  list-style: none;
-}
-
-/* stile item list */
-div.breadcrumb li {
-  display: inline;
-  font-size: 18px;
-}
-
-/* Metti un > dopo ogni list item */
-div.breadcrumb li+li:before {
-  padding: 8px;
-  color: black;
-  content: ">\00a0";
-}
-
-/* colore dei link non visitati */
-div.breadcrumb li a {
-  color: #0275d8;
-  text-decoration: none;
-}
-
-/* colore link visitati*/
-div.breadcrumb li a:visited{
-  color: purple;
-}
-
-/* Colore quando metti il mouse sul link */
-div.breadcrumb li a:hover {
-  color: #01447e;
-  text-decoration: underline;
-}
 
 /* media query */
 
