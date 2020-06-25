@@ -1,6 +1,14 @@
 <?php require_once("../resources/config.php"); ?>
 <?php include(TEMPLATE_FRONT . DS . "intro.php"); ?>
 
+    <!-- breadcrumb -->
+    <div class="breadcrumb">
+        <ul>
+            <li><a href="index.php">Home</a></li>
+            <li>Profilo</li>
+        </ul>
+    </div>
+
 
 <div id="Profile">
     <h1 class="page-title">Pagina profilo</h1>

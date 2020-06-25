@@ -1,6 +1,15 @@
 <?php require_once("../resources/config.php"); ?>
 <?php include(TEMPLATE_FRONT . DS . "intro.php"); ?>
 
+<!-- breadcrumb -->
+<div class="breadcrumb">
+    <ul>
+        <li>Home</li>
+    </ul>
+</div>
+
+
+
   <div id="Header">
     <div id="HeaderTitle">
       <h1>Succulente</h1>

@@ -632,6 +632,43 @@ legend {
   margin-bottom: 2em;
 }
 
+/* breadcrumb */
+
+/* Stile generale */
+div.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+}
+
+/* stile item list */
+div.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+
+/* Metti un > dopo ogni list item */
+div.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: ">\00a0";
+}
+
+/* colore dei link non visitati */
+div.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+/* colore link visitati*/
+div.breadcrumb li a:visited{
+  color: purple;
+}
+
+/* Colore quando metti il mouse sul link */
+div.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
 
 /* media query */
 
