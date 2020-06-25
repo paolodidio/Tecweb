@@ -86,7 +86,9 @@ function show_title($page) {
         break;
     
     case '/Tecweb/public/categorie.php':
-        $title= 'Categorie | Succulente';
+        $id = $_GET['id'];
+        $cat_id = show_cat_name($id);
+        $title= "{$cat_id} | Succulente";
         break;
 
     case '/Tecweb/public/checkout.php':
@@ -106,11 +108,15 @@ function show_title($page) {
         break;
 
     case '/Tecweb/public/piante.php':
-        $title= 'Piante | Succulente';
+        $title= ' Catalogo Piante | Succulente';
         break;
 
     case '/Tecweb/public/plantDetail.php':
-        $title= 'Dettaglio pianta | Succulente';
+        $id = $_GET['id'];
+        $query = query("SELECT * FROM piante WHERE pianta_id={$id}");
+        confirm($query);
+        $result = fetch_array($query);
+        $title= "Pianta {$result['nome']} | Succulente";
         break;
 
     case '/Tecweb/public/profile.php':
