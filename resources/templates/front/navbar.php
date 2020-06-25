@@ -7,7 +7,16 @@
     <li><a href="../public/contatti.php" tabindex="4">Contatti</a></li>
     <li><a href="../public/checkout.php" tabindex="5">Carrello</a></li>
     <?php if(isset($_SESSION['user']) && !empty($_SESSION['user'])) {
-          echo "<li><a href='../public/profile.php' tabindex='6'>Profilo</a></li>";
+          $users = query("SELECT * FROM utenti WHERE `email`= '{$_SESSION['user']}' ");
+          confirm($users);
+          $result = fetch_array($users);
+          $admin = $result['admin'];
+          if($admin == 0) {
+            echo "<li><a href='../public/admin' tabindex='6'>Admin</a></li>";
+          }
+          else {
+            echo "<li><a href='../public/profile.php' tabindex='6'>Profilo</a></li>";
+          }
           echo "<li><a href='../public/logout.php' id='Logout' xml:lang='en' tabindex='7'>Logout</a></li>";}
       else{
           echo "<li><a href='../public/registrazione.php' id='Registrati' tabindex='7'>Registrati</a></li>";
