@@ -531,11 +531,11 @@ $plant = <<<DELIMITER
 
     <div class="plant-desc-panel">
         <p class="plant-detail-name">{$row['nome']}</p>
-        <p class="plant-detail-spec">Famiglia: {$row['famiglia']}</p>
-        <p class="plant-detail-spec">Genere: {$row['genere']}</p>
-        <p class="plant-detail-spec">Specie: {$row['specie']}</p>
+        <p class="plant-detail-spec">Famiglia: <span>{$row['famiglia']}</span></p>
+        <p class="plant-detail-spec">Genere: <span>{$row['genere']}</span></p>
+        <p class="plant-detail-spec">Specie: <span>{$row['specie']}</span></p>
         <p class="plant-detail-desc">{$row['descrizione']}</p>
-        <p class="plant-detail-spec">Prezzo: {$row['prezzo']} &euro;</p>
+        <p class="plant-detail-spec">Prezzo: <span>{$row['prezzo']} &euro;</span></p>
         <a class="confirm-button" href="../resources/carrello.php?add={$row['pianta_id']}">Aggiungi al carrello</a>
     </div>
 
@@ -740,7 +740,7 @@ $orders = <<<DELIMITER
 <tr>
     <td>{$row['ordine_id']}</td>
     <td>{$row['ordine_tot']} &euro;</td>
-    <td><a class="admin-button" href="../../resources/templates/back/delete_order.php?id={$row['ordine_id']}">Elimina</a></td>
+    <td><a href="../../resources/templates/back/delete_order.php?id={$row['ordine_id']}">Elimina</a></td>
 </tr>
 
 DELIMITER;

@@ -40,14 +40,14 @@ fieldset {
 
 /* messaggi dal php */
 .warning-msg {
-  color: #ff4301;
+  color: #d50d00;
   font-weight: bold;
   font-size: 1.3em;
 }
 
 /* bottone comune nel sito */
 .colored-button {
-  background-color: #708A64;
+  background-color: #557345;
   color: #FFF;
   border-radius: 2em;
   padding: 1em;
@@ -56,27 +56,25 @@ fieldset {
 }
 
 .colored-button:visited {
-  background-color: #bac964;
-  color: #EDEBE9;
+  background-color: #94aa2a;
+  color: #FFF;
 }
 
 .colored-button:hover {
-  background-color: #242424;
-  color: #EDEBE9;
+  opacity: 0.7;
 }
 
 /* bottone per azioni che richiedono più attenzione */
 .confirm-button {
-  background-color: #F90;
-  color: #EDEBE9;
+  background-color: #dd7d00;
+  color: #FFF;
   border-radius: 2.5em;
   padding: 1.5em;
   font-weight: bold;
 }
 
 .confirm-button:hover {
-  background-color: #7c3c21;
-  color: #EDEBE9;
+  opacity: 0.7;
 }
 
 /* p nelle pagine */
@@ -92,24 +90,24 @@ fieldset {
 }
 
 .table thead tr th{
-  background-color: #4D5E52;
+  background-color: #30774d;
   height: 2em;
   margin: 0;
   padding: 0.5em 1.5em;
   color: #EDEBE9;
   text-align: justify;
-  border: #4D5E52 solid 1px;
+  border: #30774d solid 1px;
 }
 
 .table tbody tr td {
   text-align: justify;
   padding: 0.5em 1.5em;
-  border: #4D5E52 solid 1px;
+  border: #30774d solid 1px;
 }
 
 /* bottone di conferma per i form */
 .submit-button {
-  background-color: #6C9070;
+  background-color: #527318;
   color: #FFF;
   border-radius: 1.5em;
   padding: 1em 3em;
@@ -121,7 +119,7 @@ fieldset {
 }
 
 .submit-button:hover {
-  background-color: #4D5E52;
+  opacity: 0.7;
 }
 
 /* input dei form di login e registrazione */
@@ -185,7 +183,7 @@ fieldset {
 
 .navigation-bar ul li a {
   float: left;
-  color: #708A64;
+  color: #57714c;
   text-align: center;
   padding: 1.5em;
   margin: 2%;
@@ -198,7 +196,7 @@ fieldset {
 }
 
 .navigation-bar ul li a:visited{
-  color: #bac964;
+  color: #94aa2a;
 }
 
 .navigation-bar .icon {
@@ -226,7 +224,7 @@ div.breadcrumb li {
 /* Metti un > dopo ogni list item */
 div.breadcrumb li+li:before {
   padding: 8px;
-  color: black;
+  color: #3C2B26;
   content: ">\00a0";
 }
 
@@ -238,7 +236,7 @@ div.breadcrumb li a {
 
 /* colore link visitati*/
 div.breadcrumb li a:visited{
-  color: purple;
+  color: #94aa2a;
 }
 
 /* Colore quando metti il mouse sul link */
@@ -269,7 +267,7 @@ div.breadcrumb li a:hover {
 /* come funziona homepage*/
 
 #HowItWorks {
-  background-color: #6C9070;
+  background-color: #4f7253;
   padding: 2em;
   margin-top: 5%;
 }
@@ -277,7 +275,7 @@ div.breadcrumb li a:hover {
 #HowItWorks h2 {
   font-weight: bold;
   font-size: 3em;
-  color: #F3D6A9;
+  color: #ffe8ba;
   text-align: center;
 }
 
@@ -331,8 +329,8 @@ div.breadcrumb li a:hover {
 }
 
 #Categorie li a:visited{
-  border: #bac964 solid 0.2em;
-  color: #bac964;
+  border: #94aa2a solid 0.2em;
+  color: #94aa2a;
 }
 
 #Categorie ul li a {
@@ -344,12 +342,12 @@ div.breadcrumb li a:hover {
   font-weight: bold;
   font-size: 1.5em;
   padding: 2em;
-  border: #6C9070 solid 0.2em;
+  border: #4f7253 solid 0.2em;
   border-radius: 2.5em;
 }
 
 #Categorie ul li:hover a{
-  color: #708A64;
+  opacity: 0.7;
 }
 
 /* pagina negozio piante e filtri per categoria */
@@ -379,14 +377,15 @@ div.breadcrumb li a:hover {
 
 .plant-shop .pagination li a {
   color: #000;
+  font-weight: bold;
 }
 
 .plant-shop .pagination li a:visited {
-  color: #6C9070;
+  color: #4f7253;
 }
 
 .plant-shop .pagination li.active {
-  background-color: #bac964;
+  background-color: #94aa2a;
   border-radius: 1em;
   color: #FFF;
 }
@@ -443,8 +442,9 @@ div.breadcrumb li a:hover {
 }
 
 .plant-price {
-  color: #F90 ;
+  color: #a85200 ;
   font-size: 1.5em;
+  font-weight: bold;
 }
 
 .plant-preview-image {
@@ -473,11 +473,11 @@ div.breadcrumb li a:hover {
 
 /* pannello di centro */
 .plant-desc-panel {
-  padding: 0 5em;
+  padding: 0 7em;
 }
 
 .plant-detail-name {
-  color: #6C9070;
+  color: #4f7253;
   font-size: 3em;
   margin: 0;
   font-weight: bold;
@@ -487,7 +487,7 @@ div.breadcrumb li a:hover {
 .plant-detail-spec {
   font-weight: bold;
   text-transform: uppercase;
-  color: #4D5E52;
+  color: #4f7253;
   padding-bottom: 2em;
 }
 
@@ -498,26 +498,26 @@ div.breadcrumb li a:hover {
 }
 
 .plant-detail-desc {
-  color: #4D5E52;
+  color: #242424;
   line-height: 1.5em;
   text-align: justify;
 }
 
 /* pannello di destra */
 .plant-info-panel {
-  background-color: #6C9070;
+  background-color: #4f7253;
   border-radius: 2em;
   padding: 2em 3em;
   text-align: justify;
 }
 
 .plant-info-panel dl dt {
-  color: #EDEBE9;
+  color: #242424;
   font-weight: bold;
 }
 
 .plant-info-panel dl dd {
-   color: #000;
+   color: #EDEBE9;
    margin: 0;
    padding: 2em 0;
 }
@@ -564,12 +564,12 @@ div.breadcrumb li a:hover {
   font-weight: bold;
 }
 
-#LoginPage a:hover {
-  color: #708A64;
+#LoginPage a:hover, #LoginPage a:visited:hover {
+  color: #242424;
 }
 
 #LoginPage a:visited {
-  color: #bac964;
+  color: #94aa2a;
 }
 
 /* pagina di registrazione */
@@ -587,14 +587,26 @@ div.breadcrumb li a:hover {
 /* navbar admin */
 
 #AdminNavbar {
-  background-color: #4D5E52;
+  background-color: #2a3a2f;
   color: #FFF;
+}
+
+#AdminNavbar li a {
+  color: #EDEBE9;
+}
+
+#AdminNavbar li a:visited {
+  color: #94aa2a;
+}
+
+#AdminNavbar li a:visited:hover, #AdminNavbar li a:hover {
+  color: #9f9f9f;
 }
 
 /* sidebar admin */
 
 .sidenav {
-  background-color: #4D5E52;
+  background-color: #2a3a2f;
   height: 100%; 
   width: 25%;
   position: fixed;
@@ -610,17 +622,17 @@ div.breadcrumb li a:hover {
 .sidenav ul li a {
   padding: 1.5em 1em;
   display: block;
-  color: #FFF;
+  color: #EDEBE9;
   font-weight: bold;
   text-transform: uppercase;
 }
 
 .sidenav ul li a:visited {
-  color: #bac964;
+  color: #94aa2a;
 }
 
 .sidenav a:hover, .sidenav ul li a:visited:hover {
-  color: #000;
+  color: #9f9f9f;
 }
 
 /* admin content */
@@ -650,13 +662,13 @@ div.breadcrumb li a:hover {
   cursor: pointer;
 }
 
-.admin-button:hover {
-  background-color: #6C9070;
-  color: #FFF;
+.admin-button:hover, .admin-button:visited:hover {
+  opacity: 0.7;
 }
 
 .admin-button:visited {
-  background-color: #bac964;
+  background-color: #94aa2a;
+  color: #FFF;
 }
 
 /* prodotti */
