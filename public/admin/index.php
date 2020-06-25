@@ -5,17 +5,17 @@
 
 <head>
 
-  <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
-  <meta name="description" content="Pagina di gestione del sito per l'amministratore">
-  <meta name="keywords" content="succulente, piante, admin, cactus, e-commerce">
-  <meta name="author" content="Anna Cisotto Bertocco, Ismaele Gobbo, Paolo di Dio, Lucrezia Gradi">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Cache-control" content="no-cache">
+  <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8"/>
+  <meta name="description" content="Pagina di gestione del sito per l'amministratore"/>
+  <meta name="keywords" content="succulente, piante, admin, cactus, e-commerce"/>
+  <meta name="author" content="Anna Cisotto Bertocco, Ismaele Gobbo, Paolo di Dio, Lucrezia Gradi"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="Cache-control" content="no-cache"/>
 
   <title>Admin | Succulente</title>
 
-  <link rel="stylesheet" type="text/css" href="../../public/css/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../../public/css/styles.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
 </head>
 
@@ -38,7 +38,7 @@
   </div>
 
 
-<script src="../public/js/hamburger.js"></script>
+<script type="text/javascript" src="../public/js/hamburger.js"></script>
 
 </body>
 
