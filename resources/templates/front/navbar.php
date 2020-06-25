@@ -7,21 +7,20 @@
     <li><a href="../public/contatti.php" tabindex="4">Contatti</a></li>
     <li><a href="../public/checkout.php" tabindex="5">Carrello</a></li>
     <?php if(isset($_SESSION['user']) && !empty($_SESSION['user'])) {
-          $users = query("SELECT * FROM utenti WHERE `email`= '{$_SESSION['user']}' ");
-          confirm($users);
-          $result = fetch_array($users);
-          $admin = $result['admin'];
-          if($admin == 0) {
-            echo "<li><a href='../public/admin' tabindex='6'>Admin</a></li>";
+            if(isset($_SESSION['admin'])){
+              echo "<li><a href='../public/profile.php' tabindex='6'>Profilo</a></li>";
+              echo "<li><a href='../public/admin/index.php' tabindex='7'>Dashboard</a></li>";
+              echo "<li><a href='../public/logout.php' id='Logout' xml:lang='en' tabindex='8'>Logout</a></li>";
+            }
+            else {
+                 echo "<li><a href='../public/profile.php' tabindex='6'>Profilo</a></li>";
+                  echo "<li><a href='../public/logout.php' id='Logout' xml:lang='en' tabindex='7'>Logout</a></li>";
+            }
           }
-          else {
-            echo "<li><a href='../public/profile.php' tabindex='6'>Profilo</a></li>";
+          else{
+            echo "<li><a href='../public/registrazione.php' id='Registrati' tabindex='7'>Registrati</a></li>";
+            echo "<li><a href='../public/login.php' id='Accedi' tabindex='6'>Accedi</a></li>";
           }
-          echo "<li><a href='../public/logout.php' id='Logout' xml:lang='en' tabindex='7'>Logout</a></li>";}
-      else{
-          echo "<li><a href='../public/registrazione.php' id='Registrati' tabindex='7'>Registrati</a></li>";
-          echo "<li><a href='../public/login.php' id='Accedi' tabindex='6'>Accedi</a></li>";
-        }
       ?>
     <li class="icon"><a href="javascript:void(0);" onclick="myFunction()">
       <i class="fa fa-bars"></i>
