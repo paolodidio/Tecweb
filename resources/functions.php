@@ -382,7 +382,7 @@ while($row = fetch_array($query)) {
 
 $categories_links = <<<DELIMETER
 
-<a href='../public/categorie.php?id={$row['cat_id']}'><li>{$row['cat_title']}</li></a>
+<li><a href='../public/categorie.php?id={$row['cat_id']}'>{$row['cat_title']}</a></li>
 
 DELIMETER;
 

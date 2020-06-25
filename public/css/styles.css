@@ -322,12 +322,16 @@ div.breadcrumb li a:hover {
   text-align: center;
 }
 
-#Categorie a:visited li{
+#Categorie ul li {
+  display: inline;
+}
+
+#Categorie li a:visited{
   border: #bac964 solid 0.2em;
   color: #bac964;
 }
 
-#Categorie ul a li {
+#Categorie ul li a {
   display: inline-block;
   padding-right: 2em;
   margin: 1% 0 1% 1%;
@@ -340,14 +344,14 @@ div.breadcrumb li a:hover {
   border-radius: 2.5em;
 }
 
-#Categorie ul a li:hover {
+#Categorie ul li:hover a{
   color: #708A64;
 }
 
 /* pagina negozio piante e filtri per categoria */
 
 /* link categorie nella pagina piante */
-#Categorie ul.categorie-small a li {
+#Categorie ul.categorie-small li a{
   padding-right: 0.5em;
   font-size: 1em;
   padding: 0.5em;
