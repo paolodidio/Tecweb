@@ -14,6 +14,15 @@
 
   <h1 class="page-title">Catalogo piante</h1>
 
+  <div id="Categorie">
+    <p>Esplora le piante per categoria</p>
+    <ul class="categorie-small">
+
+      <?php get_categories(); ?>
+
+    </ul>
+  </div>
+
   <?php get_products(); ?>
 
 </div>
