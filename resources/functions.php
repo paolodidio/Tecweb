@@ -213,7 +213,7 @@ function skip_to($page) {
         break;
 
     case '/Tecweb/public/conferma.php':
-        $main= '#main';
+        $main= '#Conferma';
         break;
 
     case '/Tecweb/public/contatti.php':
@@ -245,46 +245,10 @@ function skip_to($page) {
         break;
     
     case '/Tecweb/public/admin/index.php':
-        $main= '#Dashboard';
+        $main= '#AdminContent';
         break;
 
-    case '/Tecweb/public/admin/index.php?orders':
-        $main= '#Orders';
-        break;
-
-    case '/Tecweb/public/admin/index.php?reports':
-        $main= '#Reports';
-        break;
-
-    case '/Tecweb/public/admin/index.php?prodotti':
-        $main= '#Products';
-        break;
-
-    case '/Tecweb/public/admin/index.php?edit-product':
-        $main= '#EditProduct';
-        break;
-
-    case '/Tecweb/public/admin/index.php?add-product':
-        $main= '#AddProduct';
-        break;
-
-    case '/Tecweb/public/admin/index.php?add-categoria':
-        $main= '#AddCat';
-        break;
-
-    case '/Tecweb/public/admin/index.php?users':
-        $main= '#Users';
-        break;
-
-    case '/Tecweb/public/admin/index.php?edit-user':
-        $main= '#EditUser';
-        break;
-
-    case '/Tecweb/public/admin/index.php?add-user':
-        $main= '#AddUser';
-        break;
-
-    }  
+    }
 
     return $main;
 

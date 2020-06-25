@@ -31,7 +31,7 @@
   </div>
 
 
-  <div class="admin-content">
+  <div class="admin-content" id="AdminContent">
 
     <?php show_content(); ?>
 
