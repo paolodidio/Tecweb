@@ -185,10 +185,15 @@ fieldset {
   float: left;
   color: #57714c;
   text-align: center;
-  padding: 1.5em;
-  margin: 2%;
+  padding: 1em;
+  margin-top: 1em;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+.navigation-bar ul li a.navlogo {
+  position: relative;
+  top:-2em;
 }
 
 .navigation-bar ul li a:hover, .navigation-bar ul li a:visited:hover{
@@ -748,7 +753,7 @@ div.breadcrumb li a:hover {
     .navigation-bar.responsive li.icon {
         position: absolute;
         right: 0;
-        top: 0;
+        top: 2em;
     }
     .navigation-bar.responsive ul li {
         float: none;
@@ -758,6 +763,15 @@ div.breadcrumb li a:hover {
     }
 
     .navigation-bar.responsive ul li a {
+      float: none;
+    }
+
+    .navigation-bar.responsive ul li a.navlogo {
+      position: relative;
+      top:0;
+    }
+
+    .navigation-bar.responsive #Accedi, #Registrati, #Logout, #AdminLogout {
       float: none;
     }
 
