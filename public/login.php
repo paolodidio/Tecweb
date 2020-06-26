@@ -19,9 +19,9 @@
             <?php login_user(); ?>
             <div class="login-input-group">
                 <label for="email" xml:lang="en">Email: </label>
-                <input type="email" placeholder="Inserisci email" name="email" required/>
+                <input type="email"  name="email" required/>
                 <label for="password" xml:lang="en">Password: </label>
-                <input type="password" placeholder="Inserisci password" name="password" required/>
+                <input type="password"  name="password" required/>
             </div>
             <button class="submit-button" type="submit" name="log_user">Accedi</button>
             <input class="reset-button" type="button" value="Reset" onclick="this.form.reset()" />
