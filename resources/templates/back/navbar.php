@@ -1,11 +1,8 @@
 <p><a class="skip-nav" href="<?php echo skip_to($_SERVER['PHP_SELF']); ?>" tabindex="1">Vai al contenuto della pagina</a></p>
-<div class="navigation-bar" id="AdminNavbar">
+<div id="AdminNavbar">
   <ul>
     <li><a href="../index.php" xml:lang="en" tabindex="2">Home</a></li>
     <li><a href="logout.php" id="AdminLogout" xml:lang="en" tabindex="3">Logout</a></li>
-    <li class="icon"><a href="javascript:void(0);" onclick="myFunction1()">
-      <i class="fa fa-bars"></i>
-    </a></li>
   </ul>
 </div>
 

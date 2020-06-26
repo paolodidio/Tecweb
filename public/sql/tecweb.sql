@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Creato il: Giu 10, 2020 alle 11:21
+-- Creato il: Giu 25, 2020 alle 12:06
 -- Versione del server: 10.4.8-MariaDB
 -- Versione PHP: 7.1.32
 
@@ -52,17 +52,20 @@ INSERT INTO `categorie` (`cat_id`, `cat_title`) VALUES
 
 CREATE TABLE `ordini` (
   `ordine_id` int(11) NOT NULL,
-  `ordine_tot` float NOT NULL
+  `ordine_tot` float NOT NULL,
+  `utente_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dump dei dati per la tabella `ordini`
 --
 
-INSERT INTO `ordini` (`ordine_id`, `ordine_tot`) VALUES
-(25, 6),
-(26, 2),
-(27, 4);
+INSERT INTO `ordini` (`ordine_id`, `ordine_tot`, `utente_id`) VALUES
+(71, 4, 8),
+(117, 7, 8),
+(118, 7, 8),
+(119, 7, 8),
+(120, 5, 8);
 
 -- --------------------------------------------------------
 
@@ -93,11 +96,10 @@ CREATE TABLE `piante` (
 --
 
 INSERT INTO `piante` (`pianta_id`, `nome`, `genere`, `specie`, `famiglia`, `fioritura`, `colore`, `hardiness`, `illuminazione`, `cat_id`, `prezzo`, `descrizione`, `pianta_img`, `pianta_qt`, `interno`) VALUES
-(14, 'Flying Saucer', 'Echinopsis', '', 'Cactaceae', 'Primavera', 'Rosa', 1, '', 1, 4, 'Echinopsis \\\\\\\\\\\\\\\'Flying Saucer\\\\\\\\\\\\\\\' è uno degli ibridi più belli del genere Echinopsis. È un cactus che forma gambi chari, verdi a forma di colonna fino a 75 cm di altezza e 12,5 cm di diametro. Di aspetto attraente tutto l\\\\\\\\\\\\\\\'anno, ne si apprezza particolarmente la fioritura primaverile. I fiori arrivano fino a 25cm di diametro, rossi all\\\\\\\\\\\\\\\'esterno con un tocco di arancio, diventando di un rosa sempre più tenue verso l\\\\\\\\\\\\\\\'interno; i singoli fiori appassiscono nel giro di un paio di giorni, ma la fioritura continua anche per settimane.', 'echinopsis.jpg', 2, 0),
-(15, 'Rubromarginata', 'Sedum', 'Palmeri', 'Crassulacee', 'Primavera', 'Giallo', 1, '', 2, 2, 'Sedum palmeri ha una portamento arbustivo, rampicante o strisciante a seconda della coltivazione e dell\\\'esposizione. Può raggiungere fino a 20 cm di altezza. La pianta forma piccole rosette di foglie blu-verde, che si arrossano in caso di calore o congelamento, di 5-8 cm di diametro, portate da fusti ramificati di circa venti centimetri. Fiorisce a inizio primavera, con fiori numerosi e gialli molto amati da api e altri insetti impollinatori.', '2383330382.jpg', 8, 0),
-(16, 'Rebutia fiebrigii', 'Rebutia', 'Fiebrigii', 'Cactaceae', 'Primavera', 'Arancio', 9, 'Pieno sole', 4, 4, 'Rebutia fiebrigii è una specie di cactus originaria degli altopiani delle Ande Boliviani, ad altitudini di 2,100-4000 metri. Questo cactus ha una forma \"a palla\" di circa 15 cm in diametro, coperta da spine e peli setosi. Con il tempo il cactus si moltiplica e forma agglomerati. I fiori, di un intenso color arancio, appaiono in tarda primavera e possono continuare per tutta l\'estate.', 'rebutia_fiebrigii.jpg', 12, 0),
-(17, 'Saguaro', 'Carnegiea', 'Gigantea', 'Cactaceae', 'Primavera', 'Bianco', 12, 'Pieno sole', 4, 5, 'Il saguaro (Carnegiea gigantea) è un cactus di grandi dimensioni che cresce nel deserto di Sonora, nel sud dell\'Arizona, e nell\'area adiacente del Messico. I saguari hanno tronco verde carnoso e colonnare, con alcune ramificazioni e con l\'aspetto tipico dei cactus.', 'saguaro.jpg', 13, 1),
-(18, 'Cactus di natale', 'Schlumbergera', 'Truncata', 'Cactaceae', 'Inverno', 'Rosa', 10, 'Mezz\'ombra', 5, 7, 'Il Cactus di Natale (Schlumbergera truncata), è una pianta succulenta che presenta dei fusti corti che si suddividono in ramificazioni con portamento che potrebbe essere eretto, arcuato oppure ricadente. I rami sono carnosi con una forma ovale e una colorazione verde scura, ma che potrebbe variare a seconda della luce ricevuta, diventando più chiare al buio o addirittura rossastre in piena luce. Le infiorescenze sono in grado si sbocciare agli apici fogliari, i petali sono particolarmente carnosi con una colorazione rossa oppure rosata. Per consentire ai boccioli di maturare correttamente sarebbe opportuno tenere la pianta sia lontana da correnti d\'aria e da fonti di calore.', 'schlumbergera.jpg', 12, 0),
+(15, 'Rubromarginata', 'Sedum', 'Palmeri', 'Crassulacee', 'Primavera', 'Giallo', 1, '', 2, 2, 'Sedum palmeri ha una portamento arbustivo, rampicante o strisciante a seconda della coltivazione e dell\\\'esposizione. Può raggiungere fino a 20 cm di altezza. La pianta forma piccole rosette di foglie blu-verde, che si arrossano in caso di calore o congelamento, di 5-8 cm di diametro, portate da fusti ramificati di circa venti centimetri. Fiorisce a inizio primavera, con fiori numerosi e gialli molto amati da api e altri insetti impollinatori.', '2383330382.jpg', 0, 0),
+(16, 'Rebutia fiebrigii', 'Rebutia', 'Fiebrigii', 'Cactaceae', 'Primavera', 'Arancio', 9, 'Pieno sole', 4, 4, 'Rebutia fiebrigii è una specie di cactus originaria degli altopiani delle Ande Boliviani, ad altitudini di 2,100-4000 metri. Questo cactus ha una forma \"a palla\" di circa 15 cm in diametro, coperta da spine e peli setosi. Con il tempo il cactus si moltiplica e forma agglomerati. I fiori, di un intenso color arancio, appaiono in tarda primavera e possono continuare per tutta l\'estate.', 'rebutia_fiebrigii.jpg', -59, 0),
+(17, 'Saguaro', 'Carnegiea', 'Gigantea', 'Cactaceae', 'Primavera', 'Bianco', 12, 'Pieno sole', 4, 5, 'Il saguaro (Carnegiea gigantea) è un cactus di grandi dimensioni che cresce nel deserto di Sonora, nel sud dell\'Arizona, e nell\'area adiacente del Messico. I saguari hanno tronco verde carnoso e colonnare, con alcune ramificazioni e con l\'aspetto tipico dei cactus.', 'saguaro.jpg', 12, 1),
+(18, 'Cactus di natale', 'Schlumbergera', 'Truncata', 'Cactaceae', 'Inverno', 'Rosa', 10, 'Mezz\'ombra', 5, 7, 'Il Cactus di Natale (Schlumbergera truncata), è una pianta succulenta che presenta dei fusti corti che si suddividono in ramificazioni con portamento che potrebbe essere eretto, arcuato oppure ricadente. I rami sono carnosi con una forma ovale e una colorazione verde scura, ma che potrebbe variare a seconda della luce ricevuta, diventando più chiare al buio o addirittura rossastre in piena luce. Le infiorescenze sono in grado si sbocciare agli apici fogliari, i petali sono particolarmente carnosi con una colorazione rossa oppure rosata. Per consentire ai boccioli di maturare correttamente sarebbe opportuno tenere la pianta sia lontana da correnti d\'aria e da fonti di calore.', 'schlumbergera.jpg', 8, 0),
 (19, 'Borracina acre', 'Sedum', 'Acre', 'Crassulacee', 'Estate', 'Giallo', 7, 'Mezz\'ombra', 2, 5, 'La Borracina acre (Sedum acre) è una piccola pianta carnoso/succulenta di aspetto erbaceo, strisciante, perenne e sempreverde che si presta particolarmente come tappezzante al di sotto di altre piante, o per riempire gli spazi tra le pavimentazioni del giardino. In estate, se ha avuto sufficiente esposizione solare, produce dei piccoli fiori color giallo.', 'Sedum_acre.jpg', 7, 1),
 (20, 'Zebra haworthia', 'Haworthiopsis', 'Attenuata', 'Asphodelaceae', 'Estate', 'Verde', 9, 'Pieno sole', 1, 3, 'Haworthiopsis attenuata è una piccola specie succulenta originaria del Capo Orientale, in Sud Africa.', 'haworthiopsis_attenuata.jpg', 14, 0),
 (21, 'Mix di Lithops', 'Lithops', '', 'Aizoaceae', 'Autunno', 'Giallo', 9, 'Pieno sole', 3, 3, 'Pianta perenne nana, quasi priva di fusto. Forma gruppi di due foglie accoppiate, saldate all\'apice e divise da una fenditura dalla quale, in autunno, spuntano i fiori. Ogni coppia di foglie forma il corpo di una pianta che ha forma ovoidale.', 'Lithops_mix.jpg', 11, 0),
@@ -134,10 +136,82 @@ CREATE TABLE `report` (
 --
 
 INSERT INTO `report` (`report_id`, `pianta_id`, `prezzo`, `pianta_qt`, `ordine_id`, `nome`) VALUES
-(16, 14, 4, 1, 24, 'Flying Saucer'),
-(17, 15, 2, 1, 25, 'Rubromarginata'),
-(18, 15, 2, 1, 26, 'Rubromarginata'),
-(19, 14, 4, 1, 27, 'Flying Saucer');
+(39, 15, 2, 1, 45, 'Rubromarginata'),
+(40, 16, 4, 1, 46, 'Rebutia fiebrigii'),
+(41, 16, 4, 1, 47, 'Rebutia fiebrigii'),
+(42, 16, 4, 1, 48, 'Rebutia fiebrigii'),
+(43, 16, 4, 1, 49, 'Rebutia fiebrigii'),
+(44, 16, 4, 1, 50, 'Rebutia fiebrigii'),
+(45, 16, 4, 1, 51, 'Rebutia fiebrigii'),
+(46, 16, 4, 1, 52, 'Rebutia fiebrigii'),
+(47, 16, 4, 1, 53, 'Rebutia fiebrigii'),
+(48, 16, 4, 1, 54, 'Rebutia fiebrigii'),
+(49, 16, 4, 1, 55, 'Rebutia fiebrigii'),
+(50, 16, 4, 1, 56, 'Rebutia fiebrigii'),
+(51, 16, 4, 1, 57, 'Rebutia fiebrigii'),
+(52, 16, 4, 1, 58, 'Rebutia fiebrigii'),
+(53, 16, 4, 1, 59, 'Rebutia fiebrigii'),
+(54, 16, 4, 1, 60, 'Rebutia fiebrigii'),
+(55, 16, 4, 1, 61, 'Rebutia fiebrigii'),
+(56, 16, 4, 1, 62, 'Rebutia fiebrigii'),
+(57, 16, 4, 1, 63, 'Rebutia fiebrigii'),
+(58, 16, 4, 1, 64, 'Rebutia fiebrigii'),
+(59, 16, 4, 1, 65, 'Rebutia fiebrigii'),
+(60, 16, 4, 1, 66, 'Rebutia fiebrigii'),
+(61, 16, 4, 1, 67, 'Rebutia fiebrigii'),
+(62, 16, 4, 1, 68, 'Rebutia fiebrigii'),
+(63, 16, 4, 1, 69, 'Rebutia fiebrigii'),
+(64, 16, 4, 1, 70, 'Rebutia fiebrigii'),
+(65, 16, 4, 1, 71, 'Rebutia fiebrigii'),
+(66, 16, 4, 1, 72, 'Rebutia fiebrigii'),
+(67, 16, 4, 1, 73, 'Rebutia fiebrigii'),
+(68, 16, 4, 1, 74, 'Rebutia fiebrigii'),
+(69, 16, 4, 1, 75, 'Rebutia fiebrigii'),
+(70, 16, 4, 1, 76, 'Rebutia fiebrigii'),
+(71, 16, 4, 1, 77, 'Rebutia fiebrigii'),
+(72, 16, 4, 1, 78, 'Rebutia fiebrigii'),
+(73, 16, 4, 1, 79, 'Rebutia fiebrigii'),
+(74, 16, 4, 1, 80, 'Rebutia fiebrigii'),
+(75, 16, 4, 1, 81, 'Rebutia fiebrigii'),
+(76, 16, 4, 1, 82, 'Rebutia fiebrigii'),
+(77, 16, 4, 1, 83, 'Rebutia fiebrigii'),
+(78, 16, 4, 1, 84, 'Rebutia fiebrigii'),
+(79, 16, 4, 1, 85, 'Rebutia fiebrigii'),
+(80, 16, 4, 1, 86, 'Rebutia fiebrigii'),
+(81, 16, 4, 1, 87, 'Rebutia fiebrigii'),
+(82, 16, 4, 1, 88, 'Rebutia fiebrigii'),
+(83, 16, 4, 1, 89, 'Rebutia fiebrigii'),
+(84, 16, 4, 1, 90, 'Rebutia fiebrigii'),
+(85, 16, 4, 1, 91, 'Rebutia fiebrigii'),
+(86, 16, 4, 1, 92, 'Rebutia fiebrigii'),
+(87, 16, 4, 1, 93, 'Rebutia fiebrigii'),
+(88, 16, 4, 1, 94, 'Rebutia fiebrigii'),
+(89, 16, 4, 1, 95, 'Rebutia fiebrigii'),
+(90, 16, 4, 1, 96, 'Rebutia fiebrigii'),
+(91, 16, 4, 1, 97, 'Rebutia fiebrigii'),
+(92, 16, 4, 1, 98, 'Rebutia fiebrigii'),
+(93, 16, 4, 1, 99, 'Rebutia fiebrigii'),
+(94, 16, 4, 1, 100, 'Rebutia fiebrigii'),
+(95, 16, 4, 1, 101, 'Rebutia fiebrigii'),
+(96, 16, 4, 1, 102, 'Rebutia fiebrigii'),
+(97, 16, 4, 1, 103, 'Rebutia fiebrigii'),
+(98, 16, 4, 1, 104, 'Rebutia fiebrigii'),
+(99, 16, 4, 1, 105, 'Rebutia fiebrigii'),
+(100, 16, 4, 1, 106, 'Rebutia fiebrigii'),
+(101, 16, 4, 1, 107, 'Rebutia fiebrigii'),
+(102, 16, 4, 1, 108, 'Rebutia fiebrigii'),
+(103, 16, 4, 1, 109, 'Rebutia fiebrigii'),
+(104, 16, 4, 1, 110, 'Rebutia fiebrigii'),
+(105, 16, 4, 1, 111, 'Rebutia fiebrigii'),
+(106, 16, 4, 1, 112, 'Rebutia fiebrigii'),
+(107, 16, 4, 1, 113, 'Rebutia fiebrigii'),
+(108, 16, 4, 1, 114, 'Rebutia fiebrigii'),
+(109, 16, 4, 1, 115, 'Rebutia fiebrigii'),
+(110, 18, 7, 1, 116, 'Cactus di natale'),
+(111, 18, 7, 1, 117, 'Cactus di natale'),
+(112, 18, 7, 1, 118, 'Cactus di natale'),
+(113, 18, 7, 1, 119, 'Cactus di natale'),
+(114, 17, 5, 1, 120, 'Saguaro');
 
 -- --------------------------------------------------------
 
@@ -157,9 +231,8 @@ CREATE TABLE `utenti` (
 --
 
 INSERT INTO `utenti` (`utente_id`, `email`, `password`, `admin`) VALUES
-(5, 'anna@gmail.com', 'anna', 1),
-(6, 'emma@gmail.com', 'emma', 1),
-(7, 'admin@gmail.com', 'admin', 0);
+(7, 'admin@gmail.com', 'admin', 0),
+(8, 'user@gmail.com', 'user', 1);
 
 --
 -- Indici per le tabelle scaricate
@@ -203,13 +276,13 @@ ALTER TABLE `utenti`
 -- AUTO_INCREMENT per la tabella `categorie`
 --
 ALTER TABLE `categorie`
-  MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT per la tabella `ordini`
 --
 ALTER TABLE `ordini`
-  MODIFY `ordine_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `ordine_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=121;
 
 --
 -- AUTO_INCREMENT per la tabella `piante`
@@ -221,13 +294,13 @@ ALTER TABLE `piante`
 -- AUTO_INCREMENT per la tabella `report`
 --
 ALTER TABLE `report`
-  MODIFY `report_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `report_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=115;
 
 --
 -- AUTO_INCREMENT per la tabella `utenti`
 --
 ALTER TABLE `utenti`
-  MODIFY `utente_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `utente_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
