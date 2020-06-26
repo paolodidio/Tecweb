@@ -5,7 +5,7 @@
 
 <head>
 
-  <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8"/>
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
   <meta name="description" content="Pagina di gestione del sito per l'amministratore"/>
   <meta name="keywords" content="succulente, piante, admin, cactus, e-commerce"/>
   <meta name="author" content="Anna Cisotto Bertocco, Ismaele Gobbo, Paolo di Dio, Lucrezia Gradi"/>
