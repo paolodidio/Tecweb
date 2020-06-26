@@ -21,11 +21,11 @@
             <?php reg_user(); ?>
             <div class="login-input-group">
                 <label for="email" xml:lang="en">Email: </label>
-                <input type="email" placeholder="Inserisci email" name="email" required/>
+                <input type="email" name="email" required/>
                 <label for="password"  xml:lang="en">Password: </label>
-                <input type="password" placeholder="Inserisci password" name="password" id="password" onkeyup="check();" required/>
+                <input type="password" name="password" id="password" onkeyup="check();" required/>
                 <label for="password2">Ripeti <span  xml:lang="en">password:</span>  </label>
-                <input type="password" placeholder="Inserisci nuovamente la password" name="password2" id="password2" onkeyup="check();" required/>
+                <input type="password" name="password2" id="password2" onkeyup="check();" required/>
                 <span id='message'></span>
             </div>
             <button class="submit-button" type="submit" name="reg_user">Registrati</button>
