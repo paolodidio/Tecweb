@@ -12,28 +12,28 @@
         <div>
           <div class="edit-input-group">
             <label for="nome">Nome pianta</label>
-            <input type="text" name="nome" class="form-control" required>
+            <input type="text" name="nome" class="form-control" required/>
 
             <label for="genere">Genere</label>
-            <input type="text" name="genere" class="form-control" required>
+            <input type="text" name="genere" class="form-control" required/>
 
             <label for="specie">Specie</label>
-            <input type="text" name="specie" class="form-control" required>
+            <input type="text" name="specie" class="form-control" required/>
 
             <label for="famiglia">Famiglia</label>
-            <input type="text" name="famiglia" class="form-control" required>
+            <input type="text" name="famiglia" class="form-control" required/>
 
             <label for="colore">Colore fiori</label>
-            <input type="text" name="colore" class="form-control" required>
+            <input type="text" name="colore" class="form-control" required/>
 
             <label for="prezzo">Prezzo</label>
-            <input type="number" name="prezzo" class="form-control" size="60" required>
+            <input type="number" name="prezzo" class="form-control" size="60" required/>
 
             <label for="pianta_qt">Quantità</label>
-            <input type="number" name="pianta_qt" class="form-control" size="60" required>
+            <input type="number" name="pianta_qt" class="form-control" size="60" required/>
 
             <label for="pianta_img">Immagine pianta</label>
-            <input type="file" name="file"required>
+            <input type="file" name="file"required/>
           </div>
         </div>
 
@@ -92,7 +92,7 @@
         </div>
 
         <div>
-          <input class="submit-button" type="submit" name="publish" value="Aggiungi">
+          <input class="submit-button" type="submit" name="publish" value="Aggiungi"/>
           <input class="reset-button" type="button" value="Reset" onClick="this.form.reset()" />
         </div>
       </fieldset>
