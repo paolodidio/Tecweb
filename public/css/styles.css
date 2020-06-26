@@ -13,8 +13,9 @@ html {
 }
 
 body {
-  margin: 3% 5%;
   font-family: sans-serif;
+  max-width: 1200px;
+  margin: 3% auto;
 }
 
 a {
@@ -50,13 +51,13 @@ fieldset {
   background-color: #557345;
   color: #FFF;
   border-radius: 2em;
-  padding: 1em;
+  padding: 1.2em;
   margin-bottom: 2em;
   max-width: 160px;
 }
 
 .colored-button:visited {
-  background-color: #94aa2a;
+  background-color: #6a197d;
   color: #FFF;
 }
 
@@ -66,7 +67,7 @@ fieldset {
 
 /* bottone per azioni che richiedono più attenzione */
 .confirm-button {
-  background-color: #dd7d00;
+  background-color: #f37121;
   color: #FFF;
   border-radius: 2.5em;
   padding: 1.5em;
@@ -116,6 +117,7 @@ fieldset {
   border: none;
   cursor: pointer;
   display: inline-block;
+  margin-top: 2em;
 }
 
 .submit-button:hover {
@@ -185,15 +187,10 @@ fieldset {
   float: left;
   color: #57714c;
   text-align: center;
-  padding: 1em;
-  margin-top: 1em;
+  padding: 0.5em;
+  margin: 2%;
   font-weight: bold;
   text-transform: uppercase;
-}
-
-.navigation-bar ul li a.navlogo {
-  position: relative;
-  top:-2em;
 }
 
 .navigation-bar ul li a:hover, .navigation-bar ul li a:visited:hover{
@@ -201,7 +198,16 @@ fieldset {
 }
 
 .navigation-bar ul li a:visited{
-  color: #94aa2a;
+  color: #6a197d;
+}
+
+.navigation-bar ul li a.navlogo {
+  position: relative;
+  top:-1em;
+}
+
+.navigation-bar ul li a.navlogo img {
+  width: 80%;
 }
 
 .navigation-bar .icon {
@@ -216,14 +222,14 @@ fieldset {
 
 /* Stile generale */
 div.breadcrumb {
-  padding: 10px 16px;
   list-style: none;
+  padding-left: 1em;
 }
 
 /* stile item list */
 div.breadcrumb li {
   display: inline;
-  font-size: 18px;
+  font-size: 1em;
 }
 
 /* Metti un > dopo ogni list item */
@@ -241,7 +247,7 @@ div.breadcrumb li a {
 
 /* colore link visitati*/
 div.breadcrumb li a:visited{
-  color: #94aa2a;
+  color: #6a197d;
 }
 
 /* Colore quando metti il mouse sul link */
@@ -253,14 +259,14 @@ div.breadcrumb li a:hover {
 /* header homepage */
 
 #Header {
-  padding: 3em;
+  padding: 1em 3em;
   display: grid;
   grid-template-columns: 50% 50%;
 }
 
 #HeaderTitle h1 {
   font-weight: bold;
-  font-size: 6em;
+  font-size: 5em;
   color: #3C2B26;
 }
 
@@ -269,12 +275,31 @@ div.breadcrumb li a:hover {
   background-repeat: no-repeat;
 }
 
+/* footer */
+
+.footer {
+  border-top: 0.2em #242424 dotted;
+  margin-top: 5em;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.footer dl dt {
+  font-weight: bold;
+}
+
+.footer dl dd {
+  padding-bottom: 0.5em;
+}
+
 /* come funziona homepage*/
 
 #HowItWorks {
   background-color: #4f7253;
   padding: 2em;
-  margin-top: 5%;
+  margin: 5% 3%;
 }
 
 #HowItWorks h2 {
@@ -293,7 +318,7 @@ div.breadcrumb li a:hover {
 }
 
 #HowItWorks ul li {
-  display: inline-block;
+  display: inline-flex;
   color: #EDEBE9;
   text-transform: uppercase;
   height: 20em;
@@ -318,7 +343,6 @@ div.breadcrumb li a:hover {
 /* link per le categorie homepage */
 
 #Categorie {
-  padding-top: 3em;
   text-align: center;
 }
 
@@ -334,19 +358,18 @@ div.breadcrumb li a:hover {
 }
 
 #Categorie li a:visited{
-  border: #94aa2a solid 0.2em;
-  color: #94aa2a;
+  border: #6a197d solid 0.2em;
+  color: #6a197d;
 }
 
 #Categorie ul li a {
   display: inline-block;
-  padding-right: 2em;
-  margin: 1% 0 1% 1%;
+  padding: 1em;
+  margin: 0.5% 0 0.5% 0.5%;
   color: #242424;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.5em;
-  padding: 2em;
   border: #4f7253 solid 0.2em;
   border-radius: 2.5em;
 }
@@ -358,8 +381,11 @@ div.breadcrumb li a:hover {
 /* pagina negozio piante e filtri per categoria */
 
 /* link categorie nella pagina piante */
+#Categorie ul.categorie-small {
+  margin-bottom: 2em;
+}
+
 #Categorie ul.categorie-small li a{
-  padding-right: 0.5em;
   font-size: 1em;
   padding: 0.5em;
   border-radius: 1em;
@@ -386,7 +412,7 @@ div.breadcrumb li a:hover {
 }
 
 .plant-shop .pagination li a:visited {
-  color: #4f7253;
+  color: #6a197d;
 }
 
 .plant-shop .pagination li.active {
@@ -401,7 +427,7 @@ div.breadcrumb li a:hover {
 
 /* pagina catalogo delle piante */
 .plant-shop {
-  margin: 3%;
+  padding: 0 3%;
 }
 
 /* lista piante */
@@ -474,11 +500,12 @@ div.breadcrumb li a:hover {
 
 .plant-detail-container img {
   border: 1em solid #fff;
+  width: 90%;
 }
 
 /* pannello di centro */
 .plant-desc-panel {
-  padding: 0 7em;
+  padding: 0 2em;
 }
 
 .plant-detail-name {
@@ -512,7 +539,7 @@ div.breadcrumb li a:hover {
 .plant-info-panel {
   background-color: #4f7253;
   border-radius: 2em;
-  padding: 2em 3em;
+  padding: 2em;
   text-align: justify;
 }
 
@@ -535,21 +562,35 @@ div.breadcrumb li a:hover {
 
 /* pagina su di noi */
 
+#Sudinoi {
+  padding: 3%;
+}
+
 #Sudinoi p {
   text-align: justify;
-  width: 50%;
 }
 
 /* pagina di checkout */
 
+#Checkout {
+  padding: 3%;
+}
+
 #CheckoutContent {
   display: grid;
-  grid-template-columns: 70% 40%;
+  grid-template-rows: auto auto;
 }
 
 #CheckoutTotal p {
   font-size: 2em;
   font-weight: bold;
+  padding-top: 1.5em;
+}
+
+/* pagina profilo */
+
+#Profile {
+  padding: 3%;
 }
 
 /* pagina login */
@@ -574,7 +615,7 @@ div.breadcrumb li a:hover {
 }
 
 #LoginPage a:visited {
-  color: #94aa2a;
+  color: #6a197d;
 }
 
 /* pagina di registrazione */
@@ -587,6 +628,11 @@ div.breadcrumb li a:hover {
   text-align: center;
 }
 
+/* conferma acquisto */
+#Conferma {
+  margin: 3%;
+}
+
 /******************** ADMIN ************************/
 
 /* navbar admin */
@@ -594,38 +640,51 @@ div.breadcrumb li a:hover {
 #AdminNavbar {
   background-color: #2a3a2f;
   color: #FFF;
+  overflow: hidden;
 }
 
-#AdminNavbar li a {
+#AdminNavbar ul li a {
   color: #EDEBE9;
+  float: left;
+  text-align: center;
+  padding: 0.5em;
+  margin: 2%;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 #AdminNavbar li a:visited {
-  color: #94aa2a;
+  color: #f3c623;
 }
 
 #AdminNavbar li a:visited:hover, #AdminNavbar li a:hover {
   color: #9f9f9f;
 }
 
+#AdminNavbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
 /* sidebar admin */
 
 .sidenav {
   background-color: #2a3a2f;
   height: 100%; 
-  width: 25%;
-  position: fixed;
-  margin: 0;
-  padding: 0;
+  position: absolute;
   overflow: auto;
 }
 
 .sidenav ul {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .sidenav ul li a {
-  padding: 1.5em 1em;
+  padding: 1.5em 2em;
   display: block;
   color: #EDEBE9;
   font-weight: bold;
@@ -633,7 +692,7 @@ div.breadcrumb li a:hover {
 }
 
 .sidenav ul li a:visited {
-  color: #94aa2a;
+  color: #f3c623;
 }
 
 .sidenav a:hover, .sidenav ul li a:visited:hover {
@@ -644,8 +703,7 @@ div.breadcrumb li a:hover {
 
 /* contenuto pagina admin */
 .admin-content {
-  margin-left: 30em;
-  padding-top: 2em;
+  padding-left: 15em;
   height: 100%;
 }
 
@@ -672,7 +730,7 @@ div.breadcrumb li a:hover {
 }
 
 .admin-button:visited {
-  background-color: #94aa2a;
+  background-color: #6a197d;
   color: #FFF;
 }
 
@@ -729,50 +787,52 @@ div.breadcrumb li a:hover {
 
 /* media query */
 
+/* tablet in modalità landscape e laptop */
+@media screen and (max-width: 1024px) {
+    .navigation-bar ul > :not(:first-child) {
+      display: none;
+    }
 
-@media screen and (max-width: 1200px) {
-    .navigation-bar ul > :not(:first-child) {display: none;}
     .navigation-bar li.icon {
+        padding: 2em;
         float: right;
         display: block;
     }
 
-    .header{
-      grid-template-columns: 100% auto;
+    .navigation-bar.responsive {
+      position: relative;
     }
-
-    .header-title h1 {
-      font-size: 4.5em;
-    }
-
-    .instructions {
-      grid-column-gap: 5em;
-    }
-
-    .navigation-bar.responsive {position: relative;}
+    
     .navigation-bar.responsive li.icon {
         position: absolute;
         right: 0;
-        top: 2em;
+        top: 0;
     }
     .navigation-bar.responsive ul li {
         float: none;
         display: block;
         text-align: left;
-        padding-bottom: 1.5em;
+        padding: 1em 2em;
+    }
+
+    .navigation-bar.responsive ul li a.navlogo {
+      display: none;
     }
 
     .navigation-bar.responsive ul li a {
       float: none;
     }
 
-    .navigation-bar.responsive ul li a.navlogo {
-      position: relative;
-      top:0;
+    #Accedi, #Registrati, #Logout, #AdminLogout {
+      float: none;
     }
 
-    .navigation-bar.responsive #Accedi, #Registrati, #Logout, #AdminLogout {
-      float: none;
+    #Header{
+      grid-template-columns: 100% 0;
+    }
+
+    #HeaderTitle h1 {
+      font-size: 4.5em;
     }
 
     #HeaderImg {
@@ -781,8 +841,12 @@ div.breadcrumb li a:hover {
 
     .plant-detail-container {
       display: grid;
-      grid-template-columns: 100%;
+      grid-template-columns: auto;
       padding: 3em;
+    }
+
+    .plant-detail-container img {
+      width: 40%;
     }
 
     #CheckoutContent {
@@ -790,6 +854,149 @@ div.breadcrumb li a:hover {
       grid-template-columns: 100%;
     }
 
+    .plant-info-panel {
+      margin-top: 3em;
+    }
+
+    #Conferma {
+      margin: 4%;
+    }
+
+
+
 }
 
+/* tablet in modalità portrait */
+@media screen and (max-width: 768px) {
+
+  #Sudinoi {
+    padding: 4%;
+  }
+
+  .plant-detail-container {
+    padding: 2em;
+  }
+
+  .plant-desc-panel {
+    padding: 1em 0.5em;
+  }
+
+  #AdminContent .table tr th{
+    padding: 0;
+  }
+
+  #AdminContent .table tr td{
+    padding: 0;
+  }
+
+}
+
+/* telefoni in modalità lanscape */
+@media screen and (max-width: 480px) {
+
+  .navigation-bar ul li a.navlogo {
+    padding-top: 2em;
+  }
+
+  #HeaderTitle h1 {
+    font-size: 3em;
+  }
+
+  #HowItWorks {
+    display: none;
+  }
+
+  .plant-detail-container img {
+    width: 60%;
+  }
+
+  .table thead tr th {
+    padding: 0;
+  }
+
+  .table tbody tr td {
+    padding: 0;
+  }
+
+  #Profile {
+    padding: 10%;
+  }
+
+  .reset-button {
+    margin-left: 0;
+  }
+
+  .sidenav {
+    overflow: hidden;
+    height: auto;
+    position: relative !important;
+  }
+
+  .sidenav ul li a {
+    float: left;
+  }
+
+  #AdminContent {
+    margin: 0;
+    padding: 0;
+  }
+
+}
+
+/* telefoni in modalità portrait */
+@media screen and (max-width: 320px) {
+
+  #Header {
+    padding: 3%;
+  }
+
+  .page-title {
+    font-size: 3em;
+  }
+  
+  #Categorie ul li a {
+    padding: 0.5em;
+  }
+
+  #Contacts ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  .reset-button {
+    margin-top: 1em;
+  }
+
+}
+
+/************** CSS STAMPA ****************/
+@media print {
+
+  #HeaderImg {
+    display: none;
+  }
+
+  .colored-button, .colored-button:visited {
+    color: #000;
+    border: 0.1em #000 solid;
+  }
+
+  #HowItWorks {
+    margin: 1em;
+  }
+
+  #HowItWorks ul li{
+    display: inline-block;
+    color: #000;
+    height: auto;
+    width: auto;
+  }
+
+  .confirm-button, .confirm-button:visited, .submit-button, .submit-button:visited {
+    color: #000;
+    border: 0.1em #000 solid;
+  }
+
+}
 
