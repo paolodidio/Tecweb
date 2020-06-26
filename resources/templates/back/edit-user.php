@@ -43,7 +43,7 @@ if(isset($_GET['id'])) {
       </div>
 
       <input class="submit-button" type="submit" name="update_user" value="Modifica" >
-      <input class="reset-button" type="button" value="Reset" onClick="this.form.reset()" />
+      <input class="reset-button" type="button" value="Reset" onclick="this.form.reset()" />
     </fieldset>
   </form>
 </div>

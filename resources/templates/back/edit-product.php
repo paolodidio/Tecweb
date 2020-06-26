@@ -122,7 +122,7 @@
 
         <div>
           <input class="submit-button" type="submit" name="update" value="Modifica">
-          <input class="reset-button" type="button" value="Reset" onClick="this.form.reset()" />
+          <input class="reset-button" type="button" value="Reset" onclick="this.form.reset()" />
         </div>
       </fieldset>
     </form>

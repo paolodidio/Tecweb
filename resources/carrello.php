@@ -126,7 +126,7 @@ if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
 
 $payment_button = <<<DELIMETER
 
-<a class="confirm-button" href="../public/conferma.php?amount={$_SESSION['item_total']}&email={$_SESSION['user']}">Conferma pagamento</a>
+<a class="confirm-button" href="../public/conferma.php?amount={$_SESSION['item_total']}&#38;email={$_SESSION['user']}">Conferma pagamento</a>
 
 DELIMETER;
 

@@ -24,7 +24,7 @@
                 <input type="password" placeholder="Inserisci password" name="password" required/>
             </div>
             <button class="submit-button" type="submit" name="log_user">Accedi</button>
-            <input class="reset-button" type="button" value="Reset" onClick="this.form.reset()" />
+            <input class="reset-button" type="button" value="Reset" onclick="this.form.reset()" />
             <a href="../public/registrazione.php"> Non hai un <span xml:lang="en">account</span>? Registrati</a>
         </fieldset>
     </form>

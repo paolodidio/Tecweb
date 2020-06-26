@@ -29,10 +29,10 @@
                 <span id='message'></span>
             </div>
             <button class="submit-button" type="submit" name="reg_user">Registrati</button>
-            <input class="reset-button" type="button" value="Reset" onClick="this.form.reset()" />
+            <input class="reset-button" type="button" value="Reset" onclick="this.form.reset()" />
 
             <!-- controllo input lato client -->
-            <script>
+            <script type="text/javascript">
 
                 var check = function() {
                     if (document.getElementById('password').value ===
