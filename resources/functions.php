@@ -971,7 +971,7 @@ $user = <<<DELIMITER
     <td>{$row['utente_id']}</td>
     <td>{$row['email']}</td>
     <td>{$row['admin']}</td>
-    <td><a href="../../public/admin/index.php?edit-user&id={$row['utente_id']}">Modifica</a><a href="../../resources/templates/back/delete_user.php?id={$row['utente_id']}">Elimina</a></td>
+    <td><a href="../../public/admin/index.php?edit-user&#38;id={$row['utente_id']}">Modifica</a><a href="../../resources/templates/back/delete_user.php?id={$row['utente_id']}">Elimina</a></td>
 </tr>
 
 DELIMITER;
