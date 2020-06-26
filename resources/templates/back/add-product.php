@@ -5,7 +5,7 @@
 
     <h1 class="admin-title">Aggiungi pianta</h1>
 
-    <form class="edit-form" action="" method="post" enctype="multipart/form-data">
+    <form class="edit-form"  action="" method="post" enctype="multipart/form-data">
       <fieldset>
         <legend>Aggiungi pianta</legend>
 
@@ -40,18 +40,18 @@
         <div>
           <div class="edit-input-group">
             <label for="descrizione">Descrizione pianta</label>
-            <textarea name="descrizione" id="" cols="30" rows="10" class="form-control" required></textarea>
+            <textarea name="descrizione"  cols="30" rows="10" class="form-control" required></textarea>
           </div>
 
           <div class="select-input-group">
             <label for="interno">Da interno</label>
-            <select name="interno" id="" class="form-control" required>
+            <select name="interno"  class="form-control" required>
               <option value="0">Si</option>
               <option value="1">No</option>
             </select>
 
             <label for="hardiness" xml:lang="en">Hardiness</label>
-            <select name="hardiness" id="" class="form-control"required>
+            <select name="hardiness"  class="form-control"required>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -68,7 +68,7 @@
             </select>
 
             <label for="fioritura">Fioritura</label>
-            <select name="fioritura" id="" class="form-control" required>
+            <select name="fioritura"  class="form-control" required>
               <option value="Primavera">Primavera</option>
               <option value="Estate">Estate</option>
               <option value="Autunno">Autunno</option>
@@ -76,13 +76,13 @@
             </select>
 
             <label for="cat_id">Categoria</label>
-            <select name="cat_id" id="" class="form-control" required>
-              <option value="">Seleziona categoria</option>
+            <select name="cat_id" class="form-control" required>
+              <option >Seleziona categoria</option>
               <?php show_categories_admin(); ?>
             </select>
 
             <label for="illuminazione">Illuminazione</label>
-            <select name ="illuminazione" id="" class="form-control" required>
+            <select name ="illuminazione"  class="form-control" required>
                 <option value="Pieno sole">Pieno sole</option>
                 <option value="Mezza ombra">Mezza ombra</option>
                 <option value="Ombra">Ombra</option>
